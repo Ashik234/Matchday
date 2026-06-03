@@ -1,0 +1,74 @@
+[
+  { "letter": "A", "standings": [
+    { "team": { "id": "USA", "name": "United States", "countryCode": "us", "federation": "CONCACAF", "fifaRank": 13 }, "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 5, "ga": 1, "gd": 4, "pts": 6 },
+    { "team": { "id": "MEX", "name": "Mexico", "countryCode": "mx", "federation": "CONCACAF", "fifaRank": 15 }, "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 3, "ga": 1, "gd": 2, "pts": 4 },
+    { "team": { "id": "AUS", "name": "Australia", "countryCode": "au", "federation": "AFC", "fifaRank": 25 }, "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 1, "ga": 3, "gd": -2, "pts": 1 },
+    { "team": { "id": "GHA", "name": "Ghana", "countryCode": "gh", "federation": "CAF", "fifaRank": 60 }, "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 0, "ga": 4, "gd": -4, "pts": 0 }
+  ]},
+  { "letter": "B", "standings": [
+    { "team": { "id": "ENG", "name": "England", "countryCode": "gb-eng", "federation": "UEFA", "fifaRank": 4 }, "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 4, "ga": 0, "gd": 4, "pts": 6 },
+    { "team": { "id": "NED", "name": "Netherlands", "countryCode": "nl", "federation": "UEFA", "fifaRank": 7 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 3, "ga": 2, "gd": 1, "pts": 3 },
+    { "team": { "id": "MAR", "name": "Morocco", "countryCode": "ma", "federation": "CAF", "fifaRank": 14 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 2, "gd": 0, "pts": 3 },
+    { "team": { "id": "KOR", "name": "South Korea", "countryCode": "kr", "federation": "AFC", "fifaRank": 22 }, "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 1, "ga": 6, "gd": -5, "pts": 0 }
+  ]},
+  { "letter": "C", "standings": [
+    { "team": { "id": "POR", "name": "Portugal", "countryCode": "pt", "federation": "UEFA", "fifaRank": 6 }, "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 6, "ga": 1, "gd": 5, "pts": 6 },
+    { "team": { "id": "JPN", "name": "Japan", "countryCode": "jp", "federation": "AFC", "fifaRank": 17 }, "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 4, "ga": 2, "gd": 2, "pts": 4 },
+    { "team": { "id": "SUI", "name": "Switzerland", "countryCode": "ch", "federation": "UEFA", "fifaRank": 19 }, "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 2, "ga": 4, "gd": -2, "pts": 1 },
+    { "team": { "id": "EGY", "name": "Egypt", "countryCode": "eg", "federation": "CAF", "fifaRank": 35 }, "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 1, "ga": 6, "gd": -5, "pts": 0 }
+  ]},
+  { "letter": "D", "standings": [
+    { "team": { "id": "BRA", "name": "Brazil", "countryCode": "br", "federation": "CONMEBOL", "fifaRank": 5 }, "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 5, "ga": 0, "gd": 5, "pts": 6 },
+    { "team": { "id": "ARG", "name": "Argentina", "countryCode": "ar", "federation": "CONMEBOL", "fifaRank": 1 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 4, "ga": 2, "gd": 2, "pts": 3 },
+    { "team": { "id": "URU", "name": "Uruguay", "countryCode": "uy", "federation": "CONMEBOL", "fifaRank": 11 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 3, "gd": -1, "pts": 3 },
+    { "team": { "id": "NZL", "name": "New Zealand", "countryCode": "nz", "federation": "OFC", "fifaRank": 95 }, "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 0, "ga": 6, "gd": -6, "pts": 0 }
+  ]},
+  { "letter": "E", "standings": [
+    { "team": { "id": "FRA", "name": "France", "countryCode": "fr", "federation": "UEFA", "fifaRank": 2 }, "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 4, "ga": 1, "gd": 3, "pts": 6 },
+    { "team": { "id": "GER", "name": "Germany", "countryCode": "de", "federation": "UEFA", "fifaRank": 16 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 3, "ga": 2, "gd": 1, "pts": 3 },
+    { "team": { "id": "DEN", "name": "Denmark", "countryCode": "dk", "federation": "UEFA", "fifaRank": 20 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 2, "gd": 0, "pts": 3 },
+    { "team": { "id": "TUN", "name": "Tunisia", "countryCode": "tn", "federation": "CAF", "fifaRank": 30 }, "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 1, "ga": 5, "gd": -4, "pts": 0 }
+  ]},
+  { "letter": "F", "standings": [
+    { "team": { "id": "BEL", "name": "Belgium", "countryCode": "be", "federation": "UEFA", "fifaRank": 8 }, "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 4, "ga": 2, "gd": 2, "pts": 4 },
+    { "team": { "id": "CRO", "name": "Croatia", "countryCode": "hr", "federation": "UEFA", "fifaRank": 10 }, "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 3, "ga": 1, "gd": 2, "pts": 4 },
+    { "team": { "id": "SEN", "name": "Senegal", "countryCode": "sn", "federation": "CAF", "fifaRank": 18 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 2, "gd": 0, "pts": 3 },
+    { "team": { "id": "CRC", "name": "Costa Rica", "countryCode": "cr", "federation": "CONCACAF", "fifaRank": 45 }, "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 1, "ga": 5, "gd": -4, "pts": 0 }
+  ]},
+  { "letter": "G", "standings": [
+    { "team": { "id": "ITA", "name": "Italy", "countryCode": "it", "federation": "UEFA", "fifaRank": 9 }, "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 4, "ga": 0, "gd": 4, "pts": 6 },
+    { "team": { "id": "COL", "name": "Colombia", "countryCode": "co", "federation": "CONMEBOL", "fifaRank": 12 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 3, "ga": 2, "gd": 1, "pts": 3 },
+    { "team": { "id": "NGA", "name": "Nigeria", "countryCode": "ng", "federation": "CAF", "fifaRank": 28 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 3, "gd": -1, "pts": 3 },
+    { "team": { "id": "QAT", "name": "Qatar", "countryCode": "qa", "federation": "AFC", "fifaRank": 50 }, "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 0, "ga": 4, "gd": -4, "pts": 0 }
+  ]},
+  { "letter": "H", "standings": [
+    { "team": { "id": "ESP", "name": "Spain", "countryCode": "es", "federation": "UEFA", "fifaRank": 3 }, "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 5, "ga": 1, "gd": 4, "pts": 6 },
+    { "team": { "id": "CAN", "name": "Canada", "countryCode": "ca", "federation": "CONCACAF", "fifaRank": 41 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 3, "gd": -1, "pts": 3 },
+    { "team": { "id": "POL", "name": "Poland", "countryCode": "pl", "federation": "UEFA", "fifaRank": 26 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 2, "gd": 0, "pts": 3 },
+    { "team": { "id": "SAU", "name": "Saudi Arabia", "countryCode": "sa", "federation": "AFC", "fifaRank": 55 }, "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 1, "ga": 4, "gd": -3, "pts": 0 }
+  ]},
+  { "letter": "I", "standings": [
+    { "team": { "id": "SCO", "name": "Scotland", "countryCode": "gb-sct", "federation": "UEFA", "fifaRank": 24 }, "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 3, "ga": 1, "gd": 2, "pts": 4 },
+    { "team": { "id": "ECU", "name": "Ecuador", "countryCode": "ec", "federation": "CONMEBOL", "fifaRank": 27 }, "played": 2, "won": 1, "drawn": 1, "lost": 0, "gf": 2, "ga": 0, "gd": 2, "pts": 4 },
+    { "team": { "id": "AUT", "name": "Austria", "countryCode": "at", "federation": "UEFA", "fifaRank": 23 }, "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 1, "ga": 2, "gd": -1, "pts": 1 },
+    { "team": { "id": "JAM", "name": "Jamaica", "countryCode": "jm", "federation": "CONCACAF", "fifaRank": 65 }, "played": 2, "won": 0, "drawn": 1, "lost": 1, "gf": 0, "ga": 3, "gd": -3, "pts": 1 }
+  ]},
+  { "letter": "J", "standings": [
+    { "team": { "id": "SUI2", "name": "Switzerland", "countryCode": "ch", "federation": "UEFA", "fifaRank": 19 }, "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 5, "ga": 1, "gd": 4, "pts": 6 },
+    { "team": { "id": "PER", "name": "Peru", "countryCode": "pe", "federation": "CONMEBOL", "fifaRank": 33 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 3, "ga": 2, "gd": 1, "pts": 3 },
+    { "team": { "id": "WAL", "name": "Wales", "countryCode": "gb-wls", "federation": "UEFA", "fifaRank": 38 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 3, "gd": -1, "pts": 3 },
+    { "team": { "id": "PAN", "name": "Panama", "countryCode": "pa", "federation": "CONCACAF", "fifaRank": 70 }, "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 1, "ga": 5, "gd": -4, "pts": 0 }
+  ]},
+  { "letter": "K", "standings": [
+    { "team": { "id": "URU2", "name": "Uruguay", "countryCode": "uy", "federation": "CONMEBOL", "fifaRank": 11 }, "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 4, "ga": 0, "gd": 4, "pts": 6 },
+    { "team": { "id": "TUR", "name": "Turkey", "countryCode": "tr", "federation": "UEFA", "fifaRank": 29 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 3, "ga": 2, "gd": 1, "pts": 3 },
+    { "team": { "id": "IRN", "name": "Iran", "countryCode": "ir", "federation": "AFC", "fifaRank": 21 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 2, "gd": 0, "pts": 3 },
+    { "team": { "id": "ALG", "name": "Algeria", "countryCode": "dz", "federation": "CAF", "fifaRank": 40 }, "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 0, "ga": 5, "gd": -5, "pts": 0 }
+  ]},
+  { "letter": "L", "standings": [
+    { "team": { "id": "NOR", "name": "Norway", "countryCode": "no", "federation": "UEFA", "fifaRank": 31 }, "played": 2, "won": 2, "drawn": 0, "lost": 0, "gf": 5, "ga": 1, "gd": 4, "pts": 6 },
+    { "team": { "id": "CHI", "name": "Chile", "countryCode": "cl", "federation": "CONMEBOL", "fifaRank": 34 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 3, "ga": 2, "gd": 1, "pts": 3 },
+    { "team": { "id": "PAR", "name": "Paraguay", "countryCode": "py", "federation": "CONMEBOL", "fifaRank": 48 }, "played": 2, "won": 1, "drawn": 0, "lost": 1, "gf": 2, "ga": 2, "gd": 0, "pts": 3 },
+    { "team": { "id": "CMR", "name": "Cameroon", "countryCode": "cm", "federation": "CAF", "fifaRank": 42 }, "played": 2, "won": 0, "drawn": 0, "lost": 2, "gf": 1, "ga": 6, "gd": -5, "pts": 0 }
+  ]}
+]
