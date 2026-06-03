@@ -1,6 +1,8 @@
+import { Vector3 } from 'three';
 import { useThree } from '@react-three/fiber';
 import { useUIStore } from '@/store/uiStore';
 import { useAnchorRect, type AnchorRect } from './useAnchorRect';
+import { useWaypointsCurve } from './useWaypoints';
 
 export type BallTransform = {
   position: [number, number, number];
@@ -30,6 +32,7 @@ export function useBallController(): BallTransform {
 
   const logoWorld = screenToWorld(logoRect, viewport, size);
   const cardWorld = screenToWorld(cardRect, viewport, size);
+  const curve = useWaypointsCurve();
 
   switch (stage) {
     case 'pre-intro':
@@ -45,7 +48,17 @@ export function useBallController(): BallTransform {
     case 'drop-card':
       return { position: cardWorld, rotation: [Math.PI, 0, 0], scale: 1 };
     case 'idle-card':
-    case 'scroll-guide':
+      return { position: cardWorld, rotation: [Math.PI, performance.now() / 1000, 0], scale: 1 };
+    case 'scroll-guide': {
+      if (!curve) return { position: cardWorld, rotation: [Math.PI, 0, 0], scale: 1 };
+      const p = new Vector3();
+      curve.getPointAt(Math.min(1, Math.max(0, scrollProgress)), p);
+      return {
+        position: [p.x, p.y, 0],
+        rotation: [Math.PI, performance.now() / 800, 0],
+        scale: 1,
+      };
+    }
     case 'parked-countdown':
       return { position: cardWorld, rotation: [Math.PI, performance.now() / 1000, 0], scale: 1 };
   }

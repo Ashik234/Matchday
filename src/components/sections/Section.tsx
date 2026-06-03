@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/utils/cn';
+import { MobileBallSprite } from './MobileBallSprite';
 
 type Props = {
   id: string;
@@ -18,6 +19,7 @@ export function Section({ id, stage, eyebrow, title, className, children }: Prop
       data-ball-stage={stage}
       className={cn('relative max-w-container mx-auto px-4 md:px-8 py-16 md:py-24', className)}
     >
+      <MobileBallSprite />
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         whileInView={{ opacity: 1, y: 0 }}

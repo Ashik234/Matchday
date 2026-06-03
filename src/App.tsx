@@ -4,6 +4,7 @@ import { Footer } from '@/components/ui/Footer';
 import { HeroGrid } from '@/components/hero/HeroGrid';
 import { GlobalCanvas } from '@/three/GlobalCanvas';
 import { useIntroTimeline } from '@/three/useIntroTimeline';
+import { useScrollStage } from '@/hooks/useScrollStage';
 import { TodayMatchesSection } from '@/components/sections/TodayMatchesSection';
 import { TournamentProgress } from '@/components/sections/TournamentProgress';
 import { GroupStandings } from '@/components/sections/GroupStandings';
@@ -14,6 +15,7 @@ import { FinalCountdown } from '@/components/sections/FinalCountdown';
 
 export default function App() {
   useIntroTimeline();
+  useScrollStage();
   return (
     <>
       <SkipToContent />
