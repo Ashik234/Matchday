@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @config "../../tailwind.config.ts";
+
+@import './tokens.css';
+@import './fonts.css';
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter Variable', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
