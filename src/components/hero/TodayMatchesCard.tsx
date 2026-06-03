@@ -1,11 +1,17 @@
+import { motion, AnimatePresence } from 'framer-motion';
 import { useTodayMatches } from '@/data/queries';
 import { MatchCard } from '@/components/ui/MatchCard';
 import { Skeleton } from '@/components/ui/Skeleton';
 import { FallbackBanner } from '@/components/ui/FallbackBanner';
 import { formatHeroDate } from '@/utils/formatDate';
+import { useUIStore } from '@/store/uiStore';
+import { DateImpact } from './DateImpact';
 
 export function TodayMatchesCard() {
   const { data, isLoading, isFallback, refetch } = useTodayMatches();
+  const stage = useUIStore((s) => s.ballStage);
+  const revealed =
+    stage === 'idle-card' || stage === 'scroll-guide' || stage === 'parked-countdown';
 
   const featured = data?.[0];
   const rest = (data ?? []).slice(1);
@@ -29,16 +35,29 @@ export function TodayMatchesCard() {
 
       {isFallback && <div className="mt-4"><FallbackBanner onRetry={refetch} /></div>}
 
-      <div className="mt-6 flex-1 flex flex-col gap-3">
-        {isLoading && <Skeleton className="h-48" />}
-        {!isLoading && featured && <MatchCard variant="hero" match={featured} />}
-        {!isLoading && rest.length > 0 && (
-          <div className="grid gap-2">
-            {rest.map((m) => (
-              <MatchCard key={m.id} variant="today" match={m} />
-            ))}
-          </div>
-        )}
+      <div className="mt-6 flex-1 flex flex-col gap-3 relative">
+        <DateImpact />
+        <AnimatePresence>
+          {revealed && (
+            <motion.div
+              key="content"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: 'easeOut' }}
+              className="flex flex-col gap-3"
+            >
+              {isLoading && <Skeleton className="h-48" />}
+              {!isLoading && featured && <MatchCard variant="hero" match={featured} />}
+              {!isLoading && rest.length > 0 && (
+                <div className="grid gap-2">
+                  {rest.map((m) => (
+                    <MatchCard key={m.id} variant="today" match={m} />
+                  ))}
+                </div>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
