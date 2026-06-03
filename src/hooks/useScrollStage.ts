@@ -17,6 +17,9 @@ export function useScrollStage() {
       onUpdate: (self) => {
         setScrollProgress(self.progress);
         const currentStage = useUIStore.getState().ballStage;
+        if (self.progress < 0.95 && currentStage === 'parked-countdown') {
+          setBallStage('scroll-guide');
+        }
         if (self.progress > 0.05 && currentStage === 'idle-card') {
           setBallStage('scroll-guide');
         }

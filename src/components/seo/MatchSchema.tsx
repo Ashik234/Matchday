@@ -20,7 +20,7 @@ export function MatchSchema({ matches }: { matches: Match[] }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(items) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(items).replace(/</g, '\\u003c') }}
     />
   );
 }

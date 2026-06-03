@@ -43,11 +43,9 @@ export function useWaypointsCurve(): CatmullRomCurve3 | null {
     compute();
     const ro = new ResizeObserver(compute);
     ro.observe(document.body);
-    window.addEventListener('scroll', compute, { passive: true });
     window.addEventListener('resize', compute);
     return () => {
       ro.disconnect();
-      window.removeEventListener('scroll', compute);
       window.removeEventListener('resize', compute);
     };
   }, [viewport, size]);
