@@ -18,8 +18,8 @@ export function useEnriched<T>(
   const q = useQuery<T, Error>({
     ...options,
     queryFn: useFixtures ? () => Promise.resolve(options.fixture) : options.queryFn,
-    placeholderData: () => options.fixture,
-  });
+    placeholderData: options.fixture as unknown as T | undefined,
+  } as UseQueryOptions<T, Error, T, QueryKey>);
 
   const isFallback = !useFixtures && q.isError && q.data !== undefined;
 
