@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# Matchday — FIFA World Cup 2026 Companion
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Premium single-page companion experience for the 2026 World Cup. Pitch-themed navbar, persistent Three.js football guide, seven scroll-driven sections, three live data sources with fixture fallback.
 
-Currently, two official plugins are available:
+## Setup
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Requirements: Node 18+, pnpm 8+.
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+pnpm install
+cp .env.example .env.local
+# fill in keys (optional — fixtures used when keys empty)
+pnpm dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `pnpm dev` — Vite dev server
+- `pnpm build` — Production build
+- `pnpm preview` — Serve the production build locally
+- `pnpm exec tsc --noEmit` — Type-check
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Environment
+
+| Key | Purpose |
+| --- | --- |
+| `VITE_WC2026_KEY` | World Cup 2026 API key (optional) |
+| `VITE_API_FOOTBALL_KEY` | API-Football key (optional) |
+| `VITE_BDL_KEY` | BallDontLie FIFA bearer token (optional) |
+| `VITE_USE_FIXTURES` | `true` forces fixture data even when keys present |
+
+If any key is missing or the API fails, the UI falls back to local fixture data with a banner indicating sample data is shown.
+
+## Architecture
+
+See `docs/superpowers/specs/2026-06-03-matchday/` for full planning docs and `docs/superpowers/plans/2026-06-03-matchday.md` for the phase-by-phase implementation plan.
+
+## Data sources
+
+- World Cup 2026 API — teams, matches, groups, standings, bracket
+- API-Football (`v3.football.api-sports.io`) — head-to-head, historical
+- BallDontLie FIFA — match events, player stats
+
+## License
+
+Not affiliated with FIFA. Educational / personal use only.

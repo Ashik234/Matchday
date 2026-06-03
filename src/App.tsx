@@ -1,8 +1,9 @@
+import { lazy, Suspense } from 'react';
 import { SkipToContent } from '@/components/ui/SkipToContent';
 import { PitchNavbar } from '@/components/navbar/PitchNavbar';
 import { Footer } from '@/components/ui/Footer';
 import { HeroGrid } from '@/components/hero/HeroGrid';
-import { GlobalCanvas } from '@/three/GlobalCanvas';
+import { HeadTags } from '@/components/seo/HeadTags';
 import { useIntroTimeline } from '@/three/useIntroTimeline';
 import { useScrollStage } from '@/hooks/useScrollStage';
 import { TodayMatchesSection } from '@/components/sections/TodayMatchesSection';
@@ -13,13 +14,20 @@ import { LiveMatchCenter } from '@/components/sections/LiveMatchCenter';
 import { RoadToFinal } from '@/components/sections/RoadToFinal';
 import { FinalCountdown } from '@/components/sections/FinalCountdown';
 
+const GlobalCanvas = lazy(() =>
+  import('@/three/GlobalCanvas').then((m) => ({ default: m.GlobalCanvas })),
+);
+
 export default function App() {
   useIntroTimeline();
   useScrollStage();
   return (
     <>
+      <HeadTags />
       <SkipToContent />
-      <GlobalCanvas />
+      <Suspense fallback={null}>
+        <GlobalCanvas />
+      </Suspense>
       <PitchNavbar />
       <main id="main">
         <HeroGrid />

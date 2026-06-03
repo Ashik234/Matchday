@@ -6,6 +6,7 @@ import { MatchCard } from '@/components/ui/MatchCard';
 import { Skeleton } from '@/components/ui/Skeleton';
 import { FallbackBanner } from '@/components/ui/FallbackBanner';
 import { cn } from '@/utils/cn';
+import { MatchSchema } from '@/components/seo/MatchSchema';
 
 type Filter = 'all' | 'live' | 'upcoming';
 
@@ -45,6 +46,7 @@ export function TodayMatchesSection() {
           </button>
         ))}
       </div>
+      {data && data.length > 0 && <MatchSchema matches={data} />}
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {isLoading &&
           Array.from({ length: 3 }).map((_, i) => <Skeleton key={i} className="h-44" />)}
