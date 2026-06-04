@@ -1,4 +1,4 @@
-import { request, requestCached } from './client';
+import { requestCached } from './client';
 import type {
   Match,
   Group,
@@ -278,7 +278,12 @@ export const openfootball = {
   },
 
   teams: async (_: void, signal: AbortSignal): Promise<Team[]> => {
-    const raw = await request<OfTeam[]>('openfootball', TEAMS_SOURCE, { signal });
+    const raw = await requestCached<OfTeam[]>(
+      'openfootball',
+      TEAMS_SOURCE,
+      { signal },
+      { ttlMs: 6 * 60 * 60 * 1000, staleOk: true },
+    );
     return raw.map((t) => ({
       id: t.fifa_code,
       name: t.name,
@@ -289,7 +294,12 @@ export const openfootball = {
   },
 
   stadiums: async (_: void, signal: AbortSignal): Promise<Stadium[]> => {
-    const raw = await request<OfStadiumsPayload>('openfootball', STADIUMS_SOURCE, { signal });
+    const raw = await requestCached<OfStadiumsPayload>(
+      'openfootball',
+      STADIUMS_SOURCE,
+      { signal },
+      { ttlMs: 24 * 60 * 60 * 1000, staleOk: true },
+    );
     return raw.stadiums.map((s, i) => ({
       id: `${s.cc}-${i}`,
       name: s.name,
