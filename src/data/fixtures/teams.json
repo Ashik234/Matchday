@@ -1,0 +1,10 @@
+[
+  { "id": "USA", "name": "United States", "countryCode": "us", "federation": "CONCACAF", "fifaRank": 13 },
+  { "id": "MEX", "name": "Mexico", "countryCode": "mx", "federation": "CONCACAF", "fifaRank": 15 },
+  { "id": "CAN", "name": "Canada", "countryCode": "ca", "federation": "CONCACAF", "fifaRank": 41 },
+  { "id": "BRA", "name": "Brazil", "countryCode": "br", "federation": "CONMEBOL", "fifaRank": 5 },
+  { "id": "ARG", "name": "Argentina", "countryCode": "ar", "federation": "CONMEBOL", "fifaRank": 1 },
+  { "id": "FRA", "name": "France", "countryCode": "fr", "federation": "UEFA", "fifaRank": 2 },
+  { "id": "ESP", "name": "Spain", "countryCode": "es", "federation": "UEFA", "fifaRank": 3 },
+  { "id": "GER", "name": "Germany", "countryCode": "de", "federation": "UEFA", "fifaRank": 16 }
+]

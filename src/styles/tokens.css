@@ -1,0 +1,50 @@
+:root {
+  --c-bg-deep:     #050810;
+  --c-bg:          #0A1428;
+  --c-bg-elev-1:   #0E1A30;
+  --c-bg-elev-2:   #142340;
+
+  --c-pitch:       #1F5A1F;
+  --c-pitch-dark:  #0D2818;
+  --c-pitch-line:  #FFFFFF;
+
+  --c-gold:        #D4A017;
+  --c-gold-light:  #FFD700;
+
+  --c-text:        #F5F7FA;
+  --c-text-dim:    #8A95A8;
+  --c-text-muted:  #4A5468;
+
+  --c-live:        #FF3B3B;
+  --c-success:     #2ECC71;
+  --c-loss:        #E74C3C;
+
+  --ease-out:     cubic-bezier(.22,.61,.36,1);
+  --ease-impact:  cubic-bezier(.55,.05,.67,.19);
+  --ease-spring:  cubic-bezier(.34,1.56,.64,1);
+  --dur-fast:     150ms;
+  --dur-base:     300ms;
+  --dur-slow:     600ms;
+  --dur-reveal:   1200ms;
+
+  --shadow-card:   0 4px 16px rgba(0,0,0,0.35);
+  --shadow-raised: 0 12px 40px rgba(0,0,0,0.5);
+  --shadow-gold:   0 0 24px rgba(212,160,23,0.35);
+  --shadow-live:   0 0 16px rgba(255,59,59,0.5);
+}
+
+html, body { background: var(--c-bg); color: var(--c-text); }
+
+*:focus-visible {
+  outline: 2px solid var(--c-gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

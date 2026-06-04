@@ -1,0 +1,22 @@
+[
+  {
+    "id": "m-up-1",
+    "status": "scheduled",
+    "kickoff": "2026-06-04T18:00:00Z",
+    "stage": "Group B",
+    "group": "B",
+    "stadium": { "name": "Lumen Field", "city": "Seattle" },
+    "home": { "teamId": "ENG", "name": "England", "countryCode": "gb-eng" },
+    "away": { "teamId": "NED", "name": "Netherlands", "countryCode": "nl" }
+  },
+  {
+    "id": "m-up-2",
+    "status": "scheduled",
+    "kickoff": "2026-06-04T21:00:00Z",
+    "stage": "Group C",
+    "group": "C",
+    "stadium": { "name": "AT&T Stadium", "city": "Arlington" },
+    "home": { "teamId": "POR", "name": "Portugal", "countryCode": "pt" },
+    "away": { "teamId": "JPN", "name": "Japan", "countryCode": "jp" }
+  }
+]

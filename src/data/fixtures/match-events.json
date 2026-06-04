@@ -1,0 +1,7 @@
+[
+  { "id": "ev-1", "matchId": "m-today-1", "minute": 12, "type": "goal", "teamId": "USA", "playerName": "C. Pulisic", "detail": "Right footed shot" },
+  { "id": "ev-2", "matchId": "m-today-1", "minute": 27, "type": "yellow", "teamId": "MEX", "playerName": "E. Álvarez" },
+  { "id": "ev-3", "matchId": "m-today-1", "minute": 38, "type": "goal", "teamId": "MEX", "playerName": "S. Giménez", "detail": "Header" },
+  { "id": "ev-4", "matchId": "m-today-1", "minute": 54, "type": "goal", "teamId": "USA", "playerName": "G. Reyna", "detail": "Counter-attack" },
+  { "id": "ev-5", "matchId": "m-today-1", "minute": 61, "type": "sub", "teamId": "USA", "playerName": "T. Weah", "detail": "for B. Aaronson" }
+]

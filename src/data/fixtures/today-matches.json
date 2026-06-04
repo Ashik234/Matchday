@@ -1,0 +1,44 @@
+[
+  {
+    "id": "m-today-1",
+    "status": "live",
+    "kickoff": "2026-06-03T18:00:00Z",
+    "minute": 67,
+    "stage": "Group A",
+    "group": "A",
+    "stadium": { "name": "MetLife Stadium", "city": "East Rutherford" },
+    "home": { "teamId": "USA", "name": "United States", "countryCode": "us", "score": 2 },
+    "away": { "teamId": "MEX", "name": "Mexico", "countryCode": "mx", "score": 1 }
+  },
+  {
+    "id": "m-today-2",
+    "status": "live",
+    "kickoff": "2026-06-03T20:30:00Z",
+    "minute": 23,
+    "stage": "Group D",
+    "group": "D",
+    "stadium": { "name": "Estadio Azteca", "city": "Mexico City" },
+    "home": { "teamId": "BRA", "name": "Brazil", "countryCode": "br", "score": 0 },
+    "away": { "teamId": "ARG", "name": "Argentina", "countryCode": "ar", "score": 0 }
+  },
+  {
+    "id": "m-today-3",
+    "status": "scheduled",
+    "kickoff": "2026-06-03T23:00:00Z",
+    "stage": "Group E",
+    "group": "E",
+    "stadium": { "name": "BMO Field", "city": "Toronto" },
+    "home": { "teamId": "FRA", "name": "France", "countryCode": "fr" },
+    "away": { "teamId": "GER", "name": "Germany", "countryCode": "de" }
+  },
+  {
+    "id": "m-today-4",
+    "status": "scheduled",
+    "kickoff": "2026-06-04T01:00:00Z",
+    "stage": "Group H",
+    "group": "H",
+    "stadium": { "name": "SoFi Stadium", "city": "Los Angeles" },
+    "home": { "teamId": "ESP", "name": "Spain", "countryCode": "es" },
+    "away": { "teamId": "CAN", "name": "Canada", "countryCode": "ca" }
+  }
+]

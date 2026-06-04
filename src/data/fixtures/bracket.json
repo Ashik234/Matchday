@@ -1,0 +1,18 @@
+[
+  { "id": "n-r16-1", "round": "R16", "matchId": "m-r16-1", "home": { "teamId": "USA", "name": "United States", "countryCode": "us" }, "away": { "teamId": "NED", "name": "Netherlands", "countryCode": "nl" }, "nextNodeId": "n-qf-1" },
+  { "id": "n-r16-2", "round": "R16", "matchId": "m-r16-2", "home": { "teamId": "ARG", "name": "Argentina", "countryCode": "ar" }, "away": { "teamId": "POR", "name": "Portugal", "countryCode": "pt" }, "nextNodeId": "n-qf-1" },
+  { "id": "n-r16-3", "round": "R16", "matchId": "m-r16-3", "home": { "teamId": "FRA", "name": "France", "countryCode": "fr" }, "away": { "teamId": "JPN", "name": "Japan", "countryCode": "jp" }, "nextNodeId": "n-qf-2" },
+  { "id": "n-r16-4", "round": "R16", "matchId": "m-r16-4", "home": { "teamId": "ENG", "name": "England", "countryCode": "gb-eng" }, "away": { "teamId": "GER", "name": "Germany", "countryCode": "de" }, "nextNodeId": "n-qf-2" },
+  { "id": "n-r16-5", "round": "R16", "matchId": "m-r16-5", "home": { "teamId": "BRA", "name": "Brazil", "countryCode": "br" }, "away": { "teamId": "BEL", "name": "Belgium", "countryCode": "be" }, "nextNodeId": "n-qf-3" },
+  { "id": "n-r16-6", "round": "R16", "matchId": "m-r16-6", "home": { "teamId": "ESP", "name": "Spain", "countryCode": "es" }, "away": { "teamId": "CRO", "name": "Croatia", "countryCode": "hr" }, "nextNodeId": "n-qf-3" },
+  { "id": "n-r16-7", "round": "R16", "matchId": "m-r16-7", "home": { "teamId": "ITA", "name": "Italy", "countryCode": "it" }, "away": { "teamId": "URU", "name": "Uruguay", "countryCode": "uy" }, "nextNodeId": "n-qf-4" },
+  { "id": "n-r16-8", "round": "R16", "matchId": "m-r16-8", "home": { "teamId": "MEX", "name": "Mexico", "countryCode": "mx" }, "away": { "teamId": "NOR", "name": "Norway", "countryCode": "no" }, "nextNodeId": "n-qf-4" },
+  { "id": "n-qf-1", "round": "QF", "nextNodeId": "n-sf-1" },
+  { "id": "n-qf-2", "round": "QF", "nextNodeId": "n-sf-1" },
+  { "id": "n-qf-3", "round": "QF", "nextNodeId": "n-sf-2" },
+  { "id": "n-qf-4", "round": "QF", "nextNodeId": "n-sf-2" },
+  { "id": "n-sf-1", "round": "SF", "nextNodeId": "n-f" },
+  { "id": "n-sf-2", "round": "SF", "nextNodeId": "n-f" },
+  { "id": "n-f", "round": "F" },
+  { "id": "n-3rd", "round": "3rd" }
+]

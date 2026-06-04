@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@import './tokens.css';
+@import './fonts.css';
+@import 'flag-icons/css/flag-icons.min.css';
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter Variable', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+@keyframes floodPulse { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
