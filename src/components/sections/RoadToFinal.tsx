@@ -34,17 +34,20 @@ export function RoadToFinal() {
       {isFallback && <FallbackBanner onRetry={refetch} />}
       {isLoading && <Skeleton className="h-72" />}
       {!isLoading && (
-        <div className="flex gap-6 overflow-x-auto pb-4 -mx-4 px-4">
+        <div className="no-scrollbar flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4">
           {ORDER.map((round, i) => (
             <BracketColumn
               key={round}
               label={LABEL[round]}
               nodes={byRound.get(round) ?? []}
-              delay={i * 0.2}
+              delay={i * 0.15}
             />
           ))}
         </div>
       )}
+      <div className="text-[10px] uppercase tracking-[0.3em] text-text-dim mt-2 md:hidden text-center">
+        ← swipe →
+      </div>
     </Section>
   );
 }
