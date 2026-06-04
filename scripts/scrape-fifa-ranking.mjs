@@ -14,9 +14,52 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const OUTPUT = resolve(__dirname, '..', 'public', 'data', 'fifa-ranking.json');
 const URL = 'https://inside.fifa.com/fifa-world-ranking/men';
+const WC_TEAMS_URL =
+  'https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.teams.json';
 const NAV_TIMEOUT = 60_000;
 
+// Extra aliases for cases openfootball's name/name_normalised pair doesn't cover.
+// FIFA name → list of equivalent names that may appear in fixtures or UI.
+const FIFA_ALIASES = {
+  'IR Iran': ['Iran'],
+  'Türkiye': ['Turkey'],
+  'Côte d\'Ivoire': ['Ivory Coast', "Cote d'Ivoire"],
+  'Cape Verde Islands': ['Cape Verde', 'Cabo Verde'],
+  'Bosnia and Herzegovina': ['Bosnia & Herzegovina'],
+};
+
+function norm(s) {
+  return (s || '').toLowerCase().trim();
+}
+
+async function fetchWcTeamNames() {
+  console.log(`[scrape] fetching WC teams: ${WC_TEAMS_URL}`);
+  const res = await fetch(WC_TEAMS_URL);
+  if (!res.ok) throw new Error(`WC teams ${res.status}`);
+  const teams = await res.json();
+  // Map any-name → canonical openfootball name (t.name), so we can rewrite
+  // FIFA's name to the form the app uses for lookup.
+  const toCanonical = new Map();
+  for (const t of teams) {
+    if (!t.name) continue;
+    toCanonical.set(norm(t.name), t.name);
+    if (t.name_normalised) toCanonical.set(norm(t.name_normalised), t.name);
+  }
+  for (const [fifa, alts] of Object.entries(FIFA_ALIASES)) {
+    // FIFA name maps to the same canonical as its first alt (the openfootball form).
+    const canonical = alts.map((a) => toCanonical.get(norm(a))).find(Boolean);
+    if (canonical) {
+      toCanonical.set(norm(fifa), canonical);
+      for (const a of alts) toCanonical.set(norm(a), canonical);
+    }
+  }
+  console.log(`[scrape] WC name map size: ${toCanonical.size}`);
+  return toCanonical;
+}
+
 async function scrape() {
+  const wcMap = await fetchWcTeamNames();
+
   console.log(`[scrape] launching browser…`);
   const browser = await puppeteer.launch({
     headless: 'new',
@@ -104,10 +147,19 @@ async function scrape() {
 
     console.log(`[scrape] parsed ${ranking.length} teams`);
 
+    const filtered = ranking
+      .filter((r) => wcMap.has(norm(r.name)))
+      .map((r) => ({ ...r, name: wcMap.get(norm(r.name)) ?? r.name }));
+    console.log(`[scrape] kept ${filtered.length} WC teams (dropped ${ranking.length - filtered.length})`);
+
+    if (filtered.length < 48) {
+      console.warn(`[scrape] WARNING: only ${filtered.length}/48 WC teams matched — check FIFA_ALIASES`);
+    }
+
     const payload = {
       scrapedAt: new Date().toISOString(),
       source: URL,
-      ranking,
+      ranking: filtered,
     };
 
     await mkdir(dirname(OUTPUT), { recursive: true });
