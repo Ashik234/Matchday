@@ -1,4 +1,4 @@
-import { request } from './client';
+import { requestCached } from './client';
 import type { Team, Federation, Stadium } from '@/data/types';
 import { fifaToIso } from '@/utils/countryCodes';
 
@@ -25,12 +25,16 @@ type BdlStadium = {
   capacity?: number;
 };
 
+const TTL_TEAMS = 24 * 60 * 60 * 1000; // 24 hours — team list is static for the tournament
+const TTL_STADIUMS = 24 * 60 * 60 * 1000; // 24 hours — stadiums don't change
+
 export const bdl = {
   teams: async (_: void, signal: AbortSignal): Promise<Team[]> => {
-    const raw = await request<{ data: BdlTeam[] }>(
+    const raw = await requestCached<{ data: BdlTeam[] }>(
       'ballDontLie',
       `${BASE}/teams?per_page=100`,
       { signal, headers: headers() },
+      { ttlMs: TTL_TEAMS, staleOk: true },
     );
     return raw.data.map((t) => ({
       id: String(t.id),
@@ -41,10 +45,11 @@ export const bdl = {
   },
 
   stadiums: async (_: void, signal: AbortSignal): Promise<Stadium[]> => {
-    const raw = await request<{ data: BdlStadium[] }>(
+    const raw = await requestCached<{ data: BdlStadium[] }>(
       'ballDontLie',
       `${BASE}/stadiums?per_page=100`,
       { signal, headers: headers() },
+      { ttlMs: TTL_STADIUMS, staleOk: true },
     );
     return raw.data.map((s) => ({
       id: String(s.id),

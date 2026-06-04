@@ -12,6 +12,6 @@ export function useTodayMatches() {
     queryKey: ['today-matches', date],
     queryFn: ({ signal }) => openfootball.todayMatches({ date }, signal!),
     fixture: fixtures.todayMatches,
-    staleTime: 5 * 60_000,
+    staleTime: 30 * 60_000,
   });
 }

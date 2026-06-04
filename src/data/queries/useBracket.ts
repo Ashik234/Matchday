@@ -7,6 +7,6 @@ export function useBracket() {
     queryKey: ['bracket'],
     queryFn: ({ signal }) => openfootball.bracket(undefined, signal!),
     fixture: fixtures.bracket,
-    staleTime: 30 * 60_000,
+    staleTime: 60 * 60_000,
   });
 }

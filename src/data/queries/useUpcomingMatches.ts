@@ -7,6 +7,6 @@ export function useUpcomingMatches(limit = 2) {
     queryKey: ['upcoming-matches', limit],
     queryFn: ({ signal }) => openfootball.upcomingMatches({ limit }, signal!),
     fixture: fixtures.upcomingMatches.slice(0, limit),
-    staleTime: 30 * 60_000,
+    staleTime: 60 * 60_000,
   });
 }

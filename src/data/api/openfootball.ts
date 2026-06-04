@@ -1,4 +1,4 @@
-import { request } from './client';
+import { requestCached } from './client';
 import type {
   Match,
   Group,
@@ -29,18 +29,10 @@ type OfPayload = {
   matches: OfMatch[];
 };
 
-// One in-flight + cached promise for the lifetime of the page (TanStack still
-// handles invalidation; this avoids duplicate concurrent fetches).
-let cached: Promise<OfPayload> | null = null;
+const TTL_MS = 6 * 60 * 60 * 1000; // 6 hours
 
 function load(signal: AbortSignal): Promise<OfPayload> {
-  if (!cached) {
-    cached = request<OfPayload>('openfootball', SOURCE, { signal }).catch((err) => {
-      cached = null;
-      throw err;
-    });
-  }
-  return cached;
+  return requestCached<OfPayload>('openfootball', SOURCE, { signal }, { ttlMs: TTL_MS, staleOk: true });
 }
 
 // ---------- Helpers ----------

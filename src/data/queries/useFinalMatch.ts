@@ -7,6 +7,6 @@ export function useFinalMatch() {
     queryKey: ['final-match'],
     queryFn: ({ signal }) => openfootball.finalMatch(undefined, signal!),
     fixture: fixtures.finalMatch,
-    staleTime: 60 * 60_000,
+    staleTime: 6 * 60 * 60_000,
   });
 }

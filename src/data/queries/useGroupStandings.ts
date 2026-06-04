@@ -7,6 +7,6 @@ export function useGroupStandings() {
     queryKey: ['groups'],
     queryFn: ({ signal }) => openfootball.groups(undefined, signal!),
     fixture: fixtures.groups,
-    staleTime: 5 * 60_000,
+    staleTime: 30 * 60_000,
   });
 }

@@ -1,5 +1,7 @@
 import type { ReactNode } from 'react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient } from '@tanstack/react-query';
+import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
+import { createSyncStoragePersister } from '@tanstack/query-sync-storage-persister';
 import { HelmetProvider } from 'react-helmet-async';
 import { ErrorBoundary } from './ErrorBoundary';
 
@@ -14,12 +16,36 @@ const queryClient = new QueryClient({
   },
 });
 
+const persister =
+  typeof window !== 'undefined'
+    ? createSyncStoragePersister({
+        storage: window.localStorage,
+        key: 'matchday:rq',
+        throttleTime: 1000,
+      })
+    : undefined;
+
 export function Providers({ children }: { children: ReactNode }) {
+  if (!persister) {
+    // SSR fallback (not hit in this SPA, but keeps the type checker happy)
+    return (
+      <HelmetProvider>
+        <ErrorBoundary>{children}</ErrorBoundary>
+      </HelmetProvider>
+    );
+  }
   return (
     <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
+      <PersistQueryClientProvider
+        client={queryClient}
+        persistOptions={{
+          persister,
+          maxAge: 24 * 60 * 60 * 1000, // 24h
+          buster: 'v1',
+        }}
+      >
         <ErrorBoundary>{children}</ErrorBoundary>
-      </QueryClientProvider>
+      </PersistQueryClientProvider>
     </HelmetProvider>
   );
 }
