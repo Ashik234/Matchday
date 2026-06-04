@@ -65,7 +65,7 @@ export function FeaturedTeams() {
         onPointerUp={endDrag}
         onPointerCancel={endDrag}
         onClickCapture={onClickCapture}
-        className={`no-scrollbar flex gap-4 overflow-x-auto pb-4 -mx-4 px-4 select-none touch-pan-x ${
+        className={`no-scrollbar flex gap-4 overflow-x-auto overflow-y-visible pt-3 pb-4 -mx-4 px-4 select-none touch-pan-x ${
           grabbing ? 'cursor-grabbing' : 'cursor-grab'
         }`}
       >
