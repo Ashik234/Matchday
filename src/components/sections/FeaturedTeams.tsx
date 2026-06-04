@@ -19,9 +19,9 @@ export function FeaturedTeams() {
   const onPointerDown = useCallback((e: PointerEvent<HTMLDivElement>) => {
     const el = ref.current;
     if (!el) return;
+    // Only intercept primary mouse / touch / pen — let middle-click etc through.
+    if (e.button !== undefined && e.button !== 0) return;
     drag.current = { active: true, startX: e.clientX, startScroll: el.scrollLeft, moved: false };
-    setGrabbing(true);
-    el.setPointerCapture(e.pointerId);
   }, []);
 
   const onPointerMove = useCallback((e: PointerEvent<HTMLDivElement>) => {
@@ -29,16 +29,24 @@ export function FeaturedTeams() {
     const el = ref.current;
     if (!el) return;
     const dx = e.clientX - drag.current.startX;
-    if (Math.abs(dx) > 4) drag.current.moved = true;
-    el.scrollLeft = drag.current.startScroll - dx;
+    if (Math.abs(dx) > 6) {
+      if (!drag.current.moved) {
+        drag.current.moved = true;
+        setGrabbing(true);
+        el.setPointerCapture(e.pointerId);
+      }
+      el.scrollLeft = drag.current.startScroll - dx;
+    }
   }, []);
 
   const endDrag = useCallback((e: PointerEvent<HTMLDivElement>) => {
     if (!drag.current.active) return;
     drag.current.active = false;
-    setGrabbing(false);
-    ref.current?.releasePointerCapture(e.pointerId);
-  }, []);
+    if (grabbing) {
+      setGrabbing(false);
+      ref.current?.releasePointerCapture(e.pointerId);
+    }
+  }, [grabbing]);
 
   const onClickCapture = useCallback((e: React.MouseEvent) => {
     if (drag.current.moved) {

@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/Card';
 import { Flag } from '@/components/ui/Flag';
+import { toSlug } from '@/utils/slug';
 import type { Group } from '@/data/types';
 
 export function GroupCard({ group }: { group: Group }) {
@@ -30,10 +32,13 @@ export function GroupCard({ group }: { group: Group }) {
               className={i < 2 ? 'border-l-2 border-gold pl-1' : ''}
             >
               <td className="py-1.5">
-                <span className="flex items-center gap-2">
+                <Link
+                  to={`/team/${toSlug(row.team.name)}`}
+                  className="inline-flex items-center gap-2 hover:text-gold transition-colors"
+                >
                   <Flag countryCode={row.team.countryCode} size="sm" />
                   <span className="font-semibold">{row.team.name}</span>
-                </span>
+                </Link>
               </td>
               <td className="text-center">{row.played}</td>
               <td className="text-center">{row.won}</td>

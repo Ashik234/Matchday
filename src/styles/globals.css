@@ -13,3 +13,14 @@ body { font-family: 'Inter Variable', system-ui, sans-serif; -webkit-font-smooth
 
 .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
 .no-scrollbar::-webkit-scrollbar { display: none; }
+
+/* Hidden YouTube IFrame host — keeps audio playing while invisible. */
+.yt-host {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}

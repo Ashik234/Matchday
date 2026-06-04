@@ -9,3 +9,8 @@ export function formatKickoff(iso: string): string {
   const d = new Date(iso);
   return d.toLocaleTimeString(undefined, { hour: '2-digit', minute: '2-digit' });
 }
+
+export function formatDate(iso: string): string {
+  const d = new Date(iso);
+  return `${DAY[d.getDay()]!} · ${MON[d.getMonth()]!} ${d.getDate()}`;
+}

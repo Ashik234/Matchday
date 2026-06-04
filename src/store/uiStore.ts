@@ -4,6 +4,7 @@ type AudioState = {
   muted: boolean;
   playing: boolean;
   progress: number;
+  trackIndex: number;
 };
 
 type UIStore = {
@@ -12,6 +13,6 @@ type UIStore = {
 };
 
 export const useUIStore = create<UIStore>((set) => ({
-  audio: { muted: true, playing: false, progress: 0 },
+  audio: { muted: true, playing: false, progress: 0, trackIndex: 0 },
   setAudio: (patch) => set((s) => ({ audio: { ...s.audio, ...patch } })),
 }));

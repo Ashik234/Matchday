@@ -41,7 +41,7 @@ export function Providers({ children }: { children: ReactNode }) {
         persistOptions={{
           persister,
           maxAge: 24 * 60 * 60 * 1000, // 24h
-          buster: 'v1',
+          buster: 'v2',
         }}
       >
         <ErrorBoundary>{children}</ErrorBoundary>
