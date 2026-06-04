@@ -24,12 +24,17 @@ export function Logo() {
           className={ballCommon}
           style={ballStyle}
           aria-label="0"
-          initial={{ x: -110, rotate: 0, opacity: 0 }}
-          animate={{ x: 0, rotate: 720, opacity: 1 }}
+          initial={{ x: -150, y: 0, rotate: 0, opacity: 0 }}
+          animate={{
+            x: [-150, -110, -75, -40, 0],
+            y: [0, -28, -32, -22, 0],
+            rotate: [0, 270, 540, 810, 1080],
+            opacity: [0, 1, 1, 1, 1],
+          }}
           transition={{
-            duration: 1.8,
-            ease: [0.16, 0.84, 0.32, 1],
-            opacity: { duration: 0.2, ease: 'linear' },
+            duration: 2,
+            times: [0, 0.25, 0.5, 0.75, 1],
+            ease: 'easeInOut',
           }}
         />
       )}
