@@ -32,7 +32,7 @@ export function TrophyModel({ size = 140 }: { size?: number }) {
     >
       <Canvas
         dpr={[1, 2]}
-        camera={{ position: [0, 0.4, 3], fov: 35 }}
+        camera={{ position: [0, 0, 4.5], fov: 30 }}
         gl={{ alpha: true, antialias: true }}
         style={{ background: 'transparent' }}
       >
