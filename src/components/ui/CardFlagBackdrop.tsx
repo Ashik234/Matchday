@@ -27,6 +27,7 @@ export function CardFlagBackdrop({
   const mouseRef = useRef<[number, number]>([0.5, 0.5]);
   const intensityRef = useRef(0);
   const leaveTimerRef = useRef<number | null>(null);
+  const hoveringRef = useRef(false);
   const reduced = useReducedMotion();
 
   const isHoverDevice =
@@ -38,14 +39,23 @@ export function CardFlagBackdrop({
       window.clearTimeout(leaveTimerRef.current);
       leaveTimerRef.current = null;
     }
+    hoveringRef.current = true;
     setHovering(true);
     intensityRef.current = intensity;
     if (!tex) {
-      void loadFlagTexture(countryCode).then(setTex).catch(() => setHovering(false));
+      void loadFlagTexture(countryCode)
+        .then((t) => {
+          // ignore stale texture if user already left
+          if (hoveringRef.current) setTex(t);
+        })
+        .catch(() => {
+          if (hoveringRef.current) setHovering(false);
+        });
     }
   };
 
   const onLeave = () => {
+    hoveringRef.current = false;
     intensityRef.current = 0;
     leaveTimerRef.current = window.setTimeout(() => {
       setHovering(false);
