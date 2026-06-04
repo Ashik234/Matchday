@@ -1,5 +1,5 @@
 import { StadiumBackdrop } from './StadiumBackdrop';
-import { AudioPlayer } from './AudioPlayer';
+import { YouTubeAudioPlayer } from './YouTubeAudioPlayer';
 
 export function HeroLeft() {
   return (
@@ -13,7 +13,7 @@ export function HeroLeft() {
           Experience the journey to the Final.
         </h1>
         <div className="mt-6">
-          <AudioPlayer />
+          <YouTubeAudioPlayer />
         </div>
       </div>
     </div>
