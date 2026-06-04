@@ -1,16 +1,13 @@
-import { useEnriched } from './useEnriched';
-import { ballDontLie } from '@/data/api/ballDontLie';
+import { useQuery } from '@tanstack/react-query';
 import { fixtures } from '@/data/fixtures';
-import { useDocumentVisibility } from '@/hooks/useDocumentVisibility';
+import type { MatchEvent } from '@/data/types';
 
 export function useMatchEvents(matchId: string | undefined) {
-  const visible = useDocumentVisibility();
-  return useEnriched({
+  // BDL free tier does not expose match events. Always return fixture sample.
+  return useQuery<MatchEvent[], Error>({
     queryKey: ['match-events', matchId ?? 'none'],
-    queryFn: ({ signal }) => ballDontLie.matchEvents({ matchId: matchId! }, signal!),
-    fixture: fixtures.matchEvents,
+    queryFn: () => Promise.resolve(fixtures.matchEvents),
     enabled: !!matchId,
-    staleTime: 15_000,
-    refetchInterval: visible && matchId ? 15_000 : false,
+    staleTime: Infinity,
   });
 }

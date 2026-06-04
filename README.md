@@ -24,9 +24,8 @@ pnpm dev
 
 | Key | Purpose |
 | --- | --- |
-| `VITE_WC2026_KEY` | World Cup 2026 API key (optional) |
-| `VITE_API_FOOTBALL_KEY` | API-Football key (optional) |
-| `VITE_BDL_KEY` | BallDontLie FIFA bearer token (optional) |
+| `VITE_API_FOOTBALL_KEY` | API-Football key (FIFA World Cup 2026 = league=1, season=2026) |
+| `VITE_BDL_KEY` | BallDontLie FIFA key (free tier: teams + stadiums only) |
 | `VITE_USE_FIXTURES` | `true` forces fixture data even when keys present |
 
 If any key is missing or the API fails, the UI falls back to local fixture data with a banner indicating sample data is shown.
@@ -37,9 +36,9 @@ See `docs/superpowers/specs/2026-06-03-matchday/` for full planning docs and `do
 
 ## Data sources
 
-- World Cup 2026 API — teams, matches, groups, standings, bracket
-- API-Football (`v3.football.api-sports.io`) — head-to-head, historical
-- BallDontLie FIFA — match events, player stats
+- API-Football (`v3.football.api-sports.io`) — fixtures, standings, bracket, venues, head-to-head (FIFA World Cup 2026: `league=1, season=2026`)
+- BallDontLie FIFA World Cup (`api.balldontlie.io/fifa/worldcup/v1`) — teams and stadiums (free tier)
+- Local fixtures — fallback for sections without live coverage (e.g. match events)
 
 ## License
 
