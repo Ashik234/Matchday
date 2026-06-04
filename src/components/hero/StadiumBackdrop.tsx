@@ -5,9 +5,9 @@ export function StadiumBackdrop() {
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 60% 40% at 50% 100%, rgba(31,90,31,0.5) 0%, transparent 70%),' +
+            'radial-gradient(ellipse 60% 40% at 50% 100%, rgba(26,58,122,0.55) 0%, transparent 70%),' +
             'radial-gradient(ellipse 80% 50% at 50% 20%, rgba(255,255,255,0.08) 0%, transparent 60%),' +
-            'linear-gradient(180deg, #0A1428 0%, #0F1A2E 40%, #0D2818 100%)',
+            'linear-gradient(180deg, #0A1428 0%, #0F1A2E 40%, #0B1E45 100%)',
         }}
       />
       <div
@@ -28,7 +28,7 @@ export function StadiumBackdrop() {
       <div
         className="absolute left-0 right-0 bottom-0 h-[38%]"
         style={{
-          background: 'linear-gradient(180deg, #1F5A1F 0%, #0D2818 100%)',
+          background: 'linear-gradient(180deg, #1A3A7A 0%, #0B1E45 100%)',
         }}
       />
       <div
