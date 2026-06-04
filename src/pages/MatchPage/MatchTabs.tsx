@@ -5,7 +5,6 @@ export type MatchTabKey =
   | 'overview'
   | 'h2h'
   | 'form'
-  | 'scorers'
   | 'squad'
   | 'history';
 
@@ -13,7 +12,6 @@ export const MATCH_TABS: { key: MatchTabKey; label: string }[] = [
   { key: 'overview', label: 'Overview' },
   { key: 'h2h', label: 'Head-to-Head' },
   { key: 'form', label: 'Recent Form' },
-  { key: 'scorers', label: 'Top Scorers' },
   { key: 'squad', label: 'Squad' },
   { key: 'history', label: 'Previous Meetings' },
 ];

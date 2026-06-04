@@ -1,4 +1,4 @@
-import { FlagRipple } from '@/components/ui/FlagRipple';
+import { Flag } from '@/components/ui/Flag';
 import { Countdown } from '@/components/ui/Countdown';
 import { Pill } from '@/components/ui/Pill';
 import type { Match } from '@/data/types';
@@ -34,7 +34,7 @@ export function MatchHero({
       <div className="relative max-w-container mx-auto px-6 lg:px-8 py-10 md:py-14">
         <div className="grid grid-cols-3 gap-4 items-center">
           <div className="flex flex-col items-center text-center gap-3">
-            <FlagRipple countryCode={match.home.countryCode} size="xl" ariaLabel={match.home.name} />
+            <Flag countryCode={match.home.countryCode} size="xl" ariaLabel={match.home.name} />
             <div className="font-display text-2xl md:text-3xl text-text">{match.home.name}</div>
             {homeRank && (
               <div className="text-[10px] uppercase tracking-[0.18em] text-gold">FIFA #{homeRank}</div>
@@ -54,7 +54,7 @@ export function MatchHero({
           </div>
 
           <div className="flex flex-col items-center text-center gap-3">
-            <FlagRipple countryCode={match.away.countryCode} size="xl" ariaLabel={match.away.name} />
+            <Flag countryCode={match.away.countryCode} size="xl" ariaLabel={match.away.name} />
             <div className="font-display text-2xl md:text-3xl text-text">{match.away.name}</div>
             {awayRank && (
               <div className="text-[10px] uppercase tracking-[0.18em] text-gold">FIFA #{awayRank}</div>

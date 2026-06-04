@@ -9,7 +9,6 @@ import { MatchTabs, MATCH_TABS, type MatchTabKey } from './MatchTabs';
 import { MatchOverviewTab } from './tabs/MatchOverviewTab';
 import { HeadToHeadTab } from './tabs/HeadToHeadTab';
 import { RecentFormTab } from './tabs/RecentFormTab';
-import { TopScorersTab } from './tabs/TopScorersTab';
 import { SquadCompareTab } from './tabs/SquadCompareTab';
 import { PreviousMeetingsTab } from './tabs/PreviousMeetingsTab';
 import type { Match } from '@/data/types';
@@ -77,7 +76,7 @@ export default function MatchPage() {
     );
   }
 
-  const { match, h2h, squadHome, squadAway, recentHome, recentAway, topScorersHome, topScorersAway } = profile;
+  const { match, h2h, squadHome, squadAway, recentHome, recentAway } = profile;
   const homeCode = homeTeam?.id ?? match.home.countryCode.toUpperCase();
   const awayCode = awayTeam?.id ?? match.away.countryCode.toUpperCase();
 
@@ -122,16 +121,6 @@ export default function MatchPage() {
                 awayCode={awayCode}
                 recentHome={recentHome}
                 recentAway={recentAway}
-              />
-            )}
-            {tab === 'scorers' && (
-              <TopScorersTab
-                homeName={match.home.name}
-                awayName={match.away.name}
-                scorersHome={topScorersHome}
-                scorersAway={topScorersAway}
-                squadHome={squadHome}
-                squadAway={squadAway}
               />
             )}
             {tab === 'squad' && (

@@ -10,12 +10,6 @@ import type {
   Player,
 } from '@/data/types';
 
-export type Scorer = {
-  name: string;
-  goals: number;
-  lastTournament: string;
-};
-
 export type MatchProfile = {
   match?: Match;
   h2h: HistoricalMatch[];
@@ -23,39 +17,9 @@ export type MatchProfile = {
   squadAway: Player[];
   recentHome: Array<Match | HistoricalMatch>;
   recentAway: Array<Match | HistoricalMatch>;
-  topScorersHome: Scorer[];
-  topScorersAway: Scorer[];
   isLoading: boolean;
   notFound: boolean;
 };
-
-function aggregateScorers(
-  history: HistoricalMatch[],
-  teamCode: string,
-  topN: number,
-): Scorer[] {
-  const byPlayer = new Map<string, { goals: number; tournaments: string[] }>();
-  for (const m of history) {
-    for (const e of m.events) {
-      if (e.teamCode !== teamCode) continue;
-      if (e.type !== 'goal' && e.type !== 'penalty') continue;
-      const entry = byPlayer.get(e.player) ?? { goals: 0, tournaments: [] };
-      entry.goals++;
-      if (!entry.tournaments.includes(m.tournament)) {
-        entry.tournaments.push(m.tournament);
-      }
-      byPlayer.set(e.player, entry);
-    }
-  }
-  return Array.from(byPlayer.entries())
-    .map(([name, { goals, tournaments }]) => ({
-      name,
-      goals,
-      lastTournament: tournaments.sort().reverse()[0] ?? '',
-    }))
-    .sort((a, b) => b.goals - a.goals)
-    .slice(0, topN);
-}
 
 function recentForTeam(
   current: Match[],
@@ -131,21 +95,6 @@ export function useMatchProfile(slug: string): MatchProfile {
     [match, matches.data, history.data, awayTeam],
   );
 
-  const topScorersHome = useMemo(
-    () =>
-      homeTeam && history.data
-        ? aggregateScorers(history.data.matches, homeTeam.id, 5)
-        : [],
-    [homeTeam, history.data],
-  );
-  const topScorersAway = useMemo(
-    () =>
-      awayTeam && history.data
-        ? aggregateScorers(history.data.matches, awayTeam.id, 5)
-        : [],
-    [awayTeam, history.data],
-  );
-
   const isLoading =
     matches.isLoading || teams.isLoading || history.isLoading;
   const notFound = !matches.isLoading && !!matches.data && !match;
@@ -157,8 +106,6 @@ export function useMatchProfile(slug: string): MatchProfile {
     squadAway: squadAway.players,
     recentHome,
     recentAway,
-    topScorersHome,
-    topScorersAway,
     isLoading,
     notFound,
   };
