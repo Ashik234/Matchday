@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Section } from './Section';
 import { useTodayMatches, useUpcomingMatches } from '@/data/queries';
 import { MatchCard } from '@/components/ui/MatchCard';
@@ -8,6 +9,7 @@ import { FallbackBanner } from '@/components/ui/FallbackBanner';
 import { Countdown } from '@/components/ui/Countdown';
 import { cn } from '@/utils/cn';
 import { MatchSchema } from '@/components/seo/MatchSchema';
+import { toMatchSlug } from '@/utils/matchSlug';
 
 type Filter = 'all' | 'live' | 'upcoming';
 
@@ -72,7 +74,9 @@ export function TodayMatchesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
             >
-              <MatchCard variant="today" match={m} />
+              <Link to={`/match/${toMatchSlug(m)}`} className="block">
+                <MatchCard variant="today" match={m} />
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -123,7 +127,9 @@ export function TodayMatchesSection() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.08 }}
                   >
-                    <MatchCard variant="today" match={m} />
+                    <Link to={`/match/${toMatchSlug(m)}`} className="block">
+                      <MatchCard variant="today" match={m} />
+                    </Link>
                   </motion.div>
                 ))}
               </div>
