@@ -4,7 +4,7 @@ import type { Team } from '@/data/types';
 
 export function TeamCarouselCard({ team }: { team: Team }) {
   return (
-    <Card hover className="min-w-[260px] snap-start">
+    <Card hover className="min-w-[260px] shrink-0 snap-start">
       <div className="flex items-center gap-3 mb-3">
         <Flag countryCode={team.countryCode} size="lg" />
         <div>
