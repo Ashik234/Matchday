@@ -1,11 +1,11 @@
 import { useEnriched } from './useEnriched';
-import { apiFootball } from '@/data/api/apiFootball';
+import { openfootball } from '@/data/api/openfootball';
 import { fixtures } from '@/data/fixtures';
 
 export function useBracket() {
   return useEnriched({
     queryKey: ['bracket'],
-    queryFn: ({ signal }) => apiFootball.bracket(undefined, signal!),
+    queryFn: ({ signal }) => openfootball.bracket(undefined, signal!),
     fixture: fixtures.bracket,
     staleTime: 30 * 60_000,
   });

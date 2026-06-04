@@ -1,11 +1,11 @@
 import { useEnriched } from './useEnriched';
-import { apiFootball } from '@/data/api/apiFootball';
+import { openfootball } from '@/data/api/openfootball';
 import { fixtures } from '@/data/fixtures';
 
 export function useGroupStandings() {
   return useEnriched({
     queryKey: ['groups'],
-    queryFn: ({ signal }) => apiFootball.groups(undefined, signal!),
+    queryFn: ({ signal }) => openfootball.groups(undefined, signal!),
     fixture: fixtures.groups,
     staleTime: 5 * 60_000,
   });

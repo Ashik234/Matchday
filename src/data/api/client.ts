@@ -1,4 +1,4 @@
-export type ApiSource = 'apiFootball' | 'ballDontLie';
+export type ApiSource = 'ballDontLie' | 'openfootball';
 
 export class ApiError extends Error {
   source: ApiSource;
