@@ -30,12 +30,14 @@ export function YouTubeAudioPlayer() {
         if (cancelled || !hostRef.current) return;
         playerRef.current = new YT.Player(hostRef.current, {
           videoId: track.videoId,
+          host: 'https://www.youtube-nocookie.com',
           playerVars: {
             controls: 0,
             disablekb: 1,
             playsinline: 1,
             rel: 0,
             modestbranding: 1,
+            origin: window.location.origin,
           },
           events: {
             onReady: (e) => {
@@ -58,13 +60,14 @@ export function YouTubeAudioPlayer() {
                 }
               }
             },
-            onError: () => {
-              const id = ANTHEMS[trackIndexRef.current]?.id;
-              if (id) {
+            onError: (err) => {
+              const a = ANTHEMS[trackIndexRef.current];
+              if (a) {
+                console.warn(`[anthem] YT error ${err.data} on "${a.title}" (${a.videoId})`);
                 setErroredIds((prev) => {
-                  if (prev.has(id)) return prev;
+                  if (prev.has(a.id)) return prev;
                   const nxt = new Set(prev);
-                  nxt.add(id);
+                  nxt.add(a.id);
                   return nxt;
                 });
               }

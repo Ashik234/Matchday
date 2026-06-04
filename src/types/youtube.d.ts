@@ -15,11 +15,13 @@ declare global {
       rel?: 0 | 1;
       modestbranding?: 0 | 1;
       autoplay?: 0 | 1;
+      origin?: string;
     }
     interface PlayerOptions {
       videoId?: string;
       width?: number;
       height?: number;
+      host?: string;
       playerVars?: PlayerVars;
       events?: {
         onReady?: (e: PlayerEvent) => void;
