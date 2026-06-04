@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "scrape:ranking": "node scripts/scrape-fifa-ranking.mjs",
-    "scrape:squads": "node scripts/scrape-squads.mjs"
+    "scrape:squads": "node scripts/scrape-squads.mjs",
+    "scrape:matches": "node scripts/scrape-match-history.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
