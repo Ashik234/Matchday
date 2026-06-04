@@ -1,22 +1,24 @@
+import { Link } from 'react-router-dom';
+
 const LINKS = [
-  { label: 'Home', href: '#hero' },
-  { label: 'Matches', href: '#today-matches' },
-  { label: 'Teams', href: '#featured-teams' },
-  { label: 'Stadiums', href: '#stadiums' },
-  { label: 'Bracket', href: '#road-to-final' },
+  { label: 'Home', to: '/' },
+  { label: 'Matches', to: '/#today-matches' },
+  { label: 'Teams', to: '/#featured-teams' },
+  { label: 'Stadiums', to: '/#stadiums' },
+  { label: 'Bracket', to: '/#road-to-final' },
 ];
 
 export function NavLinks() {
   return (
     <ul className="flex gap-7">
       {LINKS.map((l) => (
-        <li key={l.href}>
-          <a
-            href={l.href}
+        <li key={l.to}>
+          <Link
+            to={l.to}
             className="text-xs font-semibold tracking-[0.15em] uppercase text-text/85 hover:text-gold transition-colors duration-fast"
           >
             {l.label}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>
