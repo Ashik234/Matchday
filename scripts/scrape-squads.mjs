@@ -25,6 +25,21 @@ async function fetchWcTeamCodes() {
     map.set(norm(t.name), t.fifa_code);
     if (t.name_normalised) map.set(norm(t.name_normalised), t.fifa_code);
   }
+  // Wikipedia → openfootball name aliases (Wikipedia heading on the left,
+  // openfootball name on the right). Add new aliases as scraper drift surfaces.
+  const WIKI_ALIASES = {
+    'bosnia and herzegovina': 'Bosnia & Herzegovina',
+    "cote d'ivoire": "Côte d'Ivoire",
+    'ivory coast': "Côte d'Ivoire",
+    'cape verde': 'Cape Verde Islands',
+    'cabo verde': 'Cape Verde Islands',
+    'turkey': 'Türkiye',
+    'south korea': 'Korea Republic',
+  };
+  for (const [wikiName, ofName] of Object.entries(WIKI_ALIASES)) {
+    const code = map.get(norm(ofName));
+    if (code) map.set(norm(wikiName), code);
+  }
   return map;
 }
 

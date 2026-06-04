@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-06-04T09:35:03.641Z",
+  "scrapedAt": "2026-06-04T09:41:17.462Z",
   "teams": {
     "CZE": {
       "teamCode": "CZE",
@@ -1162,6 +1162,297 @@
           "age": 28,
           "caps": 18,
           "goals": 4
+        }
+      ]
+    },
+    "BIH": {
+      "teamCode": "BIH",
+      "players": [
+        {
+          "id": "BIH-1",
+          "teamCode": "BIH",
+          "jersey": 1,
+          "name": "Nikola Vasilj",
+          "position": "GK",
+          "club": "FC St. Pauli",
+          "age": 30,
+          "caps": 25,
+          "goals": 0
+        },
+        {
+          "id": "BIH-2",
+          "teamCode": "BIH",
+          "jersey": 2,
+          "name": "Nihad Mujakić",
+          "position": "DF",
+          "club": "Gaziantep",
+          "age": 28,
+          "caps": 11,
+          "goals": 1
+        },
+        {
+          "id": "BIH-3",
+          "teamCode": "BIH",
+          "jersey": 3,
+          "name": "Dennis Hadžikadunić",
+          "position": "DF",
+          "club": "Sampdoria",
+          "age": 27,
+          "caps": 31,
+          "goals": 0
+        },
+        {
+          "id": "BIH-4",
+          "teamCode": "BIH",
+          "jersey": 4,
+          "name": "Tarik Muharemović",
+          "position": "DF",
+          "club": "Sassuolo",
+          "age": 23,
+          "caps": 13,
+          "goals": 1
+        },
+        {
+          "id": "BIH-5",
+          "teamCode": "BIH",
+          "jersey": 5,
+          "name": "Sead Kolašinac",
+          "position": "DF",
+          "club": "Atalanta",
+          "age": 32,
+          "caps": 64,
+          "goals": 0
+        },
+        {
+          "id": "BIH-6",
+          "teamCode": "BIH",
+          "jersey": 6,
+          "name": "Benjamin Tahirović",
+          "position": "MF",
+          "club": "Brøndby",
+          "age": 23,
+          "caps": 27,
+          "goals": 2
+        },
+        {
+          "id": "BIH-7",
+          "teamCode": "BIH",
+          "jersey": 7,
+          "name": "Amar Dedić",
+          "position": "DF",
+          "club": "Benfica",
+          "age": 23,
+          "caps": 27,
+          "goals": 1
+        },
+        {
+          "id": "BIH-8",
+          "teamCode": "BIH",
+          "jersey": 8,
+          "name": "Armin Gigović",
+          "position": "MF",
+          "club": "Young Boys",
+          "age": 24,
+          "caps": 19,
+          "goals": 1
+        },
+        {
+          "id": "BIH-9",
+          "teamCode": "BIH",
+          "jersey": 9,
+          "name": "Samed Baždar",
+          "position": "FW",
+          "club": "Jagiellonia Białystok",
+          "age": 22,
+          "caps": 12,
+          "goals": 1
+        },
+        {
+          "id": "BIH-10",
+          "teamCode": "BIH",
+          "jersey": 10,
+          "name": "Ermedin Demirović",
+          "position": "FW",
+          "club": "VfB Stuttgart",
+          "age": 28,
+          "caps": 39,
+          "goals": 4
+        },
+        {
+          "id": "BIH-11",
+          "teamCode": "BIH",
+          "jersey": 11,
+          "name": "Edin Džeko (captain)",
+          "position": "FW",
+          "club": "Schalke 04",
+          "age": 40,
+          "caps": 148,
+          "goals": 73
+        },
+        {
+          "id": "BIH-12",
+          "teamCode": "BIH",
+          "jersey": 12,
+          "name": "Mladen Jurkas",
+          "position": "GK",
+          "club": "Borac Banja Luka",
+          "age": 18,
+          "caps": 0,
+          "goals": 0
+        },
+        {
+          "id": "BIH-13",
+          "teamCode": "BIH",
+          "jersey": 13,
+          "name": "Ivan Bašić",
+          "position": "MF",
+          "club": "Astana",
+          "age": 24,
+          "caps": 16,
+          "goals": 0
+        },
+        {
+          "id": "BIH-14",
+          "teamCode": "BIH",
+          "jersey": 14,
+          "name": "Ivan Šunjić",
+          "position": "MF",
+          "club": "Pafos",
+          "age": 29,
+          "caps": 11,
+          "goals": 0
+        },
+        {
+          "id": "BIH-15",
+          "teamCode": "BIH",
+          "jersey": 15,
+          "name": "Amar Memić",
+          "position": "MF",
+          "club": "Viktoria Plzeň",
+          "age": 25,
+          "caps": 12,
+          "goals": 1
+        },
+        {
+          "id": "BIH-16",
+          "teamCode": "BIH",
+          "jersey": 16,
+          "name": "Amir Hadžiahmetović",
+          "position": "MF",
+          "club": "Hull City",
+          "age": 29,
+          "caps": 35,
+          "goals": 0
+        },
+        {
+          "id": "BIH-17",
+          "teamCode": "BIH",
+          "jersey": 17,
+          "name": "Dženis Burnić",
+          "position": "MF",
+          "club": "Karlsruher SC",
+          "age": 28,
+          "caps": 19,
+          "goals": 0
+        },
+        {
+          "id": "BIH-18",
+          "teamCode": "BIH",
+          "jersey": 18,
+          "name": "Nikola Katić",
+          "position": "DF",
+          "club": "Schalke 04",
+          "age": 29,
+          "caps": 16,
+          "goals": 1
+        },
+        {
+          "id": "BIH-19",
+          "teamCode": "BIH",
+          "jersey": 19,
+          "name": "Kerim Alajbegović",
+          "position": "FW",
+          "club": "Red Bull Salzburg",
+          "age": 18,
+          "caps": 9,
+          "goals": 1
+        },
+        {
+          "id": "BIH-20",
+          "teamCode": "BIH",
+          "jersey": 20,
+          "name": "Esmir Bajraktarević",
+          "position": "FW",
+          "club": "PSV Eindhoven",
+          "age": 21,
+          "caps": 15,
+          "goals": 1
+        },
+        {
+          "id": "BIH-21",
+          "teamCode": "BIH",
+          "jersey": 21,
+          "name": "Stjepan Radeljić",
+          "position": "DF",
+          "club": "Rijeka",
+          "age": 28,
+          "caps": 5,
+          "goals": 0
+        },
+        {
+          "id": "BIH-22",
+          "teamCode": "BIH",
+          "jersey": 22,
+          "name": "Martin Zlomislić",
+          "position": "GK",
+          "club": "Rijeka",
+          "age": 27,
+          "caps": 3,
+          "goals": 0
+        },
+        {
+          "id": "BIH-23",
+          "teamCode": "BIH",
+          "jersey": 23,
+          "name": "Haris Tabaković",
+          "position": "FW",
+          "club": "Borussia Mönchengladbach",
+          "age": 31,
+          "caps": 10,
+          "goals": 4
+        },
+        {
+          "id": "BIH-24",
+          "teamCode": "BIH",
+          "jersey": 24,
+          "name": "Nidal Čelik",
+          "position": "DF",
+          "club": "Lens",
+          "age": 19,
+          "caps": 1,
+          "goals": 0
+        },
+        {
+          "id": "BIH-25",
+          "teamCode": "BIH",
+          "jersey": 25,
+          "name": "Jovo Lukić",
+          "position": "FW",
+          "club": "Universitatea Cluj",
+          "age": 27,
+          "caps": 2,
+          "goals": 0
+        },
+        {
+          "id": "BIH-26",
+          "teamCode": "BIH",
+          "jersey": 26,
+          "name": "Ermin Mahmić",
+          "position": "MF",
+          "club": "Slovan Liberec",
+          "age": 21,
+          "caps": 1,
+          "goals": 0
         }
       ]
     },
