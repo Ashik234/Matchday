@@ -14,6 +14,9 @@ export function YouTubeAudioPlayer() {
   const [unavailable, setUnavailable] = useState(false);
   const [coverFailed, setCoverFailed] = useState(false);
 
+  const trackIndexRef = useRef(audio.trackIndex);
+  trackIndexRef.current = audio.trackIndex;
+
   const track = ANTHEMS[audio.trackIndex] ?? ANTHEMS[0]!;
 
   useEffect(() => {
@@ -41,7 +44,7 @@ export function YouTubeAudioPlayer() {
             onStateChange: (e) => {
               if (e.data === YT.PlayerState.ENDED) {
                 setAudio({
-                  trackIndex: (audio.trackIndex + 1) % ANTHEMS.length,
+                  trackIndex: (trackIndexRef.current + 1) % ANTHEMS.length,
                   playing: true,
                 });
               }
@@ -72,8 +75,9 @@ export function YouTubeAudioPlayer() {
     const p = playerRef.current;
     if (!p || !ready) return;
     p.loadVideoById(track.videoId);
+    let pauseTimer: number | null = null;
     if (!audio.playing) {
-      window.setTimeout(() => p.pauseVideo(), 50);
+      pauseTimer = window.setTimeout(() => p.pauseVideo(), 50);
     }
     setCoverFailed(false);
 
@@ -83,6 +87,9 @@ export function YouTubeAudioPlayer() {
         setAudio({ trackIndex: (audio.trackIndex + 1) % ANTHEMS.length });
       }, 5000);
     }
+    return () => {
+      if (pauseTimer) window.clearTimeout(pauseTimer);
+    };
   }, [audio.trackIndex, ready]); // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
