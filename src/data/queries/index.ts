@@ -7,3 +7,4 @@ export * from './useFinalMatch';
 export * from './useTeams';
 export * from './useStadiums';
 export * from './useAllMatches';
+export * from './useFifaRanking';

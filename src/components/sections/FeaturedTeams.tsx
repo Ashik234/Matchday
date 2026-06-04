@@ -7,7 +7,11 @@ import { FallbackBanner } from '@/components/ui/FallbackBanner';
 
 export function FeaturedTeams() {
   const { data, isLoading, isFallback, refetch } = useTeams();
-  const teams = data ?? [];
+  const teams = (data ?? []).slice().sort((a, b) => {
+    const ra = a.fifaRank ?? 999;
+    const rb = b.fifaRank ?? 999;
+    return ra - rb;
+  });
   const ref = useRef<HTMLDivElement>(null);
   const drag = useRef({ active: false, startX: 0, startScroll: 0, moved: false });
   const [grabbing, setGrabbing] = useState(false);
