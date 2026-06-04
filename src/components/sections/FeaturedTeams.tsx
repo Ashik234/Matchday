@@ -1,10 +1,13 @@
 import { useRef, useState, useCallback, type PointerEvent } from 'react';
 import { Section } from './Section';
 import { TeamCarouselCard } from './TeamCarouselCard';
-import { fixtures } from '@/data/fixtures';
+import { useTeams } from '@/data/queries';
+import { Skeleton } from '@/components/ui/Skeleton';
+import { FallbackBanner } from '@/components/ui/FallbackBanner';
 
 export function FeaturedTeams() {
-  const teams = fixtures.teams;
+  const { data, isLoading, isFallback, refetch } = useTeams();
+  const teams = data ?? [];
   const ref = useRef<HTMLDivElement>(null);
   const drag = useRef({ active: false, startX: 0, startScroll: 0, moved: false });
   const [grabbing, setGrabbing] = useState(false);
@@ -42,6 +45,7 @@ export function FeaturedTeams() {
 
   return (
     <Section id="featured-teams" stage="featured-teams" eyebrow="Featured" title="Teams to watch">
+      {isFallback && <FallbackBanner onRetry={refetch} />}
       <div
         ref={ref}
         onPointerDown={onPointerDown}
@@ -53,9 +57,12 @@ export function FeaturedTeams() {
           grabbing ? 'cursor-grabbing' : 'cursor-grab'
         }`}
       >
-        {teams.map((t) => (
-          <TeamCarouselCard key={t.id} team={t} />
-        ))}
+        {isLoading &&
+          Array.from({ length: 6 }).map((_, i) => (
+            <Skeleton key={i} className="min-w-[260px] h-32" />
+          ))}
+        {!isLoading &&
+          teams.map((t) => <TeamCarouselCard key={t.id} team={t} />)}
       </div>
     </Section>
   );
