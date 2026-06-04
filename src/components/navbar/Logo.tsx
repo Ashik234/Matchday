@@ -2,9 +2,19 @@ import { motion } from 'framer-motion';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 function BallSVG() {
+  // truncated icosahedron pattern: center pentagon + 5 outer hex panels (black on gold)
+  const cx = 32;
+  const cy = 32;
+  const rPent = 9;
+  const rHex = 22;
+  const pent = (radius: number, rot: number) =>
+    Array.from({ length: 5 }, (_, i) => {
+      const a = ((rot + i * 72) * Math.PI) / 180;
+      return `${cx + radius * Math.sin(a)},${cy - radius * Math.cos(a)}`;
+    }).join(' ');
   return (
     <svg
-      viewBox="0 0 32 32"
+      viewBox="0 0 64 64"
       width="100%"
       height="100%"
       aria-hidden="true"
@@ -17,20 +27,24 @@ function BallSVG() {
           <stop offset="100%" stopColor="#B8860B" />
         </radialGradient>
       </defs>
-      <circle cx="16" cy="16" r="16" fill="url(#ballShade)" />
+      <circle cx={cx} cy={cy} r="32" fill="url(#ballShade)" />
       {/* center pentagon */}
-      <polygon
-        points="16,9 22,13 19.5,20 12.5,20 10,13"
-        fill="#1A1A1A"
-      />
-      {/* spokes to outer hexagons */}
-      <line x1="16" y1="9" x2="16" y2="2" stroke="#1A1A1A" strokeWidth="1.4" />
-      <line x1="22" y1="13" x2="29" y2="10" stroke="#1A1A1A" strokeWidth="1.4" />
-      <line x1="19.5" y1="20" x2="24" y2="28" stroke="#1A1A1A" strokeWidth="1.4" />
-      <line x1="12.5" y1="20" x2="8" y2="28" stroke="#1A1A1A" strokeWidth="1.4" />
-      <line x1="10" y1="13" x2="3" y2="10" stroke="#1A1A1A" strokeWidth="1.4" />
+      <polygon points={pent(rPent, 0)} fill="#0F0F0F" />
+      {/* 5 outer hexagon "spokes" — small black pentagons offset outward */}
+      {Array.from({ length: 5 }).map((_, i) => {
+        const a = ((i * 72) * Math.PI) / 180;
+        const ox = cx + rHex * Math.sin(a);
+        const oy = cy - rHex * Math.cos(a);
+        const offsetPts = Array.from({ length: 5 }, (_, j) => {
+          const aa = ((j * 72 + i * 72 + 36) * Math.PI) / 180;
+          return `${ox + 5.5 * Math.sin(aa)},${oy - 5.5 * Math.cos(aa)}`;
+        }).join(' ');
+        return <polygon key={i} points={offsetPts} fill="#0F0F0F" />;
+      })}
       {/* highlight */}
-      <ellipse cx="11" cy="9" rx="4.5" ry="2.2" fill="rgba(255,255,255,0.35)" />
+      <ellipse cx="22" cy="18" rx="9" ry="4.5" fill="rgba(255,255,255,0.3)" />
+      {/* rim shadow */}
+      <circle cx={cx} cy={cy} r="31" fill="none" stroke="rgba(0,0,0,0.25)" strokeWidth="2" />
     </svg>
   );
 }
