@@ -137,7 +137,7 @@ export function BracketTree({ rounds }: { rounds: Rounds }) {
     <div
       ref={containerRef}
       className="relative w-full"
-      style={{ height: layout.height + 60, marginTop: 200 }}
+      style={{ height: layout.height + 60, marginTop: 130 }}
     >
       <div className="absolute inset-x-0 top-0 grid grid-cols-7 text-[10px] uppercase tracking-[0.18em] text-text-dim text-center pointer-events-none">
         {labelCols.map((l, i) => (
@@ -196,11 +196,11 @@ export function BracketTree({ rounds }: { rounds: Rounds }) {
         <div
           style={{
             position: 'absolute',
-            left: finalPos.x + CARD_W / 2 - 110,
-            top: finalPos.y - 240,
+            left: finalPos.x + CARD_W / 2 - 70,
+            top: finalPos.y - 170,
           }}
         >
-          <TrophyCenter size={220} />
+          <TrophyCenter size={140} />
         </div>
       )}
     </div>
