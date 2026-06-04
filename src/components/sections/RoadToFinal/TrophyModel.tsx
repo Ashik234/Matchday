@@ -1,13 +1,14 @@
-import { Suspense } from 'react';
+import { Suspense, useMemo } from 'react';
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, useGLTF, Environment } from '@react-three/drei';
+import { OrbitControls, useGLTF, Environment, Center, Bounds } from '@react-three/drei';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 const MODEL_URL = '/models/wc-trophy.glb';
 
 function TrophyMesh() {
   const { scene } = useGLTF(MODEL_URL);
-  return <primitive object={scene} scale={1.2} />;
+  const cloned = useMemo(() => scene.clone(true), [scene]);
+  return <primitive object={cloned} />;
 }
 
 useGLTF.preload(MODEL_URL);
@@ -22,7 +23,7 @@ export function TrophyModel({ size = 140 }: { size?: number }) {
     >
       <Canvas
         dpr={[1, 2]}
-        camera={{ position: [0, 0.5, 3.5], fov: 35 }}
+        camera={{ position: [0, 0.5, 4], fov: 35 }}
         gl={{ alpha: true, antialias: true }}
         style={{ background: 'transparent' }}
       >
@@ -30,18 +31,19 @@ export function TrophyModel({ size = 140 }: { size?: number }) {
         <directionalLight position={[5, 6, 5]} intensity={1.1} />
         <directionalLight position={[-4, 2, -3]} intensity={0.4} />
         <Suspense fallback={null}>
-          <TrophyMesh />
+          <Bounds fit clip observe margin={1.2}>
+            <Center>
+              <TrophyMesh />
+            </Center>
+          </Bounds>
           <Environment preset="studio" />
         </Suspense>
         <OrbitControls
+          makeDefault
           enableZoom
           enablePan={false}
           autoRotate={!reduced}
           autoRotateSpeed={1.5}
-          minDistance={2}
-          maxDistance={6}
-          minPolarAngle={Math.PI / 3}
-          maxPolarAngle={Math.PI / 1.8}
         />
       </Canvas>
     </div>
