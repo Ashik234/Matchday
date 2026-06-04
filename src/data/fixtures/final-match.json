@@ -1,0 +1,9 @@
+{
+  "id": "m-final",
+  "status": "scheduled",
+  "kickoff": "2026-07-19T19:00:00Z",
+  "stage": "Final",
+  "stadium": { "name": "MetLife Stadium", "city": "East Rutherford" },
+  "home": { "teamId": "TBD-H", "name": "TBD", "countryCode": "xx" },
+  "away": { "teamId": "TBD-A", "name": "TBD", "countryCode": "xx" }
+}
