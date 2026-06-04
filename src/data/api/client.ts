@@ -1,6 +1,6 @@
 import { getCached, setCached, getStale } from '@/data/cache/storageCache';
 
-export type ApiSource = 'ballDontLie' | 'openfootball';
+export type ApiSource = 'openfootball';
 
 export class ApiError extends Error {
   source: ApiSource;

@@ -5,3 +5,5 @@ export * from './useGroupStandings';
 export * from './useBracket';
 export * from './useFinalMatch';
 export * from './useMatchEvents';
+export * from './useTeams';
+export * from './useStadiums';

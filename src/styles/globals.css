@@ -10,3 +10,6 @@ body { font-family: 'Inter Variable', system-ui, sans-serif; -webkit-font-smooth
 
 @keyframes shimmer { 100% { transform: translateX(100%); } }
 @keyframes floodPulse { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }

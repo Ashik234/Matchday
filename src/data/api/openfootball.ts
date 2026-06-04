@@ -1,4 +1,4 @@
-import { requestCached } from './client';
+import { request, requestCached } from './client';
 import type {
   Match,
   Group,
@@ -6,12 +6,22 @@ import type {
   BracketNode,
   BracketRound,
   MatchStatus,
+  Team,
+  Stadium,
 } from '@/data/types';
 import { nameToIso } from '@/utils/countryCodes';
 
 const SOURCE =
   import.meta.env.VITE_OPENFOOTBALL_URL ??
   'https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json';
+
+const TEAMS_SOURCE =
+  import.meta.env.VITE_OPENFOOTBALL_TEAMS_URL ??
+  'https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.teams.json';
+
+const STADIUMS_SOURCE =
+  import.meta.env.VITE_OPENFOOTBALL_STADIUMS_URL ??
+  'https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.stadiums.json';
 
 type OfMatch = {
   round: string;
@@ -27,6 +37,31 @@ type OfMatch = {
 type OfPayload = {
   name: string;
   matches: OfMatch[];
+};
+
+type OfTeam = {
+  name: string;
+  name_normalised?: string;
+  continent: string;
+  flag_icon: string;
+  flag_unicode: string;
+  fifa_code: string;
+  group: string;
+  confed: 'AFC' | 'CAF' | 'CONCACAF' | 'CONMEBOL' | 'OFC' | 'UEFA';
+};
+
+type OfStadium = {
+  city: string;
+  timezone: string;
+  cc: string;
+  name: string;
+  capacity: number;
+  coords: string;
+};
+
+type OfStadiumsPayload = {
+  name: string;
+  stadiums: OfStadium[];
 };
 
 const TTL_MS = 6 * 60 * 60 * 1000; // 6 hours
@@ -240,5 +275,27 @@ export const openfootball = {
     const final = matches.find((m) => /^Final\b/i.test(m.stage));
     if (!final) throw new Error('Final not found in openfootball payload');
     return final;
+  },
+
+  teams: async (_: void, signal: AbortSignal): Promise<Team[]> => {
+    const raw = await request<OfTeam[]>('openfootball', TEAMS_SOURCE, { signal });
+    return raw.map((t) => ({
+      id: t.fifa_code,
+      name: t.name,
+      countryCode: nameToIso(t.name) || t.fifa_code.toLowerCase().slice(0, 2),
+      federation: t.confed,
+      group: t.group,
+    }));
+  },
+
+  stadiums: async (_: void, signal: AbortSignal): Promise<Stadium[]> => {
+    const raw = await request<OfStadiumsPayload>('openfootball', STADIUMS_SOURCE, { signal });
+    return raw.stadiums.map((s, i) => ({
+      id: `${s.cc}-${i}`,
+      name: s.name,
+      city: s.city,
+      country: s.cc.toUpperCase(),
+      capacity: s.capacity,
+    }));
   },
 };

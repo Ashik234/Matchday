@@ -9,7 +9,7 @@ Requirements: Node 18+, pnpm 8+.
 ```bash
 pnpm install
 cp .env.example .env.local
-# openfootball needs no key; BDL key is optional (fixtures used on failure)
+# openfootball needs no key; fixtures used on failure
 pnpm dev
 ```
 
@@ -24,10 +24,10 @@ pnpm dev
 
 | Key | Purpose |
 | --- | --- |
-| `VITE_OPENFOOTBALL_URL` | openfootball/worldcup.json source URL (default points at the 2026 file) |
-| `VITE_BDL_KEY` | BallDontLie FIFA key (free tier: teams + stadiums only) |
-| `VITE_BDL_BASE_URL` | BallDontLie base URL (defaults to `api.balldontlie.io/fifa/worldcup/v1`) |
-| `VITE_USE_FIXTURES` | `true` forces fixture data even when keys present |
+| `VITE_OPENFOOTBALL_URL` | openfootball matches JSON URL (default: 2026 worldcup.json) |
+| `VITE_OPENFOOTBALL_TEAMS_URL` | openfootball teams JSON URL (optional override) |
+| `VITE_OPENFOOTBALL_STADIUMS_URL` | openfootball stadiums JSON URL (optional override) |
+| `VITE_USE_FIXTURES` | `true` forces fixture data |
 
 If a request fails, the UI falls back to local fixture data with a banner indicating sample data is shown.
 
@@ -37,8 +37,7 @@ See `docs/superpowers/specs/2026-06-03-matchday/` for full planning docs and `do
 
 ## Data sources
 
-- openfootball/worldcup.json (`raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.json`) — full 2026 schedule, groups, knockout rounds, final. Public domain JSON, no key required, served via GitHub CDN with `Access-Control-Allow-Origin: *`. Today/upcoming/live/standings/bracket are all derived client-side from a single cached fetch.
-- BallDontLie FIFA World Cup (`api.balldontlie.io/fifa/worldcup/v1`) — teams and stadiums (free tier).
+- openfootball/worldcup.json (`raw.githubusercontent.com/openfootball/worldcup.json/master/2026/`) — full 2026 schedule, groups, knockout rounds, final, teams, and stadiums. Public domain JSON, no key required, served via GitHub CDN with `Access-Control-Allow-Origin: *`. Today/upcoming/live/standings/bracket are all derived client-side from a single cached fetch. Teams and stadiums come from separate JSON files on the same CDN path.
 - Local fixtures — fallback for sections without live coverage (e.g. match events) and whenever the network call fails.
 
 ## License

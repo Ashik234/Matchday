@@ -6,4 +6,5 @@ export type Team = {
   countryCode: string;
   federation: Federation;
   fifaRank?: number;
+  group?: string;
 };
