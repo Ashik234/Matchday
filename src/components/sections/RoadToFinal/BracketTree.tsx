@@ -196,11 +196,11 @@ export function BracketTree({ rounds }: { rounds: Rounds }) {
         <div
           style={{
             position: 'absolute',
-            left: finalPos.x + CARD_W / 2 - 48,
-            top: finalPos.y - 110,
+            left: finalPos.x + CARD_W / 2 - 70,
+            top: finalPos.y - 160,
           }}
         >
-          <TrophyCenter />
+          <TrophyCenter size={140} />
         </div>
       )}
     </div>
