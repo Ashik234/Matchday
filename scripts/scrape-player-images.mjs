@@ -1,40 +1,44 @@
 #!/usr/bin/env node
-// Scrape national-team player portraits → public/images/players/ + manifest.
-// Usage: pnpm run scrape:player-images [-- --force] [-- --team ARG] [-- --player BRA-10]
+// Generate SVG portraits for every WC squad player.
+// - Curated stars (~50) get hand-picked motifs from scripts/data/player-motifs.json.
+// - Long tail gets deterministic motif derived from name+jersey hash.
+// Outputs:
+//   public/images/players/<iso>-<jersey>-<slug>.svg
+//   public/data/player-images.json   (manifest mapping Player.id → image entry)
+//
+// Usage:
+//   node scripts/scrape-player-images.mjs                 (full rebuild)
+//   node scripts/scrape-player-images.mjs --team ARG
+//   node scripts/scrape-player-images.mjs --player BRA-10
 
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, rm, readdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import sharp from 'sharp';
-import { findPlayerQid, fetchEntity, extractImageFilenames } from './lib/wikidata.mjs';
-import { fetchFileMetadata, downloadFile } from './lib/commons.mjs';
-import { rankImageCandidates } from './lib/image-rank.mjs';
-import { generateFallbackSvg } from './lib/fallback-svg.mjs';
+import { renderPortraitSvg } from './lib/motif-svg.mjs';
 import { countryMeta } from './lib/country-meta.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const SQUADS_PATH = resolve(ROOT, 'public', 'data', 'squads.json');
+const MOTIFS_PATH = resolve(__dirname, 'data', 'player-motifs.json');
 const MANIFEST_PATH = resolve(ROOT, 'public', 'data', 'player-images.json');
 const IMG_DIR = resolve(ROOT, 'public', 'images', 'players');
 
-// CLI flags
 const argv = process.argv.slice(2);
 const flags = {
-  force: argv.includes('--force'),
   team: argvValue('--team'),
   player: argvValue('--player'),
+  clean: argv.includes('--clean'),
 };
 function argvValue(name) {
   const i = argv.indexOf(name);
   return i >= 0 ? argv[i + 1] : null;
 }
 
-// Flag colors per ISO code — copied from src/utils/flagColors.ts so the build-time
-// scraper doesn't need a TS→JS bridge.
+// Flag colors per ISO code — copied from src/utils/flagColors.ts because the
+// build-time script can't import TS directly.
 const FLAG_COLORS = {
-  // UEFA
   fr:        ['#0055A4', '#FFFFFF', '#EF4135'],
   es:        ['#AA151B', '#F1BF00'],
   ar:        ['#74ACDF', '#FFFFFF', '#F6B40E'],
@@ -54,13 +58,11 @@ const FLAG_COLORS = {
   tr:        ['#E30A17', '#FFFFFF'],
   'gb-sct':  ['#005EB8', '#FFFFFF'],
   it:        ['#008C45', '#FFFFFF', '#CD212A'],
-  // CONMEBOL
   br:        ['#FEDF00', '#009C3B', '#002776'],
   uy:        ['#7B9FE5', '#FFFFFF', '#FCD116'],
   co:        ['#FCD116', '#003893', '#CE1126'],
   ec:        ['#FFD100', '#0072CE', '#EF3340'],
   py:        ['#D52B1E', '#FFFFFF', '#0038A8'],
-  // AFC
   jp:        ['#FFFFFF', '#BC002D'],
   kr:        ['#FFFFFF', '#CD2E3A', '#0047A0'],
   ir:        ['#239F40', '#FFFFFF', '#DA0000'],
@@ -70,7 +72,6 @@ const FLAG_COLORS = {
   au:        ['#012169', '#FFFFFF', '#E4002B'],
   uz:        ['#0099B5', '#FFFFFF', '#1EB53A'],
   jo:        ['#000000', '#FFFFFF', '#007A3D', '#CE1126'],
-  // CAF
   ma:        ['#C1272D', '#006233'],
   eg:        ['#CE1126', '#FFFFFF', '#000000'],
   sn:        ['#00853F', '#FDEF42', '#E31B23'],
@@ -81,103 +82,95 @@ const FLAG_COLORS = {
   dz:        ['#006233', '#FFFFFF', '#D21034'],
   cv:        ['#003893', '#FFFFFF', '#CF2027', '#F7D116'],
   cd:        ['#007FFF', '#F7D618', '#CE1126'],
-  // CONCACAF
   us:        ['#3C3B6E', '#FFFFFF', '#B22234'],
   mx:        ['#006847', '#FFFFFF', '#CE1126'],
   ca:        ['#FF0000', '#FFFFFF'],
   ht:        ['#00209F', '#D21034'],
   pa:        ['#005AA7', '#FFFFFF', '#D21034'],
   cw:        ['#012169', '#FFD100', '#FFFFFF'],
-  // OFC
   nz:        ['#012169', '#FFFFFF', '#C8102E'],
 };
-function flagColorsFor(iso) {
-  return FLAG_COLORS[iso] ?? ['#1a1a1a', '#3a3a3a'];
+
+// Some FIFA squad codes differ from the COUNTRY_META keys. Map them.
+const TEAM_CODE_ALIASES = {
+  KSA: 'SAU',
+  ALG: 'DZA',
+  COD: 'DRC',
+  IRQ: 'IRQ',
+  SUI: 'SUI',
+};
+
+// ISO codes for squad codes not in country-meta.
+const SQUAD_ISO_FALLBACK = {
+  KSA: 'sa',
+  ALG: 'dz',
+  COD: 'cd',
+  IRQ: 'iq',
+  SUI: 'ch',
+};
+
+function isoForTeam(teamCode) {
+  const meta = countryMeta(TEAM_CODE_ALIASES[teamCode] ?? teamCode);
+  if (meta) return meta.iso;
+  return SQUAD_ISO_FALLBACK[teamCode] ?? null;
 }
 
 function slug(s) {
   return s
-    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
     .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
-async function loadManifest() {
-  if (!existsSync(MANIFEST_PATH)) return { generatedAt: new Date().toISOString(), players: {} };
-  return JSON.parse(await readFile(MANIFEST_PATH, 'utf8'));
+function cleanName(name) {
+  return name.replace(/\s*\([^)]*\)\s*$/, '').trim();
 }
 
-async function resolveOne(player, existing) {
-  const id = player.id;
-  if (!flags.force && existing.players[id]) return existing.players[id];
+async function loadMotifs() {
+  if (!existsSync(MOTIFS_PATH)) return {};
+  const raw = JSON.parse(await readFile(MOTIFS_PATH, 'utf8'));
+  // Strip underscore-prefixed metadata keys.
+  const out = {};
+  for (const [k, v] of Object.entries(raw)) {
+    if (!k.startsWith('_')) out[k] = v;
+  }
+  return out;
+}
 
-  const meta = countryMeta(player.teamCode);
-  if (!meta) {
-    console.warn(`[skip] no country meta for ${player.teamCode}`);
+async function cleanImgDir() {
+  if (!existsSync(IMG_DIR)) return;
+  const entries = await readdir(IMG_DIR);
+  for (const f of entries) await rm(resolve(IMG_DIR, f));
+  console.log(`[clean] removed ${entries.length} files from ${IMG_DIR}`);
+}
+
+async function renderOne(player, motifs) {
+  const iso = isoForTeam(player.teamCode);
+  if (!iso) {
+    console.warn(`[skip] no ISO mapping for ${player.teamCode}`);
     return null;
   }
+  const cn = cleanName(player.name);
+  const fileSlug = `${iso}-${player.jersey}-${slug(cn)}`;
+  const motifEntry = motifs[player.id] ?? null;
+  const flagColors = FLAG_COLORS[iso] ?? ['#1a1a1a', '#3a3a3a'];
 
-  // Strip parenthetical suffixes like "(captain)" / "(vice-captain)" before
-  // Wikidata lookup — SPARQL rdfs:label does exact match, and the squad scrape
-  // includes captain markers that no Wikidata entity has in its label.
-  const cleanName = player.name.replace(/\s*\([^)]*\)\s*$/, '').trim();
-
-  let chosen = null;
-  try {
-    const qid = await findPlayerQid(cleanName, meta.qid);
-    if (qid) {
-      const entity = await fetchEntity(qid);
-      const filenames = extractImageFilenames(entity);
-      const metas = [];
-      for (const fn of filenames) {
-        const m = await fetchFileMetadata(fn);
-        if (m) metas.push(m);
-      }
-      const ranked = rankImageCandidates(metas, { country: meta.country, countryAdjective: meta.adjective });
-      chosen = ranked[0] ?? null;
-    }
-  } catch (err) {
-    console.warn(`[wikidata-fail] ${id} ${player.name}: ${err.message}`);
-  }
-
-  const fileSlug = `${meta.iso}-${player.jersey}-${slug(cleanName)}`;
-
-  if (chosen) {
-    try {
-      const { buffer, hash } = await downloadFile(chosen.filename, { width: 800 });
-      const processed = await sharp(buffer)
-        .resize(600, 800, { fit: 'cover', position: 'top' })
-        .webp({ quality: 82 })
-        .toBuffer();
-      const outPath = resolve(IMG_DIR, `${fileSlug}.webp`);
-      await writeFile(outPath, processed);
-      return {
-        url: `/images/players/${fileSlug}.webp`,
-        width: 600,
-        height: 800,
-        source: chosen.source,
-        hash,
-        generatedAt: new Date().toISOString(),
-        attribution: chosen.attribution || '',
-      };
-    } catch (err) {
-      console.warn(`[download-fail] ${id} ${chosen.filename}: ${err.message}`);
-      // Fall through to fallback SVG
-    }
-  }
-
-  // Fallback SVG
-  const svg = generateFallbackSvg({
-    name: player.name,
+  const svg = renderPortraitSvg({
+    name: cn,
     jersey: player.jersey,
-    flagColors: flagColorsFor(meta.iso),
+    flagColors,
+    motif: motifEntry?.motif ?? null,
+    signature: motifEntry?.signature ?? null,
+    accent: motifEntry?.accent ?? null,
   });
+
   const outPath = resolve(IMG_DIR, `${fileSlug}.svg`);
   await writeFile(outPath, svg);
+
   return {
     url: `/images/players/${fileSlug}.svg`,
     width: 600,
     height: 800,
-    source: 'generated-fallback',
+    source: motifEntry ? 'motif-curated' : 'motif-default',
     hash: '',
     generatedAt: new Date().toISOString(),
     attribution: '',
@@ -186,24 +179,31 @@ async function resolveOne(player, existing) {
 
 async function main() {
   await mkdir(IMG_DIR, { recursive: true });
-  const squads = JSON.parse(await readFile(SQUADS_PATH, 'utf8'));
-  const existing = await loadManifest();
-  const out = { generatedAt: new Date().toISOString(), players: { ...existing.players } };
+  if (flags.clean) await cleanImgDir();
 
-  const teamEntries = Object.entries(squads.teams);
-  let processed = 0;
-  for (const [code, team] of teamEntries) {
+  const squads = JSON.parse(await readFile(SQUADS_PATH, 'utf8'));
+  const motifs = await loadMotifs();
+  const out = { generatedAt: new Date().toISOString(), players: {} };
+
+  let curated = 0;
+  let total = 0;
+
+  for (const [code, team] of Object.entries(squads.teams)) {
     if (flags.team && code !== flags.team) continue;
     for (const player of team.players) {
       if (flags.player && player.id !== flags.player) continue;
-      const entry = await resolveOne(player, existing);
-      if (entry) out.players[player.id] = entry;
-      processed++;
-      if (processed % 10 === 0) console.log(`[progress] ${processed} players done`);
+      const entry = await renderOne(player, motifs);
+      if (entry) {
+        out.players[player.id] = entry;
+        total++;
+        if (entry.source === 'motif-curated') curated++;
+      }
     }
   }
+
   await writeFile(MANIFEST_PATH, JSON.stringify(out, null, 2));
-  console.log(`[done] ${processed} players, manifest at ${MANIFEST_PATH}`);
+  console.log(`[done] ${total} portraits written (${curated} curated, ${total - curated} default)`);
+  console.log(`[manifest] ${MANIFEST_PATH}`);
 }
 
 main().catch((err) => {

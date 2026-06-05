@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
+  <title id="t">Mohamed Salah #10</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CE1126"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  
+    <path d="M300 580 Q220 480 240 360 Q190 320 240 240 Q260 200 300 180 Q340 200 360 240 Q410 320 360 360 Q380 480 300 580 Z"
+          fill="#CE1126" stroke="#fff" stroke-width="5" opacity="0.88"/>
+    <path d="M300 480 Q260 420 280 360 Q300 320 300 280 Q300 320 320 360 Q340 420 300 480 Z"
+          fill="#fff" opacity="0.45"/>
+  <rect width="600" height="800" fill="url(#vignette)"/>
+  <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
+        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">MS10</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
+        font-size="56" fill="#CE1126" font-weight="700">#10</text>
+  <text x="60" y="760" font-family="Anton, Impact, sans-serif"
+        font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">MOHAMED SALAH</text>
+</svg>

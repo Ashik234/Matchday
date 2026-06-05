@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
+  <title id="t">Yoane Wissa #20</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#007FFF"/>
+      <stop offset="100%" stop-color="#F7D618"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  
+    <g stroke="#CE1126" stroke-width="20" stroke-linecap="round">
+      <line x1="200" y1="200" x2="420" y2="500"/>
+      <line x1="420" y1="200" x2="200" y2="500"/>
+    </g>
+  <rect width="600" height="800" fill="url(#vignette)"/>
+  <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
+        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">YW</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
+        font-size="56" fill="#CE1126" font-weight="700">#20</text>
+  <text x="60" y="760" font-family="Anton, Impact, sans-serif"
+        font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">YOANE WISSA</text>
+</svg>

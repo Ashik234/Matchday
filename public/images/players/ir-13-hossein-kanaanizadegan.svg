@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
+  <title id="t">Hossein Kanaanizadegan #13</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#239F40"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  
+    <g stroke="#DA0000" stroke-width="10" fill="none" opacity="0.9">
+      <line x1="240" y1="200" x2="240" y2="480"/>
+      <line x1="360" y1="200" x2="360" y2="480"/>
+      <line x1="240" y1="280" x2="360" y2="200"/>
+      <line x1="240" y1="400" x2="360" y2="320"/>
+    </g>
+  <rect width="600" height="800" fill="url(#vignette)"/>
+  <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
+        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">HK</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
+        font-size="56" fill="#DA0000" font-weight="700">#13</text>
+  <text x="60" y="760" font-family="Anton, Impact, sans-serif"
+        font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">HOSSEIN KANAANIZADEGAN</text>
+</svg>

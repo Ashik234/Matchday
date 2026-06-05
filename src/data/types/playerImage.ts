@@ -1,10 +1,6 @@
 export type PlayerImageSource =
-  | 'wikidata-national-team'
-  | 'wikidata-tournament'
-  | 'wikidata-national-team-training'
-  | 'wikidata-portrait'
-  | 'manual-override'
-  | 'generated-fallback';
+  | 'motif-curated'      // hand-crafted SVG motif (star players)
+  | 'motif-default';     // auto-generated SVG from name+jersey hash
 
 export type PlayerImage = {
   /** Path served by Vite, relative to site root, e.g. `/images/players/arg-10-messi.webp`. */
