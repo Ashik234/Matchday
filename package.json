@@ -11,7 +11,8 @@
     "scrape:ranking": "node scripts/scrape-fifa-ranking.mjs",
     "scrape:squads": "node scripts/scrape-squads.mjs",
     "scrape:matches": "node scripts/scrape-match-history.mjs",
-    "scrape:player-images": "node scripts/scrape-player-images.mjs"
+    "scrape:player-images": "node scripts/scrape-player-images.mjs",
+    "scrape:results": "node scripts/scrape-match-results.mjs"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",

@@ -12,3 +12,9 @@ export type {
   HistoricalMatch,
   MatchHistoryPayload,
 } from './matchHistory';
+export type {
+  MatchResult,
+  MatchResultsPayload,
+  ResultStatus,
+  Scorer,
+} from './matchResult';

@@ -1,6 +1,8 @@
 import { Flag } from '@/components/ui/Flag';
 import { Countdown } from '@/components/ui/Countdown';
 import { Pill } from '@/components/ui/Pill';
+import { useMatchResult } from '@/data/queries/useMatchResults';
+import { toMatchSlug } from '@/utils/matchSlug';
 import type { Match } from '@/data/types';
 
 export function MatchHero({
@@ -12,6 +14,10 @@ export function MatchHero({
   homeRank?: number;
   awayRank?: number;
 }) {
+  const result = useMatchResult(toMatchSlug(match));
+  const homeScore = result?.homeScore ?? match.home.score;
+  const awayScore = result?.awayScore ?? match.away.score;
+  const isFinished = match.status === 'finished' || Boolean(result);
   const kickoff = new Date(match.kickoff);
   const dateStr = kickoff.toLocaleDateString(undefined, {
     weekday: 'short',
@@ -44,13 +50,18 @@ export function MatchHero({
           <div className="flex flex-col items-center text-center gap-3">
             <div className="text-[10px] uppercase tracking-[0.18em] text-text-dim">{match.stage}</div>
             <div className="font-display text-3xl md:text-display text-text">
-              {match.home.score ?? '·'} <span className="text-text-dim">vs</span> {match.away.score ?? '·'}
+              {homeScore ?? '·'} <span className="text-text-dim">vs</span> {awayScore ?? '·'}
             </div>
+            {result?.status === 'PEN' && (
+              <div className="text-xs text-text-dim font-mono">
+                ({result.homePenScore} - {result.awayPenScore}) on penalties
+              </div>
+            )}
             <div className="text-xs text-text-dim">{dateStr}</div>
             <div className="text-[11px] text-text-dim">{match.stadium.name}</div>
-            {match.status === 'scheduled' && <Countdown to={match.kickoff} />}
-            {match.status === 'live' && <Pill variant="live">LIVE · {match.minute}'</Pill>}
-            {match.status === 'finished' && <Pill variant="final">FT</Pill>}
+            {!isFinished && match.status === 'scheduled' && <Countdown to={match.kickoff} />}
+            {match.status === 'live' && !result && <Pill variant="live">LIVE · {match.minute}'</Pill>}
+            {isFinished && <Pill variant="final">{result?.status ?? 'FT'}</Pill>}
           </div>
 
           <div className="flex flex-col items-center text-center gap-3">
