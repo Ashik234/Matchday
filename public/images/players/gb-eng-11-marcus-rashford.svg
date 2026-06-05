@@ -12,11 +12,10 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M200 220 Q300 180 400 220 Q420 280 380 320 Q300 340 220 320 Q180 280 200 220 Z"
-          fill="#CE1124" opacity="0.6"/>
-    
-    <path d="M310 130 L210 380 L290 380 L240 580 L390 290 L310 290 L360 130 Z"
-          fill="#CE1124" stroke="#fff" stroke-width="6" opacity="0.92"/>
+    <path d="M180 420 Q230 320 320 320 Q400 320 420 380 Q440 460 380 480 Q300 500 220 480 Q160 460 180 420 Z"
+          fill="#CE1124" opacity="0.9"/>
+    <circle cx="380" cy="360" r="8" fill="#fff"/>
+    <path d="M420 380 L460 340 L450 360 L470 380" fill="none" stroke="#CE1124" stroke-width="6"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">MR</text>

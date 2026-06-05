@@ -12,9 +12,10 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M120 380 Q180 320 240 380 T360 380 T480 380 L480 480 L120 480 Z"
-          fill="#0047A0" opacity="0.85"/>
-    <path d="M120 440 Q180 400 240 440 T360 440 T480 440" fill="none" stroke="#fff" stroke-width="3" opacity="0.5"/>
+    <g>
+      <circle cx="220" cy="220" r="6" fill="#0047A0"/><circle cx="320" cy="260" r="6" fill="#0047A0"/><circle cx="420" cy="220" r="6" fill="#0047A0"/><circle cx="380" cy="360" r="6" fill="#0047A0"/><circle cx="260" cy="380" r="6" fill="#0047A0"/><circle cx="180" cy="460" r="6" fill="#0047A0"/><circle cx="340" cy="460" r="6" fill="#0047A0"/><circle cx="440" cy="420" r="6" fill="#0047A0"/><circle cx="300" cy="520" r="6" fill="#0047A0"/><circle cx="240" cy="300" r="6" fill="#0047A0"/>
+      <polyline points="220,220 320,260 420,220 380,360 260,380 180,460 340,460 440,420 300,520 240,300" fill="none" stroke="#0047A0" stroke-width="2" opacity="0.55"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">YH</text>

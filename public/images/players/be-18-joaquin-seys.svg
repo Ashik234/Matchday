@@ -12,8 +12,16 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M120 340 A180 180 0 0 1 480 340" fill="none" stroke="#ED2939" stroke-width="22" opacity="0.9"/>
-    <circle cx="300" cy="340" r="60" fill="#ED2939" opacity="0.85"/>
+    <g transform="translate(220 340)">
+      <circle r="80" fill="#ED2939" opacity="0.85"/>
+      <circle r="40" fill="#fff"/>
+      <circle r="18" fill="#000"/>
+    </g>
+    <g transform="translate(380 340)">
+      <circle r="80" fill="#ED2939" opacity="0.85"/>
+      <circle r="40" fill="#fff"/>
+      <circle r="18" fill="#000"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">JS</text>

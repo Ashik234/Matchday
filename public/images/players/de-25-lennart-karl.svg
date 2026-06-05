@@ -12,10 +12,10 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M200 460 L380 460 L430 380 L400 360 L380 380 L300 380 L260 320 L200 360 Z"
-          fill="#FFCE00" opacity="0.92" stroke="#fff" stroke-width="4"/>
-    <path d="M180 360 Q140 340 100 360 M180 380 Q140 360 100 380 M180 400 Q140 380 100 400"
-          stroke="#FFCE00" stroke-width="6" fill="none" opacity="0.85"/>
+    <path d="M180 420 Q230 320 320 320 Q400 320 420 380 Q440 460 380 480 Q300 500 220 480 Q160 460 180 420 Z"
+          fill="#FFCE00" opacity="0.9"/>
+    <circle cx="380" cy="360" r="8" fill="#fff"/>
+    <path d="M420 380 L460 340 L450 360 L470 380" fill="none" stroke="#FFCE00" stroke-width="6"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">LK</text>

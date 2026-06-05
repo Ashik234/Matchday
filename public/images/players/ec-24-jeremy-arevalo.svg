@@ -12,10 +12,8 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g>
-      <circle cx="220" cy="220" r="6" fill="#EF3340"/><circle cx="320" cy="260" r="6" fill="#EF3340"/><circle cx="420" cy="220" r="6" fill="#EF3340"/><circle cx="380" cy="360" r="6" fill="#EF3340"/><circle cx="260" cy="380" r="6" fill="#EF3340"/><circle cx="180" cy="460" r="6" fill="#EF3340"/><circle cx="340" cy="460" r="6" fill="#EF3340"/><circle cx="440" cy="420" r="6" fill="#EF3340"/><circle cx="300" cy="520" r="6" fill="#EF3340"/><circle cx="240" cy="300" r="6" fill="#EF3340"/>
-      <polyline points="220,220 320,260 420,220 380,360 260,380 180,460 340,460 440,420 300,520 240,300" fill="none" stroke="#EF3340" stroke-width="2" opacity="0.55"/>
-    </g>
+    <polyline points="300,200 219.09830056250524,232 204.89434837048464,264 269.09830056250524,296 358.7785252292473,328 400,360 358.77852522924735,392 269.0983005625053,424 204.89434837048464,456 219.09830056250524,488 299.99999999999994,520" fill="none" stroke="#EF3340" stroke-width="10" opacity="0.92"/>
+    <polyline points="300,200 380.90169943749476,232 395.10565162951536,264 330.90169943749476,296 241.2214747707527,328 200,360 241.22147477075265,392 330.9016994374947,424 395.10565162951536,456 380.90169943749476,488 300.00000000000006,520" fill="none" stroke="#EF3340" stroke-width="10" opacity="0.65"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">JA</text>

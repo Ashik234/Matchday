@@ -12,10 +12,15 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g transform="translate(300 340)">
-      <path d="M0 -160 L20 0 L0 160 L-20 0 Z" fill="#FFFFFF" opacity="0.92"/>
-      <path d="M-160 0 L0 -20 L160 0 L0 20 Z" fill="#FFFFFF" opacity="0.6"/>
-      <circle r="14" fill="#fff"/>
+    <g transform="translate(220 340)">
+      <circle r="80" fill="#FFFFFF" opacity="0.85"/>
+      <circle r="40" fill="#fff"/>
+      <circle r="18" fill="#000"/>
+    </g>
+    <g transform="translate(380 340)">
+      <circle r="80" fill="#FFFFFF" opacity="0.85"/>
+      <circle r="40" fill="#fff"/>
+      <circle r="18" fill="#000"/>
     </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"

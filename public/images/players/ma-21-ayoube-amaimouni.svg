@@ -12,11 +12,12 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M200 220 Q300 180 400 220 Q420 280 380 320 Q300 340 220 320 Q180 280 200 220 Z"
-          fill="#006233" opacity="0.6"/>
-    
-    <path d="M310 130 L210 380 L290 380 L240 580 L390 290 L310 290 L360 130 Z"
-          fill="#006233" stroke="#fff" stroke-width="6" opacity="0.92"/>
+    <g transform="translate(300 340)">
+      <ellipse rx="160" ry="40" fill="#006233" opacity="0.85"/>
+      <rect x="-160" y="0" width="320" height="120" fill="#006233" opacity="0.6"/>
+      <ellipse cy="120" rx="160" ry="40" fill="#006233" opacity="0.75"/>
+      <line x1="-100" y1="0" x2="-100" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="-50" y1="0" x2="-50" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="0" y1="0" x2="0" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="50" y1="0" x2="50" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="100" y1="0" x2="100" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">AA</text>

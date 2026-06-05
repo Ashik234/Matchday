@@ -12,15 +12,11 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g opacity="0.95">
-      <path d="M150 200 L220 320 L300 230 L380 320 L450 200 L430 380 L170 380 Z"
-            fill="#FCD116" stroke="#fff" stroke-width="6" opacity="0.85"/>
-      <circle cx="220" cy="180" r="22" fill="#FCD116" stroke="#fff" stroke-width="4"/>
-      <circle cx="300" cy="170" r="26" fill="#FCD116" stroke="#fff" stroke-width="4"/>
-      <circle cx="380" cy="180" r="22" fill="#FCD116" stroke="#fff" stroke-width="4"/>
+    <g transform="translate(300 340)">
+      <path d="M0 -160 L20 0 L0 160 L-20 0 Z" fill="#FCD116" opacity="0.92"/>
+      <path d="M-160 0 L0 -20 L160 0 L0 20 Z" fill="#FCD116" opacity="0.6"/>
+      <circle r="14" fill="#fff"/>
     </g>
-    <text x="300" y="540" text-anchor="middle" font-family="Anton, Impact, sans-serif"
-          font-size="120" fill="#fff" opacity="0.18" letter-spacing="20">GOAT</text>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">NC</text>

@@ -12,15 +12,11 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g opacity="0.95">
-      <path d="M150 200 L220 320 L300 230 L380 320 L450 200 L430 380 L170 380 Z"
-            fill="#E31B23" stroke="#fff" stroke-width="6" opacity="0.85"/>
-      <circle cx="220" cy="180" r="22" fill="#E31B23" stroke="#fff" stroke-width="4"/>
-      <circle cx="300" cy="170" r="26" fill="#E31B23" stroke="#fff" stroke-width="4"/>
-      <circle cx="380" cy="180" r="22" fill="#E31B23" stroke="#fff" stroke-width="4"/>
-    </g>
-    <text x="300" y="540" text-anchor="middle" font-family="Anton, Impact, sans-serif"
-          font-size="120" fill="#fff" opacity="0.18" letter-spacing="20">GOAT</text>
+    <path d="M300 180 Q330 220 330 280 L330 420 L360 460 L240 460 L270 420 L270 280 Q270 220 300 180 Z"
+          fill="#E31B23" opacity="0.92" stroke="#fff" stroke-width="4"/>
+    <circle cx="300" cy="300" r="18" fill="#fff"/>
+    <path d="M270 460 Q260 510 240 540 M330 460 Q340 510 360 540 M300 460 L300 560"
+          stroke="#E31B23" stroke-width="8" fill="none" opacity="0.7"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">PC</text>

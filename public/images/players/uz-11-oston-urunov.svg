@@ -12,8 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M170 540 L460 230 L490 260 L200 570 Z" fill="#1EB53A" stroke="#fff" stroke-width="4" opacity="0.92"/>
-    <path d="M450 240 L470 220 L500 250 L480 270 Z" fill="#fff" opacity="0.8"/>
+    <path d="M300 180 Q260 240 300 280 Q360 320 320 380 Q260 420 320 480 Q360 520 300 580"
+          fill="none" stroke="#1EB53A" stroke-width="22" opacity="0.9" stroke-linecap="round"/>
+    <circle cx="300" cy="180" r="26" fill="#1EB53A"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">OU</text>

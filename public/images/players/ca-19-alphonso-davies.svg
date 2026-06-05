@@ -12,9 +12,8 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M120 520 L260 280 L320 380 L400 220 L500 520 Z"
-          fill="#FF0000" opacity="0.88" stroke="#fff" stroke-width="4"/>
-    <path d="M260 280 L320 380 L400 220 Z" fill="#fff" opacity="0.55"/>
+    <path d="M300 180 L320 260 L380 240 L350 300 L420 320 L360 340 L380 400 L320 380 L300 460 L280 380 L220 400 L240 340 L180 320 L250 300 L220 240 L280 260 Z"
+          fill="#FF0000" opacity="0.92" stroke="#fff" stroke-width="4"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">AD19</text>

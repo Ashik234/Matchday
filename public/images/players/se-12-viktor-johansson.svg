@@ -12,8 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M120 340 A180 180 0 0 1 480 340" fill="none" stroke="#FECC00" stroke-width="22" opacity="0.9"/>
-    <circle cx="300" cy="340" r="60" fill="#FECC00" opacity="0.85"/>
+    <path d="M300 180 L440 240 L420 420 Q380 500 300 540 Q220 500 180 420 L160 240 Z"
+          fill="#FECC00" opacity="0.88" stroke="#fff" stroke-width="5"/>
+    <path d="M260 280 L300 240 L340 280 L320 380 L280 380 Z" fill="#fff" opacity="0.65"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">VJ</text>

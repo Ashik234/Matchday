@@ -12,9 +12,12 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M300 180 Q260 240 270 300 Q230 340 260 380 Q300 420 340 380 Q370 340 330 300 Q340 240 300 180 Z"
-          fill="#FFFFFF" opacity="0.9"/>
-    <rect x="280" y="400" width="40" height="160" fill="#FFFFFF" opacity="0.85"/>
+    <g transform="translate(300 340)">
+      <ellipse rx="160" ry="40" fill="#FFFFFF" opacity="0.85"/>
+      <rect x="-160" y="0" width="320" height="120" fill="#FFFFFF" opacity="0.6"/>
+      <ellipse cy="120" rx="160" ry="40" fill="#FFFFFF" opacity="0.75"/>
+      <line x1="-100" y1="0" x2="-100" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="-50" y1="0" x2="-50" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="0" y1="0" x2="0" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="50" y1="0" x2="50" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="100" y1="0" x2="100" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">SA</text>

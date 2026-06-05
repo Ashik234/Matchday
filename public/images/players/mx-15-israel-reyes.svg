@@ -12,9 +12,10 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M300 180 Q260 240 270 300 Q230 340 260 380 Q300 420 340 380 Q370 340 330 300 Q340 240 300 180 Z"
-          fill="#CE1126" opacity="0.9"/>
-    <rect x="280" y="400" width="40" height="160" fill="#CE1126" opacity="0.85"/>
+    <g stroke="#CE1126" stroke-width="20" stroke-linecap="round">
+      <line x1="200" y1="200" x2="420" y2="500"/>
+      <line x1="420" y1="200" x2="200" y2="500"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">IR</text>

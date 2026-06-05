@@ -12,13 +12,13 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M170 540 L460 230 L490 260 L200 570 Z" fill="#DA0000" stroke="#fff" stroke-width="4" opacity="0.92"/>
-    <path d="M450 240 L470 220 L500 250 L480 270 Z" fill="#fff" opacity="0.8"/>
+    <path d="M200 460 Q280 460 320 380 Q380 280 460 240 L440 220 L470 200 L490 230 L470 260"
+          fill="none" stroke="#239F40" stroke-width="16" opacity="0.92" stroke-linecap="round"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
-        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">SM</text>
+        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">ST20</text>
   <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
-        font-size="56" fill="#DA0000" font-weight="700">#20</text>
+        font-size="56" fill="#239F40" font-weight="700">#20</text>
   <text x="60" y="760" font-family="Anton, Impact, sans-serif"
         font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">SHAHRIYAR MOGHANLOU</text>
 </svg>

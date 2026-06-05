@@ -11,10 +11,7 @@
     </radialGradient>
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
-  
-    <path d="M300 180 Q260 240 300 280 Q360 320 320 380 Q260 420 320 480 Q360 520 300 580"
-          fill="none" stroke="#0047A0" stroke-width="22" opacity="0.9" stroke-linecap="round"/>
-    <circle cx="300" cy="180" r="26" fill="#0047A0"/>
+  <polygon points="480,340 377.9422863405995,385 390,495.88457268119896 300,430 210.00000000000006,495.88457268119896 222.05771365940052,385 120,340 222.05771365940052,295 209.99999999999991,184.11542731880107 300,250 390,184.11542731880104 377.9422863405995,294.99999999999994" fill="#0047A0" opacity="0.9" stroke="#fff" stroke-width="4"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">LD</text>

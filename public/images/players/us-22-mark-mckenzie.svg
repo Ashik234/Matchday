@@ -12,8 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M120 340 A180 180 0 0 1 480 340" fill="none" stroke="#B22234" stroke-width="22" opacity="0.9"/>
-    <circle cx="300" cy="340" r="60" fill="#B22234" opacity="0.85"/>
+    <g><line x1="460" y1="340" x2="500" y2="340" stroke="#B22234" stroke-width="22" opacity="0.92"/><line x1="438.5640646055102" y1="420" x2="473.20508075688775" y2="440" stroke="#B22234" stroke-width="22" opacity="0.92"/><line x1="380" y1="478.56406460551017" x2="400" y2="513.2050807568877" stroke="#B22234" stroke-width="22" opacity="0.92"/><line x1="300" y1="500" x2="300" y2="540" stroke="#B22234" stroke-width="22" opacity="0.92"/><line x1="220.00000000000003" y1="478.5640646055102" x2="200.00000000000006" y2="513.2050807568878" stroke="#B22234" stroke-width="22" opacity="0.92"/><line x1="161.4359353944898" y1="420" x2="126.79491924311225" y2="440" stroke="#B22234" stroke-width="22" opacity="0.92"/><line x1="140" y1="340" x2="100" y2="340" stroke="#B22234" stroke-width="22" opacity="0.92"/><line x1="161.43593539448983" y1="260" x2="126.79491924311228" y2="239.99999999999997" stroke="#B22234" stroke-width="22" opacity="0.92"/><line x1="219.99999999999994" y1="201.43593539448983" x2="199.99999999999991" y2="166.7949192431123" stroke="#B22234" stroke-width="22" opacity="0.92"/><line x1="299.99999999999994" y1="180" x2="299.99999999999994" y2="140" stroke="#B22234" stroke-width="22" opacity="0.92"/><line x1="380" y1="201.43593539448983" x2="400" y2="166.79491924311228" stroke="#B22234" stroke-width="22" opacity="0.92"/><line x1="438.5640646055101" y1="259.99999999999994" x2="473.2050807568877" y2="239.99999999999991" stroke="#B22234" stroke-width="22" opacity="0.92"/></g>
+    <circle cx="300" cy="340" r="150" fill="#B22234" opacity="0.92"/>
+    <circle cx="300" cy="340" r="60" fill="url(#bg)"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">MM</text>

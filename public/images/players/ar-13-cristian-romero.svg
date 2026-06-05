@@ -11,11 +11,7 @@
     </radialGradient>
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
-  
-    <path d="M300 580 Q220 480 240 360 Q190 320 240 240 Q260 200 300 180 Q340 200 360 240 Q410 320 360 360 Q380 480 300 580 Z"
-          fill="#F6B40E" stroke="#fff" stroke-width="5" opacity="0.88"/>
-    <path d="M300 480 Q260 420 280 360 Q300 320 300 280 Q300 320 320 360 Q340 420 300 480 Z"
-          fill="#fff" opacity="0.45"/>
+  <g><path d="M360 340 Q414.08573304574844 402.3253200185464 480 340" fill="none" stroke="#F6B40E" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M342.42640687119285 382.42640687119285 Q336.6001390485511 464.7414518980228 427.27922061357856 467.27922061357856" fill="none" stroke="#F6B40E" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M300 400 Q237.6746799814536 454.08573304574844 300 520" fill="none" stroke="#F6B40E" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M257.57359312880715 382.42640687119285 Q175.25854810197723 376.6001390485511 172.72077938642144 467.27922061357856" fill="none" stroke="#F6B40E" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M240 340 Q185.91426695425156 277.6746799814536 120 340" fill="none" stroke="#F6B40E" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M257.57359312880715 297.57359312880715 Q263.3998609514489 215.25854810197723 172.7207793864214 212.72077938642144" fill="none" stroke="#F6B40E" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M300 280 Q362.3253200185464 225.91426695425156 299.99999999999994 160" fill="none" stroke="#F6B40E" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M342.42640687119285 297.57359312880715 Q424.7414518980228 303.3998609514489 427.2792206135785 212.7207793864214" fill="none" stroke="#F6B40E" stroke-width="14" stroke-linecap="round" opacity="0.85"/></g><circle cx="300" cy="340" r="50" fill="#F6B40E" opacity="0.95"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">CR</text>

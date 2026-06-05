@@ -12,9 +12,16 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M180 420 Q260 380 360 400 Q450 420 460 360 Q470 300 400 290 Q330 290 240 340 Q160 380 180 420 Z"
-          fill="#0038A8" opacity="0.9"/>
-    <path d="M420 320 Q460 320 460 280" fill="none" stroke="#fff" stroke-width="6"/>
+    <g transform="translate(220 340)">
+      <circle r="80" fill="#0038A8" opacity="0.85"/>
+      <circle r="40" fill="#fff"/>
+      <circle r="18" fill="#000"/>
+    </g>
+    <g transform="translate(380 340)">
+      <circle r="80" fill="#0038A8" opacity="0.85"/>
+      <circle r="40" fill="#fff"/>
+      <circle r="18" fill="#000"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">JC</text>

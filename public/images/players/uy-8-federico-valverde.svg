@@ -12,10 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M300 340 m-120 0 a120 120 0 1 0 240 0 a120 120 0 1 0 -240 0
-             M300 340 m-80  0 a80  80  0 1 1 160 0 a80  80  0 1 1 -160 0
-             M300 340 m-40  0 a40  40  0 1 0 80  0 a40  40  0 1 0 -80  0"
-          fill="none" stroke="#FCD116" stroke-width="14" opacity="0.85"/>
+    <path d="M300 180 Q260 240 300 280 Q360 320 320 380 Q260 420 320 480 Q360 520 300 580"
+          fill="none" stroke="#FCD116" stroke-width="22" opacity="0.9" stroke-linecap="round"/>
+    <circle cx="300" cy="180" r="26" fill="#FCD116"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">FV</text>

@@ -12,11 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g stroke="#FFFFFF" stroke-width="10" fill="none" opacity="0.9">
-      <line x1="240" y1="200" x2="240" y2="480"/>
-      <line x1="360" y1="200" x2="360" y2="480"/>
-      <line x1="240" y1="280" x2="360" y2="200"/>
-      <line x1="240" y1="400" x2="360" y2="320"/>
+    <g stroke="#FFFFFF" stroke-width="20" stroke-linecap="round">
+      <line x1="200" y1="200" x2="420" y2="500"/>
+      <line x1="420" y1="200" x2="200" y2="500"/>
     </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"

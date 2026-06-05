@@ -12,13 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g stroke="#000000" stroke-width="10" fill="none" opacity="0.9">
-      <ellipse cx="300" cy="220" rx="120" ry="20"/>
-      <ellipse cx="300" cy="280" rx="100" ry="18"/>
-      <ellipse cx="300" cy="340" rx="80"  ry="16"/>
-      <ellipse cx="300" cy="400" rx="55"  ry="13"/>
-      <ellipse cx="300" cy="450" rx="30"  ry="10"/>
-    </g>
+    <path d="M120 520 L260 280 L320 380 L400 220 L500 520 Z"
+          fill="#000000" opacity="0.88" stroke="#fff" stroke-width="4"/>
+    <path d="M260 280 L320 380 L400 220 Z" fill="#fff" opacity="0.55"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">ES</text>

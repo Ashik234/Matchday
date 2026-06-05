@@ -24,6 +24,7 @@ const SQUADS_PATH = resolve(ROOT, 'public', 'data', 'squads.json');
 const MOTIFS_PATH = resolve(__dirname, 'data', 'player-motifs.json');
 const MANIFEST_PATH = resolve(ROOT, 'public', 'data', 'player-images.json');
 const IMG_DIR = resolve(ROOT, 'public', 'images', 'players');
+const WC_TEAMS_URL = 'https://raw.githubusercontent.com/openfootball/worldcup.json/master/2026/worldcup.teams.json';
 
 const argv = process.argv.slice(2);
 const flags = {
@@ -128,12 +129,29 @@ function cleanName(name) {
 async function loadMotifs() {
   if (!existsSync(MOTIFS_PATH)) return {};
   const raw = JSON.parse(await readFile(MOTIFS_PATH, 'utf8'));
-  // Strip underscore-prefixed metadata keys.
   const out = {};
   for (const [k, v] of Object.entries(raw)) {
     if (!k.startsWith('_')) out[k] = v;
   }
+  // Validate motif uniqueness across curated entries.
+  const seen = new Map();
+  for (const [playerId, entry] of Object.entries(out)) {
+    if (!entry.motif) continue;
+    if (seen.has(entry.motif)) {
+      throw new Error(
+        `[motif-uniqueness] motif "${entry.motif}" reused: ${seen.get(entry.motif)} and ${playerId}`,
+      );
+    }
+    seen.set(entry.motif, playerId);
+  }
   return out;
+}
+
+async function fetchWcTeamCodes() {
+  const res = await fetch(WC_TEAMS_URL);
+  if (!res.ok) throw new Error(`worldcup.teams.json ${res.status}`);
+  const teams = await res.json();
+  return new Set(teams.map((t) => t.fifa_code));
 }
 
 async function cleanImgDir() {
@@ -183,12 +201,23 @@ async function main() {
 
   const squads = JSON.parse(await readFile(SQUADS_PATH, 'utf8'));
   const motifs = await loadMotifs();
+  const wcTeams = await fetchWcTeamCodes();
+  console.log(`[wc-teams] ${wcTeams.size} teams in WC2026 roster`);
+
+  // Drop squads not in WC2026 (defensive — squads.json should already be filtered).
+  const skipped = [];
+  for (const code of Object.keys(squads.teams)) {
+    if (!wcTeams.has(code)) skipped.push(code);
+  }
+  if (skipped.length) console.log(`[skip] non-WC2026 teams in squads: ${skipped.join(', ')}`);
+
   const out = { generatedAt: new Date().toISOString(), players: {} };
 
   let curated = 0;
   let total = 0;
 
   for (const [code, team] of Object.entries(squads.teams)) {
+    if (!wcTeams.has(code)) continue;
     if (flags.team && code !== flags.team) continue;
     for (const player of team.players) {
       if (flags.player && player.id !== flags.player) continue;

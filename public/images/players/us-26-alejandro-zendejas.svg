@@ -13,8 +13,9 @@
   <rect width="600" height="800" fill="url(#bg)"/>
   
     <g transform="translate(300 340)">
-      <path d="M0 -160 L120 -40 L80 160 L-80 160 L-120 -40 Z" fill="#B22234" opacity="0.88" stroke="#fff" stroke-width="4"/>
-      <path d="M0 -160 L0 160 M-120 -40 L120 -40" stroke="#fff" stroke-width="3" opacity="0.55"/>
+      <path d="M0 -160 L20 0 L0 160 L-20 0 Z" fill="#B22234" opacity="0.92"/>
+      <path d="M-160 0 L0 -20 L160 0 L0 20 Z" fill="#B22234" opacity="0.6"/>
+      <circle r="14" fill="#fff"/>
     </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"

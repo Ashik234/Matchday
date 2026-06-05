@@ -12,15 +12,8 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g opacity="0.95">
-      <path d="M150 200 L220 320 L300 230 L380 320 L450 200 L430 380 L170 380 Z"
-            fill="#1EB53A" stroke="#fff" stroke-width="6" opacity="0.85"/>
-      <circle cx="220" cy="180" r="22" fill="#1EB53A" stroke="#fff" stroke-width="4"/>
-      <circle cx="300" cy="170" r="26" fill="#1EB53A" stroke="#fff" stroke-width="4"/>
-      <circle cx="380" cy="180" r="22" fill="#1EB53A" stroke="#fff" stroke-width="4"/>
-    </g>
-    <text x="300" y="540" text-anchor="middle" font-family="Anton, Impact, sans-serif"
-          font-size="120" fill="#fff" opacity="0.18" letter-spacing="20">GOAT</text>
+    <path d="M300 180 L300 540" stroke="#1EB53A" stroke-width="6" opacity="0.9"/>
+    <g><ellipse cx="250" cy="200" rx="40" ry="18" fill="#1EB53A" opacity="0.85" transform="rotate(-30 250 200)"/><ellipse cx="350" cy="260" rx="40" ry="18" fill="#1EB53A" opacity="0.85" transform="rotate(30 350 260)"/><ellipse cx="250" cy="320" rx="40" ry="18" fill="#1EB53A" opacity="0.85" transform="rotate(-30 250 320)"/><ellipse cx="350" cy="380" rx="40" ry="18" fill="#1EB53A" opacity="0.85" transform="rotate(30 350 380)"/><ellipse cx="250" cy="440" rx="40" ry="18" fill="#1EB53A" opacity="0.85" transform="rotate(-30 250 440)"/><ellipse cx="350" cy="500" rx="40" ry="18" fill="#1EB53A" opacity="0.85" transform="rotate(30 350 500)"/></g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">AA</text>

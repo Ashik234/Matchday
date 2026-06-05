@@ -42,9 +42,57 @@ const MOTIFS = {
   'mountain-peak':   mountainPeak,
   'samba-rhythm':    sambaRhythm,
   'boomerang-arc':   boomerangArc,
+  'cherry-blossom':  cherryBlossom,
+  'volcano-erupt':   volcanoErupt,
+  'octopus-arms':    octopusArms,
+  'pyramid-stack':   pyramidStack,
+  'wolf-howl':       wolfHowl,
+  'bull-horns':      bullHorns,
+  'olive-branch':    oliveBranch,
+  'star-burst':      starBurst,
+  'maple-leaf':      mapleLeaf,
+  'rocket-launch':   rocketLaunch,
+  'crescent-moon':   crescentMoon,
+  'ankh-symbol':     ankhSymbol,
+  'cactus-bloom':    cactusBloom,
+  'pine-forest':     pineForest,
+  'iceberg-tip':     icebergTip,
+  'falcon-dive':     falconDive,
+  'sand-dune':       sandDune,
+  'dragon-coil':     dragonCoil,
+  'orchid-petal':    orchidPetal,
+  'pearl-shell':     pearlShell,
+  'gear-cog':        gearCog,
+  'helix-spiral':    helixSpiral,
 };
 
+// Motifs reserved exclusively for curated stars — never picked for long-tail defaults.
+// Keeps Messi's GOAT-CROWN truly unique to Messi, Ronaldo's SIUUU to Ronaldo, etc.
+const EXCLUSIVE_MOTIFS = new Set([
+  'goat-crown',
+  'siuuu-rays',
+  'samba-rhythm',
+  'cherry-blossom',
+  'maple-leaf',
+  'ankh-symbol',
+  'samurai-blade',
+  'viking-rune',
+  'tiki-spiral',
+  'boomerang-arc',
+  'dragon-coil',
+  'pyramid-stack',
+  'matador-cape',
+  'cactus-bloom',
+  'pine-forest',
+  'iceberg-tip',
+  'sand-dune',
+  'volcano-erupt',
+  'crescent-moon',
+  'pearl-shell',
+]);
+
 const MOTIF_KEYS = Object.keys(MOTIFS);
+const DEFAULT_POOL = MOTIF_KEYS.filter((k) => !EXCLUSIVE_MOTIFS.has(k));
 
 function initialsFrom(name) {
   const parts = name.trim().split(/\s+/);
@@ -386,6 +434,214 @@ function boomerangArc({ accent }) {
           fill="${accent}" opacity="0.9" stroke="#fff" stroke-width="4"/>`;
 }
 
+function cherryBlossom({ accent }) {
+  const petals = [];
+  for (let i = 0; i < 5; i++) {
+    const a = (i * 72 * Math.PI) / 180;
+    const cx = 300 + Math.cos(a - Math.PI / 2) * 70;
+    const cy = 340 + Math.sin(a - Math.PI / 2) * 70;
+    petals.push(`<circle cx="${cx}" cy="${cy}" r="60" fill="${accent}" opacity="0.78"/>`);
+  }
+  return `<g>${petals.join('')}</g><circle cx="300" cy="340" r="30" fill="#fff" opacity="0.95"/>`;
+}
+
+function volcanoErupt({ accent }) {
+  return `
+    <path d="M120 540 L260 280 L340 280 L480 540 Z" fill="${accent}" opacity="0.85" stroke="#fff" stroke-width="4"/>
+    <path d="M260 280 Q280 200 300 180 Q320 200 340 280" fill="${accent}" opacity="0.95"/>
+    <circle cx="300" cy="190" r="14" fill="#fff"/>
+    <circle cx="270" cy="160" r="10" fill="${accent}" opacity="0.85"/>
+    <circle cx="330" cy="155" r="12" fill="${accent}" opacity="0.85"/>`;
+}
+
+function octopusArms({ accent }) {
+  const arms = [];
+  for (let i = 0; i < 8; i++) {
+    const a = (i * 45 * Math.PI) / 180;
+    const x1 = 300 + Math.cos(a) * 60, y1 = 340 + Math.sin(a) * 60;
+    const x2 = 300 + Math.cos(a) * 180, y2 = 340 + Math.sin(a) * 180;
+    const cx = 300 + Math.cos(a + 0.5) * 130, cy = 340 + Math.sin(a + 0.5) * 130;
+    arms.push(`<path d="M${x1} ${y1} Q${cx} ${cy} ${x2} ${y2}" fill="none" stroke="${accent}" stroke-width="14" stroke-linecap="round" opacity="0.85"/>`);
+  }
+  return `<g>${arms.join('')}</g><circle cx="300" cy="340" r="50" fill="${accent}" opacity="0.95"/>`;
+}
+
+function pyramidStack({ accent }) {
+  return `
+    <path d="M180 480 L300 240 L420 480 Z" fill="${accent}" opacity="0.88" stroke="#fff" stroke-width="4"/>
+    <path d="M240 480 L300 360 L360 480 Z" fill="#fff" opacity="0.4"/>
+    <path d="M280 480 L300 420 L320 480 Z" fill="${accent}" opacity="0.6"/>`;
+}
+
+function wolfHowl({ accent }) {
+  return `
+    <path d="M220 480 L240 320 L280 280 L260 200 L300 240 L340 200 L320 280 L360 320 L380 480 Z"
+          fill="${accent}" opacity="0.92" stroke="#fff" stroke-width="4"/>
+    <circle cx="430" cy="200" r="40" fill="${accent}" opacity="0.6"/>
+    <circle cx="430" cy="200" r="26" fill="#fff" opacity="0.85"/>`;
+}
+
+function bullHorns({ accent }) {
+  return `
+    <path d="M180 320 Q120 280 100 220 Q160 240 220 300" fill="none" stroke="${accent}" stroke-width="16" opacity="0.9" stroke-linecap="round"/>
+    <path d="M420 320 Q480 280 500 220 Q440 240 380 300" fill="none" stroke="${accent}" stroke-width="16" opacity="0.9" stroke-linecap="round"/>
+    <ellipse cx="300" cy="340" rx="100" ry="80" fill="${accent}" opacity="0.92"/>
+    <circle cx="265" cy="330" r="8" fill="#fff"/>
+    <circle cx="335" cy="330" r="8" fill="#fff"/>`;
+}
+
+function oliveBranch({ accent }) {
+  const leaves = [];
+  for (let i = 0; i < 6; i++) {
+    const y = 200 + i * 60;
+    const side = i % 2 === 0 ? -1 : 1;
+    leaves.push(`<ellipse cx="${300 + side * 50}" cy="${y}" rx="40" ry="18" fill="${accent}" opacity="0.85" transform="rotate(${side * 30} ${300 + side * 50} ${y})"/>`);
+  }
+  return `
+    <path d="M300 180 L300 540" stroke="${accent}" stroke-width="6" opacity="0.9"/>
+    <g>${leaves.join('')}</g>`;
+}
+
+function starBurst({ accent }) {
+  const points = [];
+  for (let i = 0; i < 12; i++) {
+    const a = (i * 30 * Math.PI) / 180;
+    const r = i % 2 === 0 ? 180 : 90;
+    points.push(`${300 + Math.cos(a) * r},${340 + Math.sin(a) * r}`);
+  }
+  return `<polygon points="${points.join(' ')}" fill="${accent}" opacity="0.9" stroke="#fff" stroke-width="4"/>`;
+}
+
+function mapleLeaf({ accent }) {
+  return `
+    <path d="M300 180 L320 260 L380 240 L350 300 L420 320 L360 340 L380 400 L320 380 L300 460 L280 380 L220 400 L240 340 L180 320 L250 300 L220 240 L280 260 Z"
+          fill="${accent}" opacity="0.92" stroke="#fff" stroke-width="4"/>`;
+}
+
+function rocketLaunch({ accent }) {
+  return `
+    <path d="M300 180 Q330 220 330 280 L330 420 L360 460 L240 460 L270 420 L270 280 Q270 220 300 180 Z"
+          fill="${accent}" opacity="0.92" stroke="#fff" stroke-width="4"/>
+    <circle cx="300" cy="300" r="18" fill="#fff"/>
+    <path d="M270 460 Q260 510 240 540 M330 460 Q340 510 360 540 M300 460 L300 560"
+          stroke="${accent}" stroke-width="8" fill="none" opacity="0.7"/>`;
+}
+
+function crescentMoon({ accent }) {
+  return `
+    <circle cx="300" cy="340" r="160" fill="${accent}" opacity="0.92"/>
+    <circle cx="350" cy="320" r="140" fill="url(#bg)"/>`;
+}
+
+function ankhSymbol({ accent }) {
+  return `
+    <g stroke="${accent}" stroke-width="18" fill="none" stroke-linecap="round" opacity="0.92">
+      <circle cx="300" cy="260" r="60"/>
+      <line x1="300" y1="320" x2="300" y2="500"/>
+      <line x1="220" y1="380" x2="380" y2="380"/>
+    </g>`;
+}
+
+function cactusBloom({ accent }) {
+  return `
+    <rect x="280" y="260" width="40" height="240" rx="20" fill="${accent}" opacity="0.9"/>
+    <rect x="200" y="320" width="40" height="120" rx="20" fill="${accent}" opacity="0.9"/>
+    <rect x="240" y="290" width="20" height="30" fill="${accent}" opacity="0.9"/>
+    <rect x="360" y="340" width="40" height="100" rx="20" fill="${accent}" opacity="0.9"/>
+    <rect x="340" y="310" width="20" height="30" fill="${accent}" opacity="0.9"/>
+    <circle cx="300" cy="240" r="22" fill="#fff" opacity="0.85"/>
+    <circle cx="220" cy="300" r="14" fill="#fff" opacity="0.85"/>`;
+}
+
+function pineForest({ accent }) {
+  return `
+    <path d="M180 480 L240 240 L300 480 Z" fill="${accent}" opacity="0.9"/>
+    <path d="M260 480 L320 200 L380 480 Z" fill="${accent}" opacity="0.95"/>
+    <path d="M340 480 L400 280 L460 480 Z" fill="${accent}" opacity="0.85"/>`;
+}
+
+function icebergTip({ accent }) {
+  return `
+    <path d="M120 380 L200 280 L300 220 L420 300 L500 380 Z" fill="#fff" opacity="0.92"/>
+    <path d="M120 380 L500 380 L520 460 L100 460 Z" fill="${accent}" opacity="0.7"/>
+    <path d="M180 360 L220 320 L260 350 Z" fill="${accent}" opacity="0.4"/>`;
+}
+
+function falconDive({ accent }) {
+  return `
+    <path d="M180 200 Q280 220 320 320 Q400 340 460 460 Q360 420 320 380 Q280 360 240 360 Q200 340 180 200 Z"
+          fill="${accent}" opacity="0.92" stroke="#fff" stroke-width="4"/>
+    <circle cx="220" cy="240" r="10" fill="#fff"/>`;
+}
+
+function sandDune({ accent }) {
+  return `
+    <path d="M120 460 Q200 380 300 420 Q400 460 480 380 L480 540 L120 540 Z" fill="${accent}" opacity="0.88"/>
+    <path d="M120 420 Q220 360 320 400 Q420 440 480 360" fill="none" stroke="${accent}" stroke-width="4" opacity="0.6"/>`;
+}
+
+function dragonCoil({ accent }) {
+  return `
+    <path d="M180 220 Q300 220 320 320 Q340 420 240 420 Q160 420 200 360 Q240 320 320 360 Q420 400 420 480"
+          fill="none" stroke="${accent}" stroke-width="20" opacity="0.92" stroke-linecap="round"/>
+    <circle cx="180" cy="220" r="22" fill="${accent}"/>
+    <circle cx="180" cy="220" r="8" fill="#fff"/>`;
+}
+
+function orchidPetal({ accent }) {
+  return `
+    <g transform="translate(300 340)">
+      <ellipse cx="0" cy="-100" rx="50" ry="120" fill="${accent}" opacity="0.78"/>
+      <ellipse cx="-90" cy="20" rx="120" ry="50" fill="${accent}" opacity="0.78"/>
+      <ellipse cx="90" cy="20" rx="120" ry="50" fill="${accent}" opacity="0.78"/>
+      <ellipse cx="-50" cy="100" rx="60" ry="80" fill="${accent}" opacity="0.82" transform="rotate(-30)"/>
+      <ellipse cx="50" cy="100" rx="60" ry="80" fill="${accent}" opacity="0.82" transform="rotate(30)"/>
+      <circle r="22" fill="#fff" opacity="0.95"/>
+    </g>`;
+}
+
+function pearlShell({ accent }) {
+  const rays = [];
+  for (let i = 0; i < 9; i++) {
+    const a = ((i * 20) - 80) * Math.PI / 180;
+    const x = 300 + Math.cos(a) * 180;
+    const y = 380 + Math.sin(a) * 180;
+    rays.push(`<line x1="300" y1="380" x2="${x}" y2="${y}" stroke="${accent}" stroke-width="10" opacity="0.85"/>`);
+  }
+  return `
+    <g>${rays.join('')}</g>
+    <path d="M120 380 Q300 200 480 380 Z" fill="${accent}" opacity="0.7"/>
+    <circle cx="300" cy="380" r="22" fill="#fff"/>`;
+}
+
+function gearCog({ accent }) {
+  const teeth = [];
+  for (let i = 0; i < 12; i++) {
+    const a = (i * 30 * Math.PI) / 180;
+    const x1 = 300 + Math.cos(a) * 160, y1 = 340 + Math.sin(a) * 160;
+    const x2 = 300 + Math.cos(a) * 200, y2 = 340 + Math.sin(a) * 200;
+    teeth.push(`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${accent}" stroke-width="22" opacity="0.92"/>`);
+  }
+  return `
+    <g>${teeth.join('')}</g>
+    <circle cx="300" cy="340" r="150" fill="${accent}" opacity="0.92"/>
+    <circle cx="300" cy="340" r="60" fill="url(#bg)"/>`;
+}
+
+function helixSpiral({ accent }) {
+  const left = [], right = [];
+  for (let i = 0; i <= 10; i++) {
+    const t = i / 10;
+    const y = 200 + t * 320;
+    const offset = Math.sin(t * Math.PI * 3) * 100;
+    left.push(`${300 - offset},${y}`);
+    right.push(`${300 + offset},${y}`);
+  }
+  return `
+    <polyline points="${left.join(' ')}" fill="none" stroke="${accent}" stroke-width="10" opacity="0.92"/>
+    <polyline points="${right.join(' ')}" fill="none" stroke="${accent}" stroke-width="10" opacity="0.65"/>`;
+}
+
 // ─── Public API ───
 
 export function renderPortraitSvg({
@@ -398,7 +654,7 @@ export function renderPortraitSvg({
 }) {
   const [bg1 = '#1a1a1a', bg2 = '#3a3a3a'] = flagColors;
   const seed = `${name}|${jersey}`;
-  const motifKey = motif && MOTIFS[motif] ? motif : pickFor(seed, MOTIF_KEYS);
+  const motifKey = motif && MOTIFS[motif] ? motif : pickFor(seed, DEFAULT_POOL);
   const motifFn = MOTIFS[motifKey];
   const accentColor = accent || flagColors[flagColors.length - 1] || '#FFD700';
   const sig = (signature || initialsFrom(name)).toUpperCase();

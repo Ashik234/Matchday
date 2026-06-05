@@ -11,7 +11,11 @@
     </radialGradient>
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
-  <g><rect x="160" y="420" width="28" height="80" fill="#D21034" opacity="0.7"/><rect x="200" y="343" width="28" height="157" fill="#D21034" opacity="0.7999999999999999"/><rect x="240" y="266" width="28" height="234" fill="#D21034" opacity="0.8999999999999999"/><rect x="280" y="419" width="28" height="81" fill="#D21034" opacity="0.7"/><rect x="320" y="342" width="28" height="158" fill="#D21034" opacity="0.7999999999999999"/><rect x="360" y="265" width="28" height="235" fill="#D21034" opacity="0.8999999999999999"/><rect x="400" y="418" width="28" height="82" fill="#D21034" opacity="0.7"/><rect x="440" y="341" width="28" height="159" fill="#D21034" opacity="0.7999999999999999"/></g>
+  
+    <g stroke="#D21034" stroke-width="20" stroke-linecap="round">
+      <line x1="200" y1="200" x2="420" y2="500"/>
+      <line x1="420" y1="200" x2="200" y2="500"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">EF</text>

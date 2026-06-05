@@ -12,10 +12,12 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M300 340 m-120 0 a120 120 0 1 0 240 0 a120 120 0 1 0 -240 0
-             M300 340 m-80  0 a80  80  0 1 1 160 0 a80  80  0 1 1 -160 0
-             M300 340 m-40  0 a40  40  0 1 0 80  0 a40  40  0 1 0 -80  0"
-          fill="none" stroke="#FFFFFF" stroke-width="14" opacity="0.85"/>
+    <g stroke="#FFFFFF" stroke-width="18" fill="none" stroke-linecap="round" opacity="0.92">
+      <path d="M180 200 Q220 320 200 460"/>
+      <path d="M260 180 Q300 320 280 480"/>
+      <path d="M340 180 Q380 320 360 480"/>
+      <path d="M420 200 Q460 320 440 460"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">AD</text>

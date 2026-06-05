@@ -12,8 +12,13 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M170 540 L460 230 L490 260 L200 570 Z" fill="#11457E" stroke="#fff" stroke-width="4" opacity="0.92"/>
-    <path d="M450 240 L470 220 L500 250 L480 270 Z" fill="#fff" opacity="0.8"/>
+    <g stroke="#11457E" stroke-width="10" fill="none" opacity="0.9">
+      <ellipse cx="300" cy="220" rx="120" ry="20"/>
+      <ellipse cx="300" cy="280" rx="100" ry="18"/>
+      <ellipse cx="300" cy="340" rx="80"  ry="16"/>
+      <ellipse cx="300" cy="400" rx="55"  ry="13"/>
+      <ellipse cx="300" cy="450" rx="30"  ry="10"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">DJ</text>

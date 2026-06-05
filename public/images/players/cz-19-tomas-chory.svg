@@ -12,10 +12,10 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g transform="translate(300 340)">
-      <path d="M0 -160 L120 -40 L80 160 L-80 160 L-120 -40 Z" fill="#11457E" opacity="0.88" stroke="#fff" stroke-width="4"/>
-      <path d="M0 -160 L0 160 M-120 -40 L120 -40" stroke="#fff" stroke-width="3" opacity="0.55"/>
-    </g>
+    <path d="M200 460 L380 460 L430 380 L400 360 L380 380 L300 380 L260 320 L200 360 Z"
+          fill="#11457E" opacity="0.92" stroke="#fff" stroke-width="4"/>
+    <path d="M180 360 Q140 340 100 360 M180 380 Q140 360 100 380 M180 400 Q140 380 100 400"
+          stroke="#11457E" stroke-width="6" fill="none" opacity="0.85"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">TC</text>

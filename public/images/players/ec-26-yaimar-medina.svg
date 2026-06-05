@@ -12,10 +12,11 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g stroke="#EF3340" stroke-width="20" stroke-linecap="round">
-      <line x1="200" y1="200" x2="420" y2="500"/>
-      <line x1="420" y1="200" x2="200" y2="500"/>
-    </g>
+    <path d="M180 320 Q120 280 100 220 Q160 240 220 300" fill="none" stroke="#EF3340" stroke-width="16" opacity="0.9" stroke-linecap="round"/>
+    <path d="M420 320 Q480 280 500 220 Q440 240 380 300" fill="none" stroke="#EF3340" stroke-width="16" opacity="0.9" stroke-linecap="round"/>
+    <ellipse cx="300" cy="340" rx="100" ry="80" fill="#EF3340" opacity="0.92"/>
+    <circle cx="265" cy="330" r="8" fill="#fff"/>
+    <circle cx="335" cy="330" r="8" fill="#fff"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">YM</text>

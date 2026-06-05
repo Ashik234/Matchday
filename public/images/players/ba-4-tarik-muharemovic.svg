@@ -12,8 +12,11 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M150 240 Q300 200 450 240 Q420 380 450 460 Q300 420 150 460 Q180 380 150 240 Z"
-          fill="#FFFFFF" opacity="0.88" stroke="#fff" stroke-width="4"/>
+    <path d="M180 320 Q120 280 100 220 Q160 240 220 300" fill="none" stroke="#FFFFFF" stroke-width="16" opacity="0.9" stroke-linecap="round"/>
+    <path d="M420 320 Q480 280 500 220 Q440 240 380 300" fill="none" stroke="#FFFFFF" stroke-width="16" opacity="0.9" stroke-linecap="round"/>
+    <ellipse cx="300" cy="340" rx="100" ry="80" fill="#FFFFFF" opacity="0.92"/>
+    <circle cx="265" cy="330" r="8" fill="#fff"/>
+    <circle cx="335" cy="330" r="8" fill="#fff"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">TM</text>

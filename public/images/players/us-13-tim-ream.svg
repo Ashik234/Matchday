@@ -12,12 +12,8 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g stroke="#B22234" stroke-width="10" fill="none" opacity="0.9">
-      <line x1="240" y1="200" x2="240" y2="480"/>
-      <line x1="360" y1="200" x2="360" y2="480"/>
-      <line x1="240" y1="280" x2="360" y2="200"/>
-      <line x1="240" y1="400" x2="360" y2="320"/>
-    </g>
+    <path d="M300 180 L300 540" stroke="#B22234" stroke-width="6" opacity="0.9"/>
+    <g><ellipse cx="250" cy="200" rx="40" ry="18" fill="#B22234" opacity="0.85" transform="rotate(-30 250 200)"/><ellipse cx="350" cy="260" rx="40" ry="18" fill="#B22234" opacity="0.85" transform="rotate(30 350 260)"/><ellipse cx="250" cy="320" rx="40" ry="18" fill="#B22234" opacity="0.85" transform="rotate(-30 250 320)"/><ellipse cx="350" cy="380" rx="40" ry="18" fill="#B22234" opacity="0.85" transform="rotate(30 350 380)"/><ellipse cx="250" cy="440" rx="40" ry="18" fill="#B22234" opacity="0.85" transform="rotate(-30 250 440)"/><ellipse cx="350" cy="500" rx="40" ry="18" fill="#B22234" opacity="0.85" transform="rotate(30 350 500)"/></g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">TR</text>

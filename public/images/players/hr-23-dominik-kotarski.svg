@@ -12,8 +12,10 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M120 340 A180 180 0 0 1 480 340" fill="none" stroke="#0F1F4F" stroke-width="22" opacity="0.9"/>
-    <circle cx="300" cy="340" r="60" fill="#0F1F4F" opacity="0.85"/>
+    <g transform="translate(300 340)">
+      <path d="M0 -160 L120 -40 L80 160 L-80 160 L-120 -40 Z" fill="#0F1F4F" opacity="0.88" stroke="#fff" stroke-width="4"/>
+      <path d="M0 -160 L0 160 M-120 -40 L120 -40" stroke="#fff" stroke-width="3" opacity="0.55"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">DK</text>

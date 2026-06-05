@@ -12,9 +12,11 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M120 540 Q220 460 320 380 Q420 300 480 200" fill="none" stroke="#EF4135" stroke-width="16" opacity="0.65" stroke-linecap="round"/>
-    <circle cx="480" cy="200" r="44" fill="#EF4135"/>
-    <circle cx="480" cy="200" r="26" fill="#fff"/>
+    <path d="M300 180 Q330 220 330 280 L330 420 L360 460 L240 460 L270 420 L270 280 Q270 220 300 180 Z"
+          fill="#EF4135" opacity="0.92" stroke="#fff" stroke-width="4"/>
+    <circle cx="300" cy="300" r="18" fill="#fff"/>
+    <path d="M270 460 Q260 510 240 540 M330 460 Q340 510 360 540 M300 460 L300 560"
+          stroke="#EF4135" stroke-width="8" fill="none" opacity="0.7"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">KM10</text>

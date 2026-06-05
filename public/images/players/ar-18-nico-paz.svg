@@ -12,11 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M200 220 Q300 180 400 220 Q420 280 380 320 Q300 340 220 320 Q180 280 200 220 Z"
-          fill="#F6B40E" opacity="0.6"/>
-    
-    <path d="M310 130 L210 380 L290 380 L240 580 L390 290 L310 290 L360 130 Z"
-          fill="#F6B40E" stroke="#fff" stroke-width="6" opacity="0.92"/>
+    <path d="M120 360 Q220 280 300 320 Q380 280 480 360 L450 410 Q360 360 300 380 Q240 360 150 410 Z"
+          fill="#F6B40E" opacity="0.88" stroke="#fff" stroke-width="4"/>
+    <path d="M260 320 L300 230 L340 320 Z" fill="#F6B40E" opacity="0.95"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">NP</text>

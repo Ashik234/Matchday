@@ -12,12 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g transform="translate(300 340)">
-      <ellipse rx="160" ry="40" fill="#C8102E" opacity="0.85"/>
-      <rect x="-160" y="0" width="320" height="120" fill="#C8102E" opacity="0.6"/>
-      <ellipse cy="120" rx="160" ry="40" fill="#C8102E" opacity="0.75"/>
-      <line x1="-100" y1="0" x2="-100" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="-50" y1="0" x2="-50" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="0" y1="0" x2="0" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="50" y1="0" x2="50" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="100" y1="0" x2="100" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/>
-    </g>
+    <path d="M180 200 Q280 220 320 320 Q400 340 460 460 Q360 420 320 380 Q280 360 240 360 Q200 340 180 200 Z"
+          fill="#C8102E" opacity="0.92" stroke="#fff" stroke-width="4"/>
+    <circle cx="220" cy="240" r="10" fill="#fff"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">BO</text>

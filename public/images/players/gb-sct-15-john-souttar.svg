@@ -11,11 +11,7 @@
     </radialGradient>
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
-  
-    <g stroke="#FFFFFF" stroke-width="20" stroke-linecap="round">
-      <line x1="200" y1="200" x2="420" y2="500"/>
-      <line x1="420" y1="200" x2="200" y2="500"/>
-    </g>
+  <polygon points="480,340 377.9422863405995,385 390,495.88457268119896 300,430 210.00000000000006,495.88457268119896 222.05771365940052,385 120,340 222.05771365940052,295 209.99999999999991,184.11542731880107 300,250 390,184.11542731880104 377.9422863405995,294.99999999999994" fill="#FFFFFF" opacity="0.9" stroke="#fff" stroke-width="4"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">JS</text>

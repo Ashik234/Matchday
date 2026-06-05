@@ -12,10 +12,11 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M200 460 L380 460 L430 380 L400 360 L380 380 L300 380 L260 320 L200 360 Z"
+    <path d="M300 180 Q330 220 330 280 L330 420 L360 460 L240 460 L270 420 L270 280 Q270 220 300 180 Z"
           fill="#F1BF00" opacity="0.92" stroke="#fff" stroke-width="4"/>
-    <path d="M180 360 Q140 340 100 360 M180 380 Q140 360 100 380 M180 400 Q140 380 100 400"
-          stroke="#F1BF00" stroke-width="6" fill="none" opacity="0.85"/>
+    <circle cx="300" cy="300" r="18" fill="#fff"/>
+    <path d="M270 460 Q260 510 240 540 M330 460 Q340 510 360 540 M300 460 L300 560"
+          stroke="#F1BF00" stroke-width="8" fill="none" opacity="0.7"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">VM</text>

@@ -13,10 +13,10 @@
   <rect width="600" height="800" fill="url(#bg)"/>
   
     <g stroke="#FFFFFF" stroke-width="18" fill="none" stroke-linecap="round" opacity="0.92">
-      <circle cx="300" cy="240" r="36"/>
-      <line x1="300" y1="280" x2="300" y2="500"/>
-      <line x1="220" y1="430" x2="380" y2="430"/>
-      <path d="M180 460 Q220 540 300 540 Q380 540 420 460"/>
+      <path d="M180 200 Q220 320 200 460"/>
+      <path d="M260 180 Q300 320 280 480"/>
+      <path d="M340 180 Q380 320 360 480"/>
+      <path d="M420 200 Q460 320 440 460"/>
     </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"

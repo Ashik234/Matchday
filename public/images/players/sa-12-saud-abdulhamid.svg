@@ -12,9 +12,11 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g transform="translate(300 330)">
-      <ellipse cx="0" cy="-70" rx="60" ry="100" fill="#FFFFFF" opacity="0.55" transform="rotate(0)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#FFFFFF" opacity="0.55" transform="rotate(60)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#FFFFFF" opacity="0.55" transform="rotate(120)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#FFFFFF" opacity="0.55" transform="rotate(180)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#FFFFFF" opacity="0.55" transform="rotate(240)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#FFFFFF" opacity="0.55" transform="rotate(300)"/>
-      <circle r="36" fill="#fff" opacity="0.9"/>
+    <g stroke="#FFFFFF" stroke-width="18" fill="none" stroke-linecap="round" opacity="0.92">
+      <path d="M180 200 Q220 320 200 460"/>
+      <path d="M260 180 Q300 320 280 480"/>
+      <path d="M340 180 Q380 320 360 480"/>
+      <path d="M420 200 Q460 320 440 460"/>
     </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"

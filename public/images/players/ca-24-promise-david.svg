@@ -1,12 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
   <title id="t">Promise David #24</title>
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FF0000"/>
       <stop offset="100%" stop-color="#FFFFFF"/>
     </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
+    </radialGradient>
   </defs>
-  <rect width="600" height="800" fill="url(#g)"/>
-  <text x="300" y="420" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="280" fill="#fff" opacity="0.92">PD</text>
-  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="56" fill="#FFD700" font-weight="700">#24</text>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <g><path d="M360 340 Q414.08573304574844 402.3253200185464 480 340" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M342.42640687119285 382.42640687119285 Q336.6001390485511 464.7414518980228 427.27922061357856 467.27922061357856" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M300 400 Q237.6746799814536 454.08573304574844 300 520" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M257.57359312880715 382.42640687119285 Q175.25854810197723 376.6001390485511 172.72077938642144 467.27922061357856" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M240 340 Q185.91426695425156 277.6746799814536 120 340" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M257.57359312880715 297.57359312880715 Q263.3998609514489 215.25854810197723 172.7207793864214 212.72077938642144" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M300 280 Q362.3253200185464 225.91426695425156 299.99999999999994 160" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M342.42640687119285 297.57359312880715 Q424.7414518980228 303.3998609514489 427.2792206135785 212.7207793864214" fill="none" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" opacity="0.85"/></g><circle cx="300" cy="340" r="50" fill="#FFFFFF" opacity="0.95"/>
+  <rect width="600" height="800" fill="url(#vignette)"/>
+  <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
+        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">PD</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
+        font-size="56" fill="#FFFFFF" font-weight="700">#24</text>
+  <text x="60" y="760" font-family="Anton, Impact, sans-serif"
+        font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">PROMISE DAVID</text>
 </svg>

@@ -12,9 +12,14 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M120 360 Q220 280 300 320 Q380 280 480 360 L450 410 Q360 360 300 380 Q240 360 150 410 Z"
-          fill="#1EB53A" opacity="0.88" stroke="#fff" stroke-width="4"/>
-    <path d="M260 320 L300 230 L340 320 Z" fill="#1EB53A" opacity="0.95"/>
+    <g transform="translate(300 340)">
+      <ellipse cx="0" cy="-100" rx="50" ry="120" fill="#1EB53A" opacity="0.78"/>
+      <ellipse cx="-90" cy="20" rx="120" ry="50" fill="#1EB53A" opacity="0.78"/>
+      <ellipse cx="90" cy="20" rx="120" ry="50" fill="#1EB53A" opacity="0.78"/>
+      <ellipse cx="-50" cy="100" rx="60" ry="80" fill="#1EB53A" opacity="0.82" transform="rotate(-30)"/>
+      <ellipse cx="50" cy="100" rx="60" ry="80" fill="#1EB53A" opacity="0.82" transform="rotate(30)"/>
+      <circle r="22" fill="#fff" opacity="0.95"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">AM</text>

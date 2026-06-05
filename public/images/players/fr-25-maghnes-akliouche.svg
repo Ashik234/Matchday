@@ -12,15 +12,13 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g transform="translate(220 340)">
-      <circle r="80" fill="#EF4135" opacity="0.85"/>
-      <circle r="40" fill="#fff"/>
-      <circle r="18" fill="#000"/>
-    </g>
-    <g transform="translate(380 340)">
-      <circle r="80" fill="#EF4135" opacity="0.85"/>
-      <circle r="40" fill="#fff"/>
-      <circle r="18" fill="#000"/>
+    <g transform="translate(300 340)">
+      <ellipse cx="0" cy="-100" rx="50" ry="120" fill="#EF4135" opacity="0.78"/>
+      <ellipse cx="-90" cy="20" rx="120" ry="50" fill="#EF4135" opacity="0.78"/>
+      <ellipse cx="90" cy="20" rx="120" ry="50" fill="#EF4135" opacity="0.78"/>
+      <ellipse cx="-50" cy="100" rx="60" ry="80" fill="#EF4135" opacity="0.82" transform="rotate(-30)"/>
+      <ellipse cx="50" cy="100" rx="60" ry="80" fill="#EF4135" opacity="0.82" transform="rotate(30)"/>
+      <circle r="22" fill="#fff" opacity="0.95"/>
     </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"

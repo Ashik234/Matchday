@@ -12,8 +12,10 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M170 540 L460 230 L490 260 L200 570 Z" fill="#11457E" stroke="#fff" stroke-width="4" opacity="0.92"/>
-    <path d="M450 240 L470 220 L500 250 L480 270 Z" fill="#fff" opacity="0.8"/>
+    <path d="M180 420 Q230 320 320 320 Q400 320 420 380 Q440 460 380 480 Q300 500 220 480 Q160 460 180 420 Z"
+          fill="#11457E" opacity="0.9"/>
+    <circle cx="380" cy="360" r="8" fill="#fff"/>
+    <path d="M420 380 L460 340 L450 360 L470 380" fill="none" stroke="#11457E" stroke-width="6"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">ŠC</text>

@@ -12,8 +12,12 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M150 240 Q300 200 450 240 Q420 380 450 460 Q300 420 150 460 Q180 380 150 240 Z"
-          fill="#CE1126" opacity="0.88" stroke="#fff" stroke-width="4"/>
+    <g stroke="#CE1126" stroke-width="18" fill="none" stroke-linecap="round" opacity="0.92">
+      <circle cx="300" cy="240" r="36"/>
+      <line x1="300" y1="280" x2="300" y2="500"/>
+      <line x1="220" y1="430" x2="380" y2="430"/>
+      <path d="M180 460 Q220 540 300 540 Q380 540 420 460"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">MA</text>

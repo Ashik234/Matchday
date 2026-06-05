@@ -11,10 +11,7 @@
     </radialGradient>
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
-  
-    <path d="M300 180 Q260 240 300 280 Q360 320 320 380 Q260 420 320 480 Q360 520 300 580"
-          fill="none" stroke="#FFFFFF" stroke-width="22" opacity="0.9" stroke-linecap="round"/>
-    <circle cx="300" cy="180" r="26" fill="#FFFFFF"/>
+  <g><circle cx="300" cy="270" r="60" fill="#FFFFFF" opacity="0.78"/><circle cx="366.57395614066075" cy="318.3688103937537" r="60" fill="#FFFFFF" opacity="0.78"/><circle cx="341.1449676604731" cy="396.6311896062463" r="60" fill="#FFFFFF" opacity="0.78"/><circle cx="258.8550323395269" cy="396.6311896062463" r="60" fill="#FFFFFF" opacity="0.78"/><circle cx="233.42604385933925" cy="318.3688103937537" r="60" fill="#FFFFFF" opacity="0.78"/></g><circle cx="300" cy="340" r="30" fill="#fff" opacity="0.95"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">DK15</text>

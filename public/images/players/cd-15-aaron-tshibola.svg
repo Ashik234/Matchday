@@ -12,10 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M300 580 Q220 480 240 360 Q190 320 240 240 Q260 200 300 180 Q340 200 360 240 Q410 320 360 360 Q380 480 300 580 Z"
-          fill="#CE1126" stroke="#fff" stroke-width="5" opacity="0.88"/>
-    <path d="M300 480 Q260 420 280 360 Q300 320 300 280 Q300 320 320 360 Q340 420 300 480 Z"
-          fill="#fff" opacity="0.45"/>
+    <g><line x1="460" y1="340" x2="500" y2="340" stroke="#CE1126" stroke-width="22" opacity="0.92"/><line x1="438.5640646055102" y1="420" x2="473.20508075688775" y2="440" stroke="#CE1126" stroke-width="22" opacity="0.92"/><line x1="380" y1="478.56406460551017" x2="400" y2="513.2050807568877" stroke="#CE1126" stroke-width="22" opacity="0.92"/><line x1="300" y1="500" x2="300" y2="540" stroke="#CE1126" stroke-width="22" opacity="0.92"/><line x1="220.00000000000003" y1="478.5640646055102" x2="200.00000000000006" y2="513.2050807568878" stroke="#CE1126" stroke-width="22" opacity="0.92"/><line x1="161.4359353944898" y1="420" x2="126.79491924311225" y2="440" stroke="#CE1126" stroke-width="22" opacity="0.92"/><line x1="140" y1="340" x2="100" y2="340" stroke="#CE1126" stroke-width="22" opacity="0.92"/><line x1="161.43593539448983" y1="260" x2="126.79491924311228" y2="239.99999999999997" stroke="#CE1126" stroke-width="22" opacity="0.92"/><line x1="219.99999999999994" y1="201.43593539448983" x2="199.99999999999991" y2="166.7949192431123" stroke="#CE1126" stroke-width="22" opacity="0.92"/><line x1="299.99999999999994" y1="180" x2="299.99999999999994" y2="140" stroke="#CE1126" stroke-width="22" opacity="0.92"/><line x1="380" y1="201.43593539448983" x2="400" y2="166.79491924311228" stroke="#CE1126" stroke-width="22" opacity="0.92"/><line x1="438.5640646055101" y1="259.99999999999994" x2="473.2050807568877" y2="239.99999999999991" stroke="#CE1126" stroke-width="22" opacity="0.92"/></g>
+    <circle cx="300" cy="340" r="150" fill="#CE1126" opacity="0.92"/>
+    <circle cx="300" cy="340" r="60" fill="url(#bg)"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">AT</text>

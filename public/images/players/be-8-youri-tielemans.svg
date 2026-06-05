@@ -12,10 +12,12 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g><line x1="380" y1="320" x2="560" y2="320" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="373.91036260090294" y1="350.6146745892072" x2="540.2086784529346" y2="419.49769241492334" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="356.5685424949238" y1="376.5685424949238" x2="483.84776310850236" y2="503.84776310850236" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="330.6146745892072" y1="393.91036260090294" x2="399.49769241492334" y2="560.2086784529346" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="300" y1="400" x2="300" y2="580" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="269.3853254107928" y1="393.91036260090294" x2="200.50230758507666" y2="560.2086784529346" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="243.4314575050762" y1="376.5685424949238" x2="116.15223689149767" y2="503.84776310850236" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="226.08963739909706" y1="350.6146745892072" x2="59.79132154706545" y2="419.4976924149234" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="220" y1="320" x2="40" y2="320.00000000000006" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="226.08963739909706" y1="289.38532541079286" x2="59.791321547065394" y2="220.5023075850768" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="243.4314575050762" y1="263.4314575050762" x2="116.15223689149761" y2="136.15223689149767" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="269.38532541079286" y1="246.08963739909706" x2="200.50230758507672" y2="79.79132154706542" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="300" y1="240" x2="299.99999999999994" y2="60" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="330.6146745892072" y1="246.08963739909706" x2="399.4976924149234" y2="79.79132154706548" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="356.5685424949238" y1="263.4314575050762" x2="483.8477631085023" y2="136.1522368914976" stroke="#ED2939" stroke-width="6" opacity="0.6"/><line x1="373.91036260090294" y1="289.38532541079286" x2="540.2086784529346" y2="220.50230758507672" stroke="#ED2939" stroke-width="6" opacity="0.6"/></g>
-    <circle cx="300" cy="320" r="78" fill="#ED2939" opacity="0.9"/>
-    <text x="300" y="550" text-anchor="middle" font-family="Anton, Impact, sans-serif"
-          font-size="80" fill="#fff" opacity="0.2" letter-spacing="14">SIUUU</text>
+    <g stroke="#ED2939" stroke-width="18" fill="none" stroke-linecap="round" opacity="0.92">
+      <path d="M180 200 Q220 320 200 460"/>
+      <path d="M260 180 Q300 320 280 480"/>
+      <path d="M340 180 Q380 320 360 480"/>
+      <path d="M420 200 Q460 320 440 460"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">YT</text>

@@ -12,9 +12,10 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M120 360 Q220 280 300 320 Q380 280 480 360 L450 410 Q360 360 300 380 Q240 360 150 410 Z"
-          fill="#D21034" opacity="0.88" stroke="#fff" stroke-width="4"/>
-    <path d="M260 320 L300 230 L340 320 Z" fill="#D21034" opacity="0.95"/>
+    <path d="M300 580 Q220 480 240 360 Q190 320 240 240 Q260 200 300 180 Q340 200 360 240 Q410 320 360 360 Q380 480 300 580 Z"
+          fill="#D21034" stroke="#fff" stroke-width="5" opacity="0.88"/>
+    <path d="M300 480 Q260 420 280 360 Q300 320 300 280 Q300 320 320 360 Q340 420 300 480 Z"
+          fill="#fff" opacity="0.45"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">IM</text>

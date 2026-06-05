@@ -12,8 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M170 540 L460 230 L490 260 L200 570 Z" fill="#FFFFFF" stroke="#fff" stroke-width="4" opacity="0.92"/>
-    <path d="M450 240 L470 220 L500 250 L480 270 Z" fill="#fff" opacity="0.8"/>
+    <path d="M120 520 L260 280 L320 380 L400 220 L500 520 Z"
+          fill="#FFFFFF" opacity="0.88" stroke="#fff" stroke-width="4"/>
+    <path d="M260 280 L320 380 L400 220 Z" fill="#fff" opacity="0.55"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">MG</text>

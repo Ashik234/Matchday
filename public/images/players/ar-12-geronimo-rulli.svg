@@ -12,10 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g>
-      <circle cx="220" cy="220" r="6" fill="#F6B40E"/><circle cx="320" cy="260" r="6" fill="#F6B40E"/><circle cx="420" cy="220" r="6" fill="#F6B40E"/><circle cx="380" cy="360" r="6" fill="#F6B40E"/><circle cx="260" cy="380" r="6" fill="#F6B40E"/><circle cx="180" cy="460" r="6" fill="#F6B40E"/><circle cx="340" cy="460" r="6" fill="#F6B40E"/><circle cx="440" cy="420" r="6" fill="#F6B40E"/><circle cx="300" cy="520" r="6" fill="#F6B40E"/><circle cx="240" cy="300" r="6" fill="#F6B40E"/>
-      <polyline points="220,220 320,260 420,220 380,360 260,380 180,460 340,460 440,420 300,520 240,300" fill="none" stroke="#F6B40E" stroke-width="2" opacity="0.55"/>
-    </g>
+    <path d="M120 360 Q220 280 300 320 Q380 280 480 360 L450 410 Q360 360 300 380 Q240 360 150 410 Z"
+          fill="#F6B40E" opacity="0.88" stroke="#fff" stroke-width="4"/>
+    <path d="M260 320 L300 230 L340 320 Z" fill="#F6B40E" opacity="0.95"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">GR</text>

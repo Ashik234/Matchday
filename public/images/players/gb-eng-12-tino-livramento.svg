@@ -12,12 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g stroke="#CE1124" stroke-width="18" fill="none" stroke-linecap="round" opacity="0.92">
-      <circle cx="300" cy="240" r="36"/>
-      <line x1="300" y1="280" x2="300" y2="500"/>
-      <line x1="220" y1="430" x2="380" y2="430"/>
-      <path d="M180 460 Q220 540 300 540 Q380 540 420 460"/>
-    </g>
+    <path d="M120 380 Q180 320 240 380 T360 380 T480 380 L480 480 L120 480 Z"
+          fill="#CE1124" opacity="0.85"/>
+    <path d="M120 440 Q180 400 240 440 T360 440 T480 440" fill="none" stroke="#fff" stroke-width="3" opacity="0.5"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">TL</text>

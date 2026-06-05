@@ -12,10 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g transform="translate(300 330)">
-      <ellipse cx="0" cy="-70" rx="60" ry="100" fill="#D21034" opacity="0.55" transform="rotate(0)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#D21034" opacity="0.55" transform="rotate(60)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#D21034" opacity="0.55" transform="rotate(120)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#D21034" opacity="0.55" transform="rotate(180)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#D21034" opacity="0.55" transform="rotate(240)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#D21034" opacity="0.55" transform="rotate(300)"/>
-      <circle r="36" fill="#fff" opacity="0.9"/>
-    </g>
+    <path d="M120 520 L260 280 L320 380 L400 220 L500 520 Z"
+          fill="#D21034" opacity="0.88" stroke="#fff" stroke-width="4"/>
+    <path d="M260 280 L320 380 L400 220 Z" fill="#fff" opacity="0.55"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">JH</text>

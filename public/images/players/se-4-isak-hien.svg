@@ -12,9 +12,11 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g>
-      <circle cx="220" cy="220" r="6" fill="#FECC00"/><circle cx="320" cy="260" r="6" fill="#FECC00"/><circle cx="420" cy="220" r="6" fill="#FECC00"/><circle cx="380" cy="360" r="6" fill="#FECC00"/><circle cx="260" cy="380" r="6" fill="#FECC00"/><circle cx="180" cy="460" r="6" fill="#FECC00"/><circle cx="340" cy="460" r="6" fill="#FECC00"/><circle cx="440" cy="420" r="6" fill="#FECC00"/><circle cx="300" cy="520" r="6" fill="#FECC00"/><circle cx="240" cy="300" r="6" fill="#FECC00"/>
-      <polyline points="220,220 320,260 420,220 380,360 260,380 180,460 340,460 440,420 300,520 240,300" fill="none" stroke="#FECC00" stroke-width="2" opacity="0.55"/>
+    <g stroke="#FECC00" stroke-width="18" fill="none" stroke-linecap="round" opacity="0.92">
+      <circle cx="300" cy="240" r="36"/>
+      <line x1="300" y1="280" x2="300" y2="500"/>
+      <line x1="220" y1="430" x2="380" y2="430"/>
+      <path d="M180 460 Q220 540 300 540 Q380 540 420 460"/>
     </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"

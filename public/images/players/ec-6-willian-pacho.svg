@@ -12,8 +12,11 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M150 240 Q300 200 450 240 Q420 380 450 460 Q300 420 150 460 Q180 380 150 240 Z"
-          fill="#EF3340" opacity="0.88" stroke="#fff" stroke-width="4"/>
+    <path d="M200 220 Q300 180 400 220 Q420 280 380 320 Q300 340 220 320 Q180 280 200 220 Z"
+          fill="#EF3340" opacity="0.6"/>
+    
+    <path d="M310 130 L210 380 L290 380 L240 580 L390 290 L310 290 L360 130 Z"
+          fill="#EF3340" stroke="#fff" stroke-width="6" opacity="0.92"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">WP</text>

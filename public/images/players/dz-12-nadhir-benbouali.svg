@@ -12,9 +12,14 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M180 420 Q260 380 360 400 Q450 420 460 360 Q470 300 400 290 Q330 290 240 340 Q160 380 180 420 Z"
-          fill="#D21034" opacity="0.9"/>
-    <path d="M420 320 Q460 320 460 280" fill="none" stroke="#fff" stroke-width="6"/>
+    <g transform="translate(300 340)">
+      <ellipse cx="0" cy="-100" rx="50" ry="120" fill="#D21034" opacity="0.78"/>
+      <ellipse cx="-90" cy="20" rx="120" ry="50" fill="#D21034" opacity="0.78"/>
+      <ellipse cx="90" cy="20" rx="120" ry="50" fill="#D21034" opacity="0.78"/>
+      <ellipse cx="-50" cy="100" rx="60" ry="80" fill="#D21034" opacity="0.82" transform="rotate(-30)"/>
+      <ellipse cx="50" cy="100" rx="60" ry="80" fill="#D21034" opacity="0.82" transform="rotate(30)"/>
+      <circle r="22" fill="#fff" opacity="0.95"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">NB</text>

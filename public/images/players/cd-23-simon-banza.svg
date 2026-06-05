@@ -12,8 +12,12 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M120 340 A180 180 0 0 1 480 340" fill="none" stroke="#CE1126" stroke-width="22" opacity="0.9"/>
-    <circle cx="300" cy="340" r="60" fill="#CE1126" opacity="0.85"/>
+    <g stroke="#CE1126" stroke-width="14" fill="none" stroke-linecap="round" opacity="0.92">
+      <line x1="300" y1="180" x2="300" y2="540"/>
+      <line x1="220" y1="220" x2="220" y2="340"/>
+      <line x1="380" y1="220" x2="380" y2="340"/>
+      <line x1="220" y1="340" x2="380" y2="340"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">SB</text>

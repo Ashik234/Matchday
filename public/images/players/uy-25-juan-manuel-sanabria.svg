@@ -11,7 +11,7 @@
     </radialGradient>
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
-  <g><rect x="160" y="420" width="28" height="80" fill="#FCD116" opacity="0.7"/><rect x="200" y="343" width="28" height="157" fill="#FCD116" opacity="0.7999999999999999"/><rect x="240" y="266" width="28" height="234" fill="#FCD116" opacity="0.8999999999999999"/><rect x="280" y="419" width="28" height="81" fill="#FCD116" opacity="0.7"/><rect x="320" y="342" width="28" height="158" fill="#FCD116" opacity="0.7999999999999999"/><rect x="360" y="265" width="28" height="235" fill="#FCD116" opacity="0.8999999999999999"/><rect x="400" y="418" width="28" height="82" fill="#FCD116" opacity="0.7"/><rect x="440" y="341" width="28" height="159" fill="#FCD116" opacity="0.7999999999999999"/></g>
+  <polygon points="480,340 377.9422863405995,385 390,495.88457268119896 300,430 210.00000000000006,495.88457268119896 222.05771365940052,385 120,340 222.05771365940052,295 209.99999999999991,184.11542731880107 300,250 390,184.11542731880104 377.9422863405995,294.99999999999994" fill="#FCD116" opacity="0.9" stroke="#fff" stroke-width="4"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">JS</text>

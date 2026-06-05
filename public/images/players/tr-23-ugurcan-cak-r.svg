@@ -12,8 +12,8 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M170 540 L460 230 L490 260 L200 570 Z" fill="#FFFFFF" stroke="#fff" stroke-width="4" opacity="0.92"/>
-    <path d="M450 240 L470 220 L500 250 L480 270 Z" fill="#fff" opacity="0.8"/>
+    <path d="M300 180 L300 540" stroke="#FFFFFF" stroke-width="6" opacity="0.9"/>
+    <g><ellipse cx="250" cy="200" rx="40" ry="18" fill="#FFFFFF" opacity="0.85" transform="rotate(-30 250 200)"/><ellipse cx="350" cy="260" rx="40" ry="18" fill="#FFFFFF" opacity="0.85" transform="rotate(30 350 260)"/><ellipse cx="250" cy="320" rx="40" ry="18" fill="#FFFFFF" opacity="0.85" transform="rotate(-30 250 320)"/><ellipse cx="350" cy="380" rx="40" ry="18" fill="#FFFFFF" opacity="0.85" transform="rotate(30 350 380)"/><ellipse cx="250" cy="440" rx="40" ry="18" fill="#FFFFFF" opacity="0.85" transform="rotate(-30 250 440)"/><ellipse cx="350" cy="500" rx="40" ry="18" fill="#FFFFFF" opacity="0.85" transform="rotate(30 350 500)"/></g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">UÇ</text>

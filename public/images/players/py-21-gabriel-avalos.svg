@@ -12,15 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g transform="translate(220 340)">
-      <circle r="80" fill="#0038A8" opacity="0.85"/>
-      <circle r="40" fill="#fff"/>
-      <circle r="18" fill="#000"/>
-    </g>
-    <g transform="translate(380 340)">
-      <circle r="80" fill="#0038A8" opacity="0.85"/>
-      <circle r="40" fill="#fff"/>
-      <circle r="18" fill="#000"/>
+    <g stroke="#0038A8" stroke-width="20" stroke-linecap="round">
+      <line x1="200" y1="200" x2="420" y2="500"/>
+      <line x1="420" y1="200" x2="200" y2="500"/>
     </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"

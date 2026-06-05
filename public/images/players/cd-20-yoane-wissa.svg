@@ -12,9 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g stroke="#CE1126" stroke-width="20" stroke-linecap="round">
-      <line x1="200" y1="200" x2="420" y2="500"/>
-      <line x1="420" y1="200" x2="200" y2="500"/>
+    <g transform="translate(300 340)">
+      <path d="M0 -160 L120 -40 L80 160 L-80 160 L-120 -40 Z" fill="#CE1126" opacity="0.88" stroke="#fff" stroke-width="4"/>
+      <path d="M0 -160 L0 160 M-120 -40 L120 -40" stroke="#fff" stroke-width="3" opacity="0.55"/>
     </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"

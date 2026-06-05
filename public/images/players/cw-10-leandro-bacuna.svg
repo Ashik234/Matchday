@@ -12,11 +12,8 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g transform="translate(300 340)">
-      <path d="M0 -160 L20 0 L0 160 L-20 0 Z" fill="#FFFFFF" opacity="0.92"/>
-      <path d="M-160 0 L0 -20 L160 0 L0 20 Z" fill="#FFFFFF" opacity="0.6"/>
-      <circle r="14" fill="#fff"/>
-    </g>
+    <path d="M180 480 L300 200 L420 480 Z" fill="#FFFFFF" opacity="0.9" stroke="#fff" stroke-width="5"/>
+    <path d="M180 480 Q220 460 300 480 T420 480" fill="none" stroke="#fff" stroke-width="4" opacity="0.5"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">LB</text>

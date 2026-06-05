@@ -12,8 +12,8 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M180 240 Q300 200 420 240 Q400 320 360 340 Q300 320 240 340 Q200 320 180 240 Z"
-          fill="#002868" opacity="0.9" stroke="#fff" stroke-width="4"/>
+    <path d="M200 460 Q280 460 320 380 Q380 280 460 240 L440 220 L470 200 L490 230 L470 260"
+          fill="none" stroke="#002868" stroke-width="16" opacity="0.92" stroke-linecap="round"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">SL</text>

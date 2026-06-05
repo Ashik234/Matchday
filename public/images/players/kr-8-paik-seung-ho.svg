@@ -11,11 +11,7 @@
     </radialGradient>
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
-  
-    <path d="M200 460 L380 460 L430 380 L400 360 L380 380 L300 380 L260 320 L200 360 Z"
-          fill="#0047A0" opacity="0.92" stroke="#fff" stroke-width="4"/>
-    <path d="M180 360 Q140 340 100 360 M180 380 Q140 360 100 380 M180 400 Q140 380 100 400"
-          stroke="#0047A0" stroke-width="6" fill="none" opacity="0.85"/>
+  <g><path d="M360 340 Q414.08573304574844 402.3253200185464 480 340" fill="none" stroke="#0047A0" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M342.42640687119285 382.42640687119285 Q336.6001390485511 464.7414518980228 427.27922061357856 467.27922061357856" fill="none" stroke="#0047A0" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M300 400 Q237.6746799814536 454.08573304574844 300 520" fill="none" stroke="#0047A0" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M257.57359312880715 382.42640687119285 Q175.25854810197723 376.6001390485511 172.72077938642144 467.27922061357856" fill="none" stroke="#0047A0" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M240 340 Q185.91426695425156 277.6746799814536 120 340" fill="none" stroke="#0047A0" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M257.57359312880715 297.57359312880715 Q263.3998609514489 215.25854810197723 172.7207793864214 212.72077938642144" fill="none" stroke="#0047A0" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M300 280 Q362.3253200185464 225.91426695425156 299.99999999999994 160" fill="none" stroke="#0047A0" stroke-width="14" stroke-linecap="round" opacity="0.85"/><path d="M342.42640687119285 297.57359312880715 Q424.7414518980228 303.3998609514489 427.2792206135785 212.7207793864214" fill="none" stroke="#0047A0" stroke-width="14" stroke-linecap="round" opacity="0.85"/></g><circle cx="300" cy="340" r="50" fill="#0047A0" opacity="0.95"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">PS</text>

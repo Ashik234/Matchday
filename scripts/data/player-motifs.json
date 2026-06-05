@@ -1,88 +1,91 @@
 {
-  "_comment": "Curated motifs for star players. Key = `<TEAM>-<JERSEY>` matching Player.id. Motif slots: motif (graphic layer), signature (text glyph top-right), accent (hex color override for highlight strokes/glow). Players not in this file get an auto-generated default motif from name+jersey hash.",
-  "_motifCatalog": [
-    "goat-crown", "siuuu-rays", "lightning-bolt", "rose-bloom", "phoenix-flame",
-    "shark-fin", "panther-stride", "eagle-wing", "cobra-strike", "drum-beat",
-    "samurai-blade", "viking-rune", "tiki-spiral", "fox-tail", "matador-cape",
-    "compass-rose", "thunder-storm", "comet-trail", "tornado-spin", "wave-crest",
-    "sword-cross", "shield-emboss", "trident-fork", "tiger-claw", "lion-mane",
-    "scorpion-tail", "spider-web", "owl-eye", "diamond-prism", "constellation",
-    "halo-arc", "winged-boot", "torch-flame", "anchor-link", "mountain-peak"
-  ],
+  "_comment": "Curated motifs for star players. Key = `<TEAM>-<JERSEY>` matching Player.id. Each motif slug MUST be unique across all curated entries — no two players share the same motif (validated by scraper). Long-tail players (not in this file) get a hash-derived default motif which may repeat across the 1200-player long tail; that's intentional.",
 
-  "ARG-10": { "motif": "goat-crown",     "signature": "M10",  "accent": "#74ACDF" },
-  "ARG-11": { "motif": "phoenix-flame",  "signature": "DM11", "accent": "#74ACDF" },
-  "ARG-22": { "motif": "lightning-bolt", "signature": "LM22", "accent": "#F6B40E" },
-  "ARG-21": { "motif": "shark-fin",      "signature": "PD21", "accent": "#FFFFFF" },
+  "ARG-10": { "motif": "goat-crown",      "signature": "M10",  "accent": "#74ACDF" },
+  "ARG-11": { "motif": "phoenix-flame",   "signature": "DM11", "accent": "#74ACDF" },
+  "ARG-22": { "motif": "lightning-bolt",  "signature": "LM22", "accent": "#F6B40E" },
+  "ARG-21": { "motif": "shark-fin",       "signature": "PD21", "accent": "#FFFFFF" },
 
-  "BRA-10": { "motif": "samba-rhythm",   "signature": "NJR",  "accent": "#FEDF00" },
-  "BRA-7":  { "motif": "comet-trail",    "signature": "VJ7",  "accent": "#FEDF00" },
-  "BRA-9":  { "motif": "drum-beat",      "signature": "RJ9",  "accent": "#009C3B" },
-  "BRA-19": { "motif": "samurai-blade",  "signature": "EN19", "accent": "#009C3B" },
+  "BRA-10": { "motif": "samba-rhythm",    "signature": "NJR",  "accent": "#FEDF00" },
+  "BRA-7":  { "motif": "comet-trail",     "signature": "VJ7",  "accent": "#FEDF00" },
+  "BRA-9":  { "motif": "drum-beat",       "signature": "RJ9",  "accent": "#009C3B" },
+  "BRA-19": { "motif": "star-burst",      "signature": "EN19", "accent": "#009C3B" },
 
-  "FRA-10": { "motif": "comet-trail",    "signature": "KM10", "accent": "#EF4135" },
-  "FRA-9":  { "motif": "lion-mane",      "signature": "OG9",  "accent": "#0055A4" },
-  "FRA-7":  { "motif": "panther-stride", "signature": "OD7",  "accent": "#0055A4" },
+  "FRA-10": { "motif": "rocket-launch",   "signature": "KM10", "accent": "#EF4135" },
+  "FRA-9":  { "motif": "lion-mane",       "signature": "OG9",  "accent": "#0055A4" },
+  "FRA-7":  { "motif": "panther-stride",  "signature": "OD7",  "accent": "#0055A4" },
 
-  "POR-7":  { "motif": "siuuu-rays",     "signature": "CR7",  "accent": "#FFD700" },
-  "POR-8":  { "motif": "wave-crest",     "signature": "BF8",  "accent": "#006600" },
-  "POR-21": { "motif": "diamond-prism",  "signature": "BS21", "accent": "#FF0000" },
+  "POR-7":  { "motif": "siuuu-rays",      "signature": "CR7",  "accent": "#FFD700" },
+  "POR-8":  { "motif": "wave-crest",      "signature": "BF8",  "accent": "#006600" },
+  "POR-21": { "motif": "diamond-prism",   "signature": "BS21", "accent": "#FF0000" },
 
-  "ENG-22": { "motif": "rose-bloom",     "signature": "JB22", "accent": "#CE1124" },
-  "ENG-9":  { "motif": "lightning-bolt", "signature": "HK9",  "accent": "#FFFFFF" },
-  "ENG-10": { "motif": "halo-arc",       "signature": "DR10", "accent": "#CE1124" },
-  "ENG-19": { "motif": "fox-tail",       "signature": "PF19", "accent": "#FFFFFF" },
+  "ENG-22": { "motif": "rose-bloom",      "signature": "JB22", "accent": "#CE1124" },
+  "ENG-9":  { "motif": "thunder-storm",   "signature": "HK9",  "accent": "#FFFFFF" },
+  "ENG-10": { "motif": "halo-arc",        "signature": "DR10", "accent": "#CE1124" },
+  "ENG-19": { "motif": "fox-tail",        "signature": "PF19", "accent": "#FFFFFF" },
 
-  "ESP-26": { "motif": "diamond-prism",  "signature": "LY26", "accent": "#F1BF00" },
-  "ESP-19": { "motif": "spider-web",     "signature": "LY19", "accent": "#AA151B" },
-  "ESP-9":  { "motif": "trident-fork",   "signature": "GT9",  "accent": "#AA151B" },
-  "ESP-6":  { "motif": "compass-rose",   "signature": "RD6",  "accent": "#F1BF00" },
+  "ESP-26": { "motif": "pearl-shell",     "signature": "LY26", "accent": "#F1BF00" },
+  "ESP-19": { "motif": "spider-web",      "signature": "LY19", "accent": "#AA151B" },
+  "ESP-9":  { "motif": "trident-fork",    "signature": "GT9",  "accent": "#AA151B" },
+  "ESP-6":  { "motif": "compass-rose",    "signature": "RD6",  "accent": "#F1BF00" },
 
-  "GER-10": { "motif": "owl-eye",        "signature": "JM10", "accent": "#DD0000" },
-  "GER-7":  { "motif": "eagle-wing",     "signature": "KH7",  "accent": "#FFCE00" },
-  "GER-13": { "motif": "thunder-storm",  "signature": "TM13", "accent": "#000000" },
+  "GER-10": { "motif": "owl-eye",         "signature": "JM10", "accent": "#DD0000" },
+  "GER-7":  { "motif": "eagle-wing",      "signature": "KH7",  "accent": "#FFCE00" },
+  "GER-13": { "motif": "gear-cog",        "signature": "TM13", "accent": "#000000" },
 
-  "NED-4":  { "motif": "shield-emboss",  "signature": "VVD",  "accent": "#AE1C28" },
-  "NED-10": { "motif": "phoenix-flame",  "signature": "MD10", "accent": "#AE1C28" },
-  "NED-21": { "motif": "tornado-spin",   "signature": "FDJ",  "accent": "#21468B" },
+  "NED-4":  { "motif": "shield-emboss",   "signature": "VVD",  "accent": "#AE1C28" },
+  "NED-10": { "motif": "orchid-petal",    "signature": "MD10", "accent": "#AE1C28" },
+  "NED-21": { "motif": "tornado-spin",    "signature": "FDJ",  "accent": "#21468B" },
 
-  "BEL-7":  { "motif": "rose-bloom",     "signature": "KDB",  "accent": "#ED2939" },
-  "BEL-10": { "motif": "wave-crest",     "signature": "ED10", "accent": "#FAE042" },
+  "BEL-7":  { "motif": "constellation",   "signature": "KDB",  "accent": "#ED2939" },
+  "BEL-10": { "motif": "helix-spiral",    "signature": "ED10", "accent": "#FAE042" },
 
-  "CRO-10": { "motif": "shield-emboss",  "signature": "LM10", "accent": "#FF0000" },
+  "CRO-10": { "motif": "sword-cross",     "signature": "LM10", "accent": "#FF0000" },
 
-  "ITA-10": { "motif": "matador-cape",   "signature": "LP10", "accent": "#008C45" },
+  "NOR-9":  { "motif": "viking-rune",     "signature": "EH9",  "accent": "#EF2B2D" },
+  "NOR-10": { "motif": "iceberg-tip",     "signature": "MO10", "accent": "#002868" },
 
-  "NOR-9":  { "motif": "viking-rune",    "signature": "EH9",  "accent": "#EF2B2D" },
-  "NOR-10": { "motif": "lightning-bolt", "signature": "MO10", "accent": "#002868" },
+  "URU-21": { "motif": "wolf-howl",       "signature": "EC21", "accent": "#7B9FE5" },
+  "URU-9":  { "motif": "tiger-claw",      "signature": "DN9",  "accent": "#FCD116" },
 
-  "URU-21": { "motif": "shark-fin",      "signature": "EC21", "accent": "#7B9FE5" },
-  "URU-9":  { "motif": "tiger-claw",     "signature": "DN9",  "accent": "#FCD116" },
+  "COL-10": { "motif": "olive-branch",    "signature": "JJ10", "accent": "#FCD116" },
+  "COL-19": { "motif": "torch-flame",     "signature": "LD19", "accent": "#003893" },
 
-  "COL-10": { "motif": "compass-rose",   "signature": "JJ10", "accent": "#FCD116" },
-  "COL-19": { "motif": "comet-trail",    "signature": "LD19", "accent": "#003893" },
+  "MAR-7":  { "motif": "matador-cape",    "signature": "HZ7",  "accent": "#C1272D" },
+  "MAR-19": { "motif": "cobra-strike",    "signature": "YE19", "accent": "#006233" },
 
-  "MAR-7":  { "motif": "matador-cape",   "signature": "HZ7",  "accent": "#C1272D" },
-  "MAR-19": { "motif": "lion-mane",      "signature": "YE19", "accent": "#006233" },
+  "SEN-19": { "motif": "falcon-dive",     "signature": "SM19", "accent": "#00853F" },
+  "SEN-9":  { "motif": "bull-horns",      "signature": "BD9",  "accent": "#FDEF42" },
 
-  "SEN-19": { "motif": "lion-mane",      "signature": "SM19", "accent": "#00853F" },
-  "SEN-9":  { "motif": "panther-stride", "signature": "BD9",  "accent": "#FDEF42" },
+  "EGY-10": { "motif": "ankh-symbol",     "signature": "MS10", "accent": "#CE1126" },
 
-  "EGY-10": { "motif": "phoenix-flame",  "signature": "MS10", "accent": "#CE1126" },
+  "USA-10": { "motif": "winged-boot",     "signature": "CP10", "accent": "#3C3B6E" },
+  "USA-8":  { "motif": "anchor-link",     "signature": "WM8",  "accent": "#B22234" },
 
-  "USA-10": { "motif": "halo-arc",       "signature": "CP10", "accent": "#3C3B6E" },
-  "USA-8":  { "motif": "compass-rose",   "signature": "WM8",  "accent": "#B22234" },
+  "MEX-22": { "motif": "tiki-spiral",     "signature": "HL22", "accent": "#006847" },
+  "MEX-9":  { "motif": "cactus-bloom",    "signature": "RJ9",  "accent": "#CE1126" },
 
-  "MEX-22": { "motif": "tiki-spiral",    "signature": "HL22", "accent": "#006847" },
-  "MEX-9":  { "motif": "matador-cape",   "signature": "RJ9",  "accent": "#CE1126" },
+  "CAN-19": { "motif": "maple-leaf",      "signature": "AD19", "accent": "#FF0000" },
+  "CAN-11": { "motif": "pine-forest",     "signature": "JD11", "accent": "#FFFFFF" },
 
-  "CAN-19": { "motif": "mountain-peak",  "signature": "AD19", "accent": "#FF0000" },
-  "CAN-11": { "motif": "winged-boot",    "signature": "JD11", "accent": "#FFFFFF" },
+  "JPN-10": { "motif": "samurai-blade",   "signature": "TK10", "accent": "#BC002D" },
+  "JPN-15": { "motif": "cherry-blossom",  "signature": "DK15", "accent": "#FFFFFF" },
 
-  "JPN-10": { "motif": "samurai-blade",  "signature": "TK10", "accent": "#BC002D" },
-  "JPN-15": { "motif": "cobra-strike",   "signature": "DK15", "accent": "#FFFFFF" },
+  "KOR-7":  { "motif": "dragon-coil",     "signature": "SHM7", "accent": "#CD2E3A" },
 
-  "KOR-7":  { "motif": "tornado-spin",   "signature": "SHM7", "accent": "#CD2E3A" },
+  "AUS-11": { "motif": "boomerang-arc",   "signature": "MD11", "accent": "#FFCD00" },
 
-  "AUS-11": { "motif": "boomerang-arc",  "signature": "MD11", "accent": "#FFCD00" }
+  "SUI-23": { "motif": "mountain-peak",   "signature": "XS23", "accent": "#FF0000" },
+
+  "IRN-20": { "motif": "scorpion-tail",   "signature": "ST20", "accent": "#239F40" },
+
+  "ECU-13": { "motif": "volcano-erupt",   "signature": "EV13", "accent": "#EF3340" },
+
+  "AUT-10": { "motif": "crescent-moon",   "signature": "DA10", "accent": "#ED2939" },
+
+  "PAR-11": { "motif": "octopus-arms",    "signature": "AS11", "accent": "#D52B1E" },
+
+  "EGY-1":  { "motif": "pyramid-stack",   "signature": "EE1",  "accent": "#FFFFFF" },
+
+  "GHA-10": { "motif": "sand-dune",       "signature": "AA10", "accent": "#FCD116" }
 }

@@ -12,10 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M300 340 m-120 0 a120 120 0 1 0 240 0 a120 120 0 1 0 -240 0
-             M300 340 m-80  0 a80  80  0 1 1 160 0 a80  80  0 1 1 -160 0
-             M300 340 m-40  0 a40  40  0 1 0 80  0 a40  40  0 1 0 -80  0"
-          fill="none" stroke="#FFFFFF" stroke-width="14" opacity="0.85"/>
+    <path d="M300 180 Q260 240 270 300 Q230 340 260 380 Q300 420 340 380 Q370 340 330 300 Q340 240 300 180 Z"
+          fill="#FFFFFF" opacity="0.9"/>
+    <rect x="280" y="400" width="40" height="160" fill="#FFFFFF" opacity="0.85"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">YM</text>

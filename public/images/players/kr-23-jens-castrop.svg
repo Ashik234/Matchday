@@ -12,12 +12,10 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <g stroke="#0047A0" stroke-width="18" fill="none" stroke-linecap="round" opacity="0.92">
-      <circle cx="300" cy="240" r="36"/>
-      <line x1="300" y1="280" x2="300" y2="500"/>
-      <line x1="220" y1="430" x2="380" y2="430"/>
-      <path d="M180 460 Q220 540 300 540 Q380 540 420 460"/>
-    </g>
+    <path d="M180 420 Q230 320 320 320 Q400 320 420 380 Q440 460 380 480 Q300 500 220 480 Q160 460 180 420 Z"
+          fill="#0047A0" opacity="0.9"/>
+    <circle cx="380" cy="360" r="8" fill="#fff"/>
+    <path d="M420 380 L460 340 L450 360 L470 380" fill="none" stroke="#0047A0" stroke-width="6"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">JC</text>

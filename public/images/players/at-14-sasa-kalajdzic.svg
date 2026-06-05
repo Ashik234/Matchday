@@ -12,10 +12,10 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M300 340 m-120 0 a120 120 0 1 0 240 0 a120 120 0 1 0 -240 0
-             M300 340 m-80  0 a80  80  0 1 1 160 0 a80  80  0 1 1 -160 0
-             M300 340 m-40  0 a40  40  0 1 0 80  0 a40  40  0 1 0 -80  0"
-          fill="none" stroke="#FFFFFF" stroke-width="14" opacity="0.85"/>
+    <path d="M200 460 L380 460 L430 380 L400 360 L380 380 L300 380 L260 320 L200 360 Z"
+          fill="#FFFFFF" opacity="0.92" stroke="#fff" stroke-width="4"/>
+    <path d="M180 360 Q140 340 100 360 M180 380 Q140 360 100 380 M180 400 Q140 380 100 400"
+          stroke="#FFFFFF" stroke-width="6" fill="none" opacity="0.85"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">SK</text>

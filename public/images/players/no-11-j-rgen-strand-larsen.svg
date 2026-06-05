@@ -11,13 +11,7 @@
     </radialGradient>
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
-  
-    <g transform="translate(300 340)">
-      <ellipse rx="160" ry="40" fill="#002868" opacity="0.85"/>
-      <rect x="-160" y="0" width="320" height="120" fill="#002868" opacity="0.6"/>
-      <ellipse cy="120" rx="160" ry="40" fill="#002868" opacity="0.75"/>
-      <line x1="-100" y1="0" x2="-100" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="-50" y1="0" x2="-50" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="0" y1="0" x2="0" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="50" y1="0" x2="50" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="100" y1="0" x2="100" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/>
-    </g>
+  <polygon points="480,340 377.9422863405995,385 390,495.88457268119896 300,430 210.00000000000006,495.88457268119896 222.05771365940052,385 120,340 222.05771365940052,295 209.99999999999991,184.11542731880107 300,250 390,184.11542731880104 377.9422863405995,294.99999999999994" fill="#002868" opacity="0.9" stroke="#fff" stroke-width="4"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">JL</text>

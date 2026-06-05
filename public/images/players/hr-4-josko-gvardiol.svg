@@ -12,8 +12,10 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M200 460 Q280 460 320 380 Q380 280 460 240 L440 220 L470 200 L490 230 L470 260"
-          fill="none" stroke="#0F1F4F" stroke-width="16" opacity="0.92" stroke-linecap="round"/>
+    <g>
+      <circle cx="220" cy="220" r="6" fill="#0F1F4F"/><circle cx="320" cy="260" r="6" fill="#0F1F4F"/><circle cx="420" cy="220" r="6" fill="#0F1F4F"/><circle cx="380" cy="360" r="6" fill="#0F1F4F"/><circle cx="260" cy="380" r="6" fill="#0F1F4F"/><circle cx="180" cy="460" r="6" fill="#0F1F4F"/><circle cx="340" cy="460" r="6" fill="#0F1F4F"/><circle cx="440" cy="420" r="6" fill="#0F1F4F"/><circle cx="300" cy="520" r="6" fill="#0F1F4F"/><circle cx="240" cy="300" r="6" fill="#0F1F4F"/>
+      <polyline points="220,220 320,260 420,220 380,360 260,380 180,460 340,460 440,420 300,520 240,300" fill="none" stroke="#0F1F4F" stroke-width="2" opacity="0.55"/>
+    </g>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">JG</text>

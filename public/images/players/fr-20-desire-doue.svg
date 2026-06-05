@@ -12,8 +12,9 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M180 240 Q300 200 420 240 Q400 320 360 340 Q300 320 240 340 Q200 320 180 240 Z"
-          fill="#EF4135" opacity="0.9" stroke="#fff" stroke-width="4"/>
+    <path d="M180 420 Q260 380 360 400 Q450 420 460 360 Q470 300 400 290 Q330 290 240 340 Q160 380 180 420 Z"
+          fill="#EF4135" opacity="0.9"/>
+    <path d="M420 320 Q460 320 460 280" fill="none" stroke="#fff" stroke-width="6"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
         font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">DD</text>

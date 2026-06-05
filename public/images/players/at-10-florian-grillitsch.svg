@@ -12,14 +12,13 @@
   </defs>
   <rect width="600" height="800" fill="url(#bg)"/>
   
-    <path d="M180 420 Q260 380 360 400 Q450 420 460 360 Q470 300 400 290 Q330 290 240 340 Q160 380 180 420 Z"
-          fill="#FFFFFF" opacity="0.9"/>
-    <path d="M420 320 Q460 320 460 280" fill="none" stroke="#fff" stroke-width="6"/>
+    <circle cx="300" cy="340" r="160" fill="#ED2939" opacity="0.92"/>
+    <circle cx="350" cy="320" r="140" fill="url(#bg)"/>
   <rect width="600" height="800" fill="url(#vignette)"/>
   <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
-        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">FG</text>
+        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">DA10</text>
   <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
-        font-size="56" fill="#FFFFFF" font-weight="700">#10</text>
+        font-size="56" fill="#ED2939" font-weight="700">#10</text>
   <text x="60" y="760" font-family="Anton, Impact, sans-serif"
         font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">FLORIAN GRILLITSCH</text>
 </svg>
