@@ -48,17 +48,34 @@ Post-match result scraping system for FIFA World Cup 2026.
 
 ## Testing
 
-### Local Test (Before Tournament)
+### ✅ Pipeline Tested (June 5, 2026)
 
-The scraper will exit with "outside WC2026 window" when run before June 11, 2026. To test the scraper logic:
+The scraper pipeline has been tested and verified:
 
-1. **Edit the date gate** in `scripts/scrape-match-results.mjs`:
+**Test Results:**
+- ✅ JSON generation works correctly
+- ✅ Match ID format: `home-vs-away-YYYY-MM-DD` 
+- ✅ Scorer parsing (regular goals, penalties, own goals)
+- ✅ Minute parsing (including stoppage time like 45+2)
+- ✅ Penalty shootout data structure (homePenScore/awayPenScore)
+- ✅ Data merging (preserves existing results)
+- ✅ React Query hook loads data without errors
+- ✅ TypeScript types validated
+
+**BBC Scraper Status:**
+- ⚠️ BBC's archived World Cup pages don't match live structure
+- The scraper includes fallback URL attempts and diagnostic logging
+- **Action Required**: Once WC2026 pages go live (June 2026), verify BBC's HTML selectors
+- Scraper will need selector adjustment if BBC changes their markup
+
+### Local Test (During Tournament)
+
+Once the tournament starts and BBC's WC2026 pages are live:
+
+1. **Verify BBC's HTML structure**:
    ```javascript
-   // Temporarily comment out the window check
-   // if (!isWithinWCWindow()) {
-   //   console.log('[results] outside WC2026 window...');
-   //   process.exit(0);
-   // }
+   // In scripts/scrape-match-results.mjs, check the DEBUG output
+   // The scraper includes diagnostic logging to help identify correct selectors
    ```
 
 2. **Run the scraper**:
