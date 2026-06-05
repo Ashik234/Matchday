@@ -136,7 +136,7 @@ function ScorerList({
         {scorers.map((s, i) => (
           <li key={i} className="text-text">
             <span className="font-mono text-gold mr-2">
-              {s.minute}{s.stoppage ? `+${s.stoppage}` : ''}'
+              {s.minute}'
             </span>
             {s.player}
             {s.penalty && <span className="text-text-dim text-xs ml-1">(pen)</span>}
