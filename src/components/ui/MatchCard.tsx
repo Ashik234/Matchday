@@ -3,7 +3,9 @@ import { Flag } from './Flag';
 import { Pill } from './Pill';
 import { Countdown } from './Countdown';
 import { formatKickoff } from '@/utils/formatDate';
-import type { Match } from '@/data/types';
+import { useMatchResult } from '@/data/queries/useMatchResults';
+import { toMatchSlug } from '@/utils/matchSlug';
+import type { Match, MatchResult } from '@/data/types';
 
 export type MatchCardVariant = 'hero' | 'upcoming' | 'today' | 'live' | 'bracket';
 
@@ -13,7 +15,8 @@ type Props = {
   onClick?: () => void;
 };
 
-function statusToPill(match: Match) {
+function statusToPill(match: Match, result?: MatchResult) {
+  if (result) return <Pill variant="final">{result.status}</Pill>;
   if (match.status === 'live') return <Pill variant="live">LIVE · {match.minute ?? 0}'</Pill>;
   if (match.status === 'finished') return <Pill variant="final">Final</Pill>;
   return <Pill variant="scheduled">{formatKickoff(match.kickoff)}</Pill>;
@@ -22,6 +25,10 @@ function statusToPill(match: Match) {
 export function MatchCard({ variant, match, onClick }: Props) {
   const interactive = !!onClick;
   const Wrapper = interactive ? 'button' : 'div';
+  const result = useMatchResult(toMatchSlug(match));
+  const homeScore = result?.homeScore ?? match.home.score;
+  const awayScore = result?.awayScore ?? match.away.score;
+  const isFinished = Boolean(result) || match.status === 'finished';
 
   if (variant === 'hero') {
     return (
@@ -35,11 +42,13 @@ export function MatchCard({ variant, match, onClick }: Props) {
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">
               {match.stage}
             </span>
-            {statusToPill(match)}
+            {statusToPill(match, result)}
           </div>
           <div className="flex items-center justify-between gap-4">
             <TeamSide team={match.home} large />
-            <span className="font-mono text-text-dim text-xl">vs</span>
+            <span className={isFinished ? 'font-mono text-text text-2xl' : 'font-mono text-text-dim text-xl'}>
+              {isFinished ? `${homeScore ?? 0} - ${awayScore ?? 0}` : 'vs'}
+            </span>
             <TeamSide team={match.away} large align="right" />
           </div>
           <div className="text-xs text-text-dim">

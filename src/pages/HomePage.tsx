@@ -1,6 +1,7 @@
 import { HeroGrid } from '@/components/hero/HeroGrid';
 import { TodayMatchesSection } from '@/components/sections/TodayMatchesSection';
 import { TournamentProgress } from '@/components/sections/TournamentProgress';
+import { OnThisDaySection } from '@/components/sections/OnThisDay/OnThisDaySection';
 import { GroupStandings } from '@/components/sections/GroupStandings';
 import { FeaturedTeams } from '@/components/sections/FeaturedTeams';
 import { LiveMatchCenter } from '@/components/sections/LiveMatchCenter';
@@ -13,6 +14,7 @@ export function HomePage() {
       <HeroGrid />
       <TodayMatchesSection />
       <TournamentProgress />
+      <OnThisDaySection />
       <GroupStandings />
       <FeaturedTeams />
       <LiveMatchCenter />

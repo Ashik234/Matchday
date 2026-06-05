@@ -1,0 +1,49 @@
+name: Refresh Match Results
+
+on:
+  schedule:
+    # Daily at 23:30 UTC during WC2026 (Jun 11 - Jul 19, 2026)
+    - cron: '30 23 * * *'
+  workflow_dispatch:
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Chromium for Puppeteer
+        run: |
+          npx puppeteer browsers install chrome
+
+      - name: Scrape match results
+        run: pnpm run scrape:results
+
+      - name: Commit results if changed
+        run: |
+          git config user.name "Ashik234"
+          git config user.email "ashik@users.noreply.github.com"
+          git add public/data/match-results.json
+          if git diff --staged --quiet; then
+            echo "No changes to match results"
+          else
+            git commit -m "chore: refresh match results [skip ci]"
+            git push
+          fi
