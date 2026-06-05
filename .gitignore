@@ -33,3 +33,7 @@ lerna-debug.log*
 
 # superpowers brainstorm session artifacts (mockups, server state)
 .superpowers/
+
+# Player portraits are SVG-only; raster fallbacks from old Wikidata scraper
+# experiment should never re-enter the repo.
+public/images/players/*.webp

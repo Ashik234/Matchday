@@ -1,30 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
   <title id="t">Husam Abu Dahab #4</title>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#000000"/>
       <stop offset="100%" stop-color="#FFFFFF"/>
     </linearGradient>
-    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
-      <stop offset="0%" stop-color="transparent"/>
-      <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
-    </radialGradient>
   </defs>
-  <rect width="600" height="800" fill="url(#bg)"/>
-  
-    <g transform="translate(300 340)">
-      <ellipse cx="0" cy="-100" rx="50" ry="120" fill="#CE1126" opacity="0.78"/>
-      <ellipse cx="-90" cy="20" rx="120" ry="50" fill="#CE1126" opacity="0.78"/>
-      <ellipse cx="90" cy="20" rx="120" ry="50" fill="#CE1126" opacity="0.78"/>
-      <ellipse cx="-50" cy="100" rx="60" ry="80" fill="#CE1126" opacity="0.82" transform="rotate(-30)"/>
-      <ellipse cx="50" cy="100" rx="60" ry="80" fill="#CE1126" opacity="0.82" transform="rotate(30)"/>
-      <circle r="22" fill="#fff" opacity="0.95"/>
-    </g>
-  <rect width="600" height="800" fill="url(#vignette)"/>
-  <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
-        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">HD</text>
-  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
-        font-size="56" fill="#CE1126" font-weight="700">#4</text>
-  <text x="60" y="760" font-family="Anton, Impact, sans-serif"
-        font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">HUSAM ABU DAHAB</text>
+  <rect width="600" height="800" fill="url(#g)"/>
+  <text x="300" y="420" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="280" fill="#fff" opacity="0.92">HD</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="56" fill="#FFD700" font-weight="700">#4</text>
 </svg>

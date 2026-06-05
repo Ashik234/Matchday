@@ -1,25 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
   <title id="t">Jiovany Ramos #13</title>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#005AA7"/>
       <stop offset="100%" stop-color="#FFFFFF"/>
     </linearGradient>
-    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
-      <stop offset="0%" stop-color="transparent"/>
-      <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
-    </radialGradient>
   </defs>
-  <rect width="600" height="800" fill="url(#bg)"/>
-  
-    <g><line x1="460" y1="340" x2="500" y2="340" stroke="#D21034" stroke-width="22" opacity="0.92"/><line x1="438.5640646055102" y1="420" x2="473.20508075688775" y2="440" stroke="#D21034" stroke-width="22" opacity="0.92"/><line x1="380" y1="478.56406460551017" x2="400" y2="513.2050807568877" stroke="#D21034" stroke-width="22" opacity="0.92"/><line x1="300" y1="500" x2="300" y2="540" stroke="#D21034" stroke-width="22" opacity="0.92"/><line x1="220.00000000000003" y1="478.5640646055102" x2="200.00000000000006" y2="513.2050807568878" stroke="#D21034" stroke-width="22" opacity="0.92"/><line x1="161.4359353944898" y1="420" x2="126.79491924311225" y2="440" stroke="#D21034" stroke-width="22" opacity="0.92"/><line x1="140" y1="340" x2="100" y2="340" stroke="#D21034" stroke-width="22" opacity="0.92"/><line x1="161.43593539448983" y1="260" x2="126.79491924311228" y2="239.99999999999997" stroke="#D21034" stroke-width="22" opacity="0.92"/><line x1="219.99999999999994" y1="201.43593539448983" x2="199.99999999999991" y2="166.7949192431123" stroke="#D21034" stroke-width="22" opacity="0.92"/><line x1="299.99999999999994" y1="180" x2="299.99999999999994" y2="140" stroke="#D21034" stroke-width="22" opacity="0.92"/><line x1="380" y1="201.43593539448983" x2="400" y2="166.79491924311228" stroke="#D21034" stroke-width="22" opacity="0.92"/><line x1="438.5640646055101" y1="259.99999999999994" x2="473.2050807568877" y2="239.99999999999991" stroke="#D21034" stroke-width="22" opacity="0.92"/></g>
-    <circle cx="300" cy="340" r="150" fill="#D21034" opacity="0.92"/>
-    <circle cx="300" cy="340" r="60" fill="url(#bg)"/>
-  <rect width="600" height="800" fill="url(#vignette)"/>
-  <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
-        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">JR</text>
-  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
-        font-size="56" fill="#D21034" font-weight="700">#13</text>
-  <text x="60" y="760" font-family="Anton, Impact, sans-serif"
-        font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">JIOVANY RAMOS</text>
+  <rect width="600" height="800" fill="url(#g)"/>
+  <text x="300" y="420" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="280" fill="#fff" opacity="0.92">JR</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="56" fill="#FFD700" font-weight="700">#13</text>
 </svg>
