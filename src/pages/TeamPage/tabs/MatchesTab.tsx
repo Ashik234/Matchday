@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
 import type { Team, Match } from '@/data/types';
 import { MatchTimeline } from '../components/MatchTimeline';
 import { Flag } from '@/components/ui/Flag';
 import { formatDate } from '@/utils/formatDate';
+import { toMatchSlug } from '@/utils/matchSlug';
 
 export function MatchesTab({ team, matches }: { team: Team; matches: Match[] }) {
   const upcoming = matches.filter((m) => m.status === 'scheduled');
@@ -22,19 +24,21 @@ export function MatchesTab({ team, matches }: { team: Team; matches: Match[] }) 
             {upcoming.map((m) => {
               const opp = m.home.teamId === team.name ? m.away : m.home;
               return (
-                <li
-                  key={m.id}
-                  className="shrink-0 w-64 rounded-2xl p-4 bg-bg-elev1/40 border border-white/8 backdrop-blur-md"
-                >
-                  <div className="flex items-center gap-2">
-                    <Flag countryCode={opp.countryCode} size="md" />
-                    <div>
-                      <div className="text-sm font-semibold text-text truncate">vs {opp.name}</div>
-                      <div className="text-[11px] text-text-dim">{formatDate(m.kickoff)}</div>
+                <li key={m.id} className="shrink-0">
+                  <Link
+                    to={`/match/${toMatchSlug(m)}`}
+                    className="block w-64 rounded-2xl p-4 bg-bg-elev1/40 border border-white/8 backdrop-blur-md hover:bg-bg-elev1/60 transition-colors"
+                  >
+                    <div className="flex items-center gap-2">
+                      <Flag countryCode={opp.countryCode} size="md" />
+                      <div>
+                        <div className="text-sm font-semibold text-text truncate">vs {opp.name}</div>
+                        <div className="text-[11px] text-text-dim">{formatDate(m.kickoff)}</div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="mt-3 text-[11px] text-text-dim">{m.stadium.name}</div>
-                  <div className="text-[11px] text-text-dim">{m.stage}</div>
+                    <div className="mt-3 text-[11px] text-text-dim">{m.stadium.name}</div>
+                    <div className="text-[11px] text-text-dim">{m.stage}</div>
+                  </Link>
                 </li>
               );
             })}

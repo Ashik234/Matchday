@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
+  <title id="t">Uğurcan Çakır #23</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E30A17"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  
+    <path d="M300 180 L300 540" stroke="#FFFFFF" stroke-width="6" opacity="0.9"/>
+    <g><ellipse cx="250" cy="200" rx="40" ry="18" fill="#FFFFFF" opacity="0.85" transform="rotate(-30 250 200)"/><ellipse cx="350" cy="260" rx="40" ry="18" fill="#FFFFFF" opacity="0.85" transform="rotate(30 350 260)"/><ellipse cx="250" cy="320" rx="40" ry="18" fill="#FFFFFF" opacity="0.85" transform="rotate(-30 250 320)"/><ellipse cx="350" cy="380" rx="40" ry="18" fill="#FFFFFF" opacity="0.85" transform="rotate(30 350 380)"/><ellipse cx="250" cy="440" rx="40" ry="18" fill="#FFFFFF" opacity="0.85" transform="rotate(-30 250 440)"/><ellipse cx="350" cy="500" rx="40" ry="18" fill="#FFFFFF" opacity="0.85" transform="rotate(30 350 500)"/></g>
+  <rect width="600" height="800" fill="url(#vignette)"/>
+  <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
+        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">UÇ</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
+        font-size="56" fill="#FFFFFF" font-weight="700">#23</text>
+  <text x="60" y="760" font-family="Anton, Impact, sans-serif"
+        font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">UĞURCAN ÇAKIR</text>
+</svg>

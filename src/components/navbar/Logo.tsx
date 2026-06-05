@@ -1,22 +1,19 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { useReducedMotion } from '@/hooks/useReducedMotion';
 
 function BallSVG() {
-  // Canonical soccer ball: center black pentagon + 5 black "wedge" panels
-  // radiating to rim, connected by gold hexagons. Approximated for icon scale.
   const cx = 50;
   const cy = 50;
-  // central pentagon (point up)
   const pentR = 14;
   const centerPent = Array.from({ length: 5 }, (_, i) => {
     const a = ((-90 + i * 72) * Math.PI) / 180;
     return `${cx + pentR * Math.cos(a)},${cy + pentR * Math.sin(a)}`;
   }).join(' ');
-  // 5 outer pentagons (peripheral black panels), pointing outward
   const outerR = 32;
   const outerSize = 11;
   const outerPents = Array.from({ length: 5 }, (_, i) => {
-    const baseAngle = -90 + 36 + i * 72; // rotated by 36deg so they sit between center-pent vertices
+    const baseAngle = -90 + 36 + i * 72;
     const ox = cx + outerR * Math.cos((baseAngle * Math.PI) / 180);
     const oy = cy + outerR * Math.sin((baseAngle * Math.PI) / 180);
     const pts = Array.from({ length: 5 }, (_, j) => {
@@ -25,7 +22,6 @@ function BallSVG() {
     }).join(' ');
     return pts;
   });
-  // Lines connecting center pentagon edges to outer panels (suggest hex seams)
   const seamPoints = Array.from({ length: 5 }, (_, i) => {
     const a1 = ((-90 + i * 72) * Math.PI) / 180;
     const a2 = ((-90 + 36 + i * 72) * Math.PI) / 180;
@@ -53,8 +49,6 @@ function BallSVG() {
         </radialGradient>
       </defs>
       <circle cx={cx} cy={cy} r="50" fill="url(#ballShade)" />
-
-      {/* seam lines (gold hex panel separators) */}
       {seamPoints.map((s, i) => (
         <line
           key={`seam-${i}`}
@@ -67,18 +61,11 @@ function BallSVG() {
           strokeLinecap="round"
         />
       ))}
-
-      {/* center pentagon */}
       <polygon points={centerPent} fill="#0F0F0F" />
-
-      {/* 5 outer black pentagon panels */}
       {outerPents.map((pts, i) => (
         <polygon key={`outer-${i}`} points={pts} fill="#0F0F0F" />
       ))}
-
-      {/* glossy highlight */}
       <ellipse cx="32" cy="26" rx="14" ry="7" fill="rgba(255,255,255,0.32)" />
-      {/* rim shadow for depth */}
       <circle cx={cx} cy={cy} r="49" fill="none" stroke="rgba(0,0,0,0.3)" strokeWidth="2" />
     </svg>
   );
@@ -95,7 +82,11 @@ export function Logo() {
   const ballCommon = 'inline-block mx-0.5 rounded-full overflow-hidden shadow-gold';
 
   return (
-    <div className="font-display text-2xl tracking-wide text-text leading-none">
+    <Link
+      to="/"
+      aria-label="Matchday — home"
+      className="font-display text-2xl tracking-wide text-text leading-none hover:text-gold transition-colors"
+    >
       FIFA 2
       {reduced ? (
         <span
@@ -138,6 +129,6 @@ export function Logo() {
         </motion.span>
       )}
       26
-    </div>
+    </Link>
   );
 }

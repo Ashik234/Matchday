@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Olwethu Makhanya #24</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#007A4D"/>
+      <stop offset="100%" stop-color="#FCB514"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M120 360 Q220 280 300 320 Q380 280 480 360 L450 410 Q360 360 300 380 Q240 360 150 410 Z"
+          fill="#002395" opacity="0.88" stroke="#fff" stroke-width="4"/>
+    <path d="M260 320 L300 230 L340 320 Z" fill="#002395" opacity="0.95"/>
+</svg>

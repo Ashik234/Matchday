@@ -75,7 +75,7 @@ export default function TeamPage() {
             transition={{ duration: 0.2 }}
           >
             {tab === 'overview' && <OverviewTab team={team} matches={matches} />}
-            {tab === 'squad' && <SquadTab squad={squad} />}
+            {tab === 'squad' && <SquadTab squad={squad} countryCode={team.countryCode} />}
             {tab === 'stats' && <StatsTab team={team} matches={matches} group={group} />}
             {tab === 'matches' && <MatchesTab team={team} matches={matches} />}
             {tab === 'journey' && (

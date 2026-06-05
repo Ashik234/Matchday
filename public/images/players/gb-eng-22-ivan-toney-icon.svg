@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Ivan Toney #22</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#CE1124"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <g transform="translate(300 330)">
+      <ellipse cx="0" cy="-70" rx="60" ry="100" fill="#CE1124" opacity="0.55" transform="rotate(0)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#CE1124" opacity="0.55" transform="rotate(60)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#CE1124" opacity="0.55" transform="rotate(120)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#CE1124" opacity="0.55" transform="rotate(180)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#CE1124" opacity="0.55" transform="rotate(240)"/><ellipse cx="0" cy="-70" rx="60" ry="100" fill="#CE1124" opacity="0.55" transform="rotate(300)"/>
+      <circle r="36" fill="#fff" opacity="0.9"/>
+    </g>
+</svg>

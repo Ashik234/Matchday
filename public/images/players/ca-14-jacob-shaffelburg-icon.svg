@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Jacob Shaffelburg #14</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M300 180 Q260 240 300 280 Q360 320 320 380 Q260 420 320 480 Q360 520 300 580"
+          fill="none" stroke="#FFFFFF" stroke-width="22" opacity="0.9" stroke-linecap="round"/>
+    <circle cx="300" cy="180" r="26" fill="#FFFFFF"/>
+</svg>

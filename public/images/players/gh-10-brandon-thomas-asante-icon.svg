@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Brandon Thomas-Asante #10</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CE1126"/>
+      <stop offset="100%" stop-color="#FCD116"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M120 460 Q200 380 300 420 Q400 460 480 380 L480 540 L120 540 Z" fill="#FCD116" opacity="0.88"/>
+    <path d="M120 420 Q220 360 320 400 Q420 440 480 360" fill="none" stroke="#FCD116" stroke-width="4" opacity="0.6"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Raúl Jiménez #9</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#006847"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <rect x="280" y="260" width="40" height="240" rx="20" fill="#CE1126" opacity="0.9"/>
+    <rect x="200" y="320" width="40" height="120" rx="20" fill="#CE1126" opacity="0.9"/>
+    <rect x="240" y="290" width="20" height="30" fill="#CE1126" opacity="0.9"/>
+    <rect x="360" y="340" width="40" height="100" rx="20" fill="#CE1126" opacity="0.9"/>
+    <rect x="340" y="310" width="20" height="30" fill="#CE1126" opacity="0.9"/>
+    <circle cx="300" cy="240" r="22" fill="#fff" opacity="0.85"/>
+    <circle cx="220" cy="300" r="14" fill="#fff" opacity="0.85"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
+  <title id="t">Haissem Hassan #12</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#CE1126"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#g)"/>
+  <text x="300" y="420" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="280" fill="#fff" opacity="0.92">HH</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="56" fill="#FFD700" font-weight="700">#12</text>
+</svg>

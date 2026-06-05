@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Alphonso Davies #19</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M300 180 L320 260 L380 240 L350 300 L420 320 L360 340 L380 400 L320 380 L300 460 L280 380 L220 400 L240 340 L180 320 L250 300 L220 240 L280 260 Z"
+          fill="#FF0000" opacity="0.92" stroke="#fff" stroke-width="4"/>
+</svg>

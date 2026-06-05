@@ -4,7 +4,7 @@ import { PlayerCard } from '../components/PlayerCard';
 
 const POS_FILTERS: Array<'ALL' | Position> = ['ALL', 'GK', 'DF', 'MF', 'FW'];
 
-export function SquadTab({ squad }: { squad: Player[] }) {
+export function SquadTab({ squad, countryCode }: { squad: Player[]; countryCode?: string }) {
   const [q, setQ] = useState('');
   const [pos, setPos] = useState<'ALL' | Position>('ALL');
 
@@ -64,7 +64,7 @@ export function SquadTab({ squad }: { squad: Player[] }) {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {filtered.map((p) => (
-            <PlayerCard key={p.id} player={p} />
+            <PlayerCard key={p.id} player={p} countryCode={countryCode} />
           ))}
         </div>
       )}

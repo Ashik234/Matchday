@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Ben Old #19</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#012169"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M180 200 Q280 220 320 320 Q400 340 460 460 Q360 420 320 380 Q280 360 240 360 Q200 340 180 200 Z"
+          fill="#C8102E" opacity="0.92" stroke="#fff" stroke-width="4"/>
+    <circle cx="220" cy="240" r="10" fill="#fff"/>
+</svg>
