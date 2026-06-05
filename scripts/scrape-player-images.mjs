@@ -15,7 +15,7 @@ import { readFile, writeFile, mkdir, rm, readdir } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { renderPortraitSvg } from './lib/motif-svg.mjs';
+import { renderPortraitSvg, renderIconSvg } from './lib/motif-svg.mjs';
 import { countryMeta } from './lib/country-meta.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -180,12 +180,20 @@ async function renderOne(player, motifs) {
     signature: motifEntry?.signature ?? null,
     accent: motifEntry?.accent ?? null,
   });
+  const iconSvg = renderIconSvg({
+    name: cn,
+    jersey: player.jersey,
+    flagColors,
+    motif: motifEntry?.motif ?? null,
+    accent: motifEntry?.accent ?? null,
+  });
 
-  const outPath = resolve(IMG_DIR, `${fileSlug}.svg`);
-  await writeFile(outPath, svg);
+  await writeFile(resolve(IMG_DIR, `${fileSlug}.svg`), svg);
+  await writeFile(resolve(IMG_DIR, `${fileSlug}-icon.svg`), iconSvg);
 
   return {
     url: `/images/players/${fileSlug}.svg`,
+    iconUrl: `/images/players/${fileSlug}-icon.svg`,
     width: 600,
     height: 800,
     source: motifEntry ? 'motif-curated' : 'motif-default',

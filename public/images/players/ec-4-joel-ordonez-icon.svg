@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Joel Ordóñez #4</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD100"/>
+      <stop offset="100%" stop-color="#0072CE"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M200 460 Q280 460 320 380 Q380 280 460 240 L440 220 L470 200 L490 230 L470 260"
+          fill="none" stroke="#EF3340" stroke-width="16" opacity="0.92" stroke-linecap="round"/>
+</svg>

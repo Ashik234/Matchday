@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Štěpán Chaloupek #6</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#D7141A"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M180 420 Q230 320 320 320 Q400 320 420 380 Q440 460 380 480 Q300 500 220 480 Q160 460 180 420 Z"
+          fill="#11457E" opacity="0.9"/>
+    <circle cx="380" cy="360" r="8" fill="#fff"/>
+    <path d="M420 380 L460 340 L450 360 L470 380" fill="none" stroke="#11457E" stroke-width="6"/>
+</svg>

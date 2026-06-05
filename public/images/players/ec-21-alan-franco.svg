@@ -1,12 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
   <title id="t">Alan Franco #21</title>
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#FFD100"/>
       <stop offset="100%" stop-color="#0072CE"/>
     </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
+    </radialGradient>
   </defs>
-  <rect width="600" height="800" fill="url(#g)"/>
-  <text x="300" y="420" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="280" fill="#fff" opacity="0.92">AF</text>
-  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="56" fill="#FFD700" font-weight="700">#21</text>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  
+    <path d="M180 420 Q260 380 360 400 Q450 420 460 360 Q470 300 400 290 Q330 290 240 340 Q160 380 180 420 Z"
+          fill="#EF3340" opacity="0.9"/>
+    <path d="M420 320 Q460 320 460 280" fill="none" stroke="#fff" stroke-width="6"/>
+  <rect width="600" height="800" fill="url(#vignette)"/>
+  <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
+        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">AF</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
+        font-size="56" fill="#EF3340" font-weight="700">#21</text>
+  <text x="60" y="760" font-family="Anton, Impact, sans-serif"
+        font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">ALAN FRANCO</text>
 </svg>

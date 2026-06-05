@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Santiago Arias #4</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FCD116"/>
+      <stop offset="100%" stop-color="#003893"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M200 460 L380 460 L430 380 L400 360 L380 380 L300 380 L260 320 L200 360 Z"
+          fill="#CE1126" opacity="0.92" stroke="#fff" stroke-width="4"/>
+    <path d="M180 360 Q140 340 100 360 M180 380 Q140 360 100 380 M180 400 Q140 380 100 400"
+          stroke="#CE1126" stroke-width="6" fill="none" opacity="0.85"/>
+</svg>

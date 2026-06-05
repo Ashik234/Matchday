@@ -32,16 +32,18 @@ function PlayerPortraitInner({
   const wrapperClass = `${PORTRAIT_CLASS[size]} relative overflow-hidden ${shapeClass} ${className ?? ''}`;
 
   if (player.image) {
+    const useIcon = (size === 'xs' || size === 'sm') && player.image.iconUrl;
+    const src = useIcon ? player.image.iconUrl! : player.image.url;
     return (
       <div className={wrapperClass}>
         <img
-          src={player.image.url}
+          src={src}
           alt={`${player.name}, #${player.jersey}`}
-          width={player.image.width}
-          height={player.image.height}
+          width={useIcon ? 360 : player.image.width}
+          height={useIcon ? 360 : player.image.height}
           loading={loading}
           decoding="async"
-          className="w-full h-full object-cover object-top"
+          className={`w-full h-full ${useIcon ? 'object-cover' : 'object-cover object-top'}`}
         />
         {showJerseyBadge && (
           <span className="absolute top-1.5 right-1.5 font-mono text-[10px] px-1.5 py-0.5 rounded bg-bg-deep/80 text-gold border border-gold/40">

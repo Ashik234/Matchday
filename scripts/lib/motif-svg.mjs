@@ -684,6 +684,36 @@ export function renderPortraitSvg({
 </svg>`;
 }
 
+/**
+ * Compact 320x320 icon variant — motif only, no signature/footer/jersey badge.
+ * Used at xs/sm sizes where the full card detail would be illegible.
+ * Crops the original (600,800) motif zone centered at (300, 340) down to
+ * a 1:1 square aligned to the motif coords; full-card text glyphs are absent.
+ */
+export function renderIconSvg({ name, jersey, flagColors, motif, accent }) {
+  const [bg1 = '#1a1a1a', bg2 = '#3a3a3a'] = flagColors;
+  const seed = `${name}|${jersey}`;
+  const motifKey = motif && MOTIFS[motif] ? motif : pickFor(seed, DEFAULT_POOL);
+  const motifFn = MOTIFS[motifKey];
+  const accentColor = accent || flagColors[flagColors.length - 1] || '#FFD700';
+  const altName = escapeXml(name);
+
+  // Motifs draw in (600,800) space — typical bbox spans roughly x:100-500, y:130-580.
+  // Tight square viewBox 60x420 around the motif gives a 1:1 crop that fits any motif
+  // without text overlay or vignette.
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">${altName} #${jersey}</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${bg1}"/>
+      <stop offset="100%" stop-color="${bg2}"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  ${motifFn({ accent: accentColor })}
+</svg>`;
+}
+
 export function listMotifs() {
   return MOTIF_KEYS.slice();
 }

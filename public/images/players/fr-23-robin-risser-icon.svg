@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Robin Risser #23</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0055A4"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <g transform="translate(300 340)">
+      <path d="M0 -160 L120 -40 L80 160 L-80 160 L-120 -40 Z" fill="#EF4135" opacity="0.88" stroke="#fff" stroke-width="4"/>
+      <path d="M0 -160 L0 160 M-120 -40 L120 -40" stroke="#fff" stroke-width="3" opacity="0.55"/>
+    </g>
+</svg>
