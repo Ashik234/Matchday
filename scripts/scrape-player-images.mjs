@@ -116,9 +116,14 @@ async function resolveOne(player, existing) {
     return null;
   }
 
+  // Strip parenthetical suffixes like "(captain)" / "(vice-captain)" before
+  // Wikidata lookup — SPARQL rdfs:label does exact match, and the squad scrape
+  // includes captain markers that no Wikidata entity has in its label.
+  const cleanName = player.name.replace(/\s*\([^)]*\)\s*$/, '').trim();
+
   let chosen = null;
   try {
-    const qid = await findPlayerQid(player.name, meta.qid);
+    const qid = await findPlayerQid(cleanName, meta.qid);
     if (qid) {
       const entity = await fetchEntity(qid);
       const filenames = extractImageFilenames(entity);
@@ -134,7 +139,7 @@ async function resolveOne(player, existing) {
     console.warn(`[wikidata-fail] ${id} ${player.name}: ${err.message}`);
   }
 
-  const fileSlug = `${meta.iso}-${player.jersey}-${slug(player.name)}`;
+  const fileSlug = `${meta.iso}-${player.jersey}-${slug(cleanName)}`;
 
   if (chosen) {
     try {
