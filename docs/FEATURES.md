@@ -11,26 +11,6 @@ Current shipped surface:
 
 ## P0 — High value, low/med effort
 
-### 1. Player Jersey Image Pipeline (HD)
-**What:** Scrape + cache HD international jersey images per player + per team kit (home/away/third). Show on player cards, squad lists, match lineups, team page.
-
-**Why:** Differentiator. Squads currently feel flat — just names. Jersey art = identity, color, drama. Powers future lineup viz, kit-clash detection, jersey number badges.
-
-**Sources (free, no API key):**
-- **Wikidata SPARQL** — `P18` (image) on player items; `P527` (has part) on national team kit items. Returns Commons file names → resolve to `https://commons.wikimedia.org/wiki/Special:FilePath/<filename>?width=600`.
-- **Wikimedia Commons category scrape** — categories like `Category:Football_kits_of_<country>_national_football_team` give kit SVGs.
-- **Footballkitarchive.com** — has HD kit PNGs but ToS-fuzzy; treat as last resort.
-
-**Scope:**
-- `scripts/scrape-player-jerseys.mjs` — batches Wikidata SPARQL per squad, downloads images, resizes to 600px wide WebP, writes `public/images/jerseys/<countryCode>-<playerSlug>.webp` + manifest `public/data/jerseys.json`.
-- New type `JerseyAsset { playerId, url, width, height, source }`.
-- `useJersey(playerId)` hook + `<PlayerJersey>` component (fallback to numbered jersey SVG generated from team kit colors).
-- Lazy-load + `loading="lazy"` + responsive `srcset`.
-
-**Risks:** Many players lack Wikidata images. Need fallback: generate SVG jersey using `flagColors` + player number.
-
----
-
 ### 2. Live Match Center (real-time scores)
 **What:** During tournament window, poll a live score feed. Show ticking time, score updates, goal flash animations on home + match page.
 
