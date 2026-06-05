@@ -1,5 +1,7 @@
 import type { Match, Team } from '@/data/types';
 import { formFromMatch } from '@/pages/TeamPage/components/RecentForm';
+import { useMatchResult } from '@/data/queries/useMatchResults';
+import { toMatchSlug } from '@/utils/matchSlug';
 
 export function MatchOverviewTab({
   match,
@@ -42,9 +44,36 @@ export function MatchOverviewTab({
   };
   const sh = stat(homeFinished, match.home.name);
   const sa = stat(awayFinished, match.away.name);
+  const result = useMatchResult(toMatchSlug(match));
+  const homeScorers = result?.scorers.filter((s) => s.team === 'home') ?? [];
+  const awayScorers = result?.scorers.filter((s) => s.team === 'away') ?? [];
 
   return (
     <div className="space-y-8">
+      {result && (
+        <section className="rounded-2xl p-5 bg-bg-elev1/40 border border-white/8 backdrop-blur-md">
+          <div className="flex items-baseline justify-between mb-3">
+            <span className="text-[10px] uppercase tracking-[0.18em] text-gold">
+              {result.status === 'PEN' ? 'Penalties' : result.status === 'AET' ? 'After Extra Time' : 'Full Time'}
+            </span>
+            <span className="font-display text-3xl text-text">
+              {result.homeScore} - {result.awayScore}
+              {result.status === 'PEN' && (
+                <span className="text-text-dim text-base ml-2">
+                  ({result.homePenScore}-{result.awayPenScore})
+                </span>
+              )}
+            </span>
+          </div>
+          {(homeScorers.length + awayScorers.length) > 0 && (
+            <div className="grid grid-cols-2 gap-4 text-sm">
+              <ScorerList side={match.home.name} scorers={homeScorers} align="left" />
+              <ScorerList side={match.away.name} scorers={awayScorers} align="right" />
+            </div>
+          )}
+        </section>
+      )}
+
       <section className="grid sm:grid-cols-2 gap-3 text-sm">
         <div className="rounded-2xl p-4 bg-bg-elev1/40 border border-white/8 backdrop-blur-md">
           <div className="text-text-dim text-xs uppercase tracking-[0.18em] mb-1">Competition</div>
@@ -87,6 +116,34 @@ export function MatchOverviewTab({
           />
         </div>
       </section>
+    </div>
+  );
+}
+
+function ScorerList({
+  side,
+  scorers,
+  align,
+}: {
+  side: string;
+  scorers: import('@/data/types').Scorer[];
+  align: 'left' | 'right';
+}) {
+  return (
+    <div className={align === 'right' ? 'text-right' : ''}>
+      <div className="text-[10px] uppercase tracking-[0.18em] text-text-dim mb-1">{side}</div>
+      <ul className="space-y-1">
+        {scorers.map((s, i) => (
+          <li key={i} className="text-text">
+            <span className="font-mono text-gold mr-2">
+              {s.minute}'
+            </span>
+            {s.player}
+            {s.penalty && <span className="text-text-dim text-xs ml-1">(pen)</span>}
+            {s.ownGoal && <span className="text-text-dim text-xs ml-1">(og)</span>}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
