@@ -1,11 +1,11 @@
 name: Refresh FIFA Ranking
 
-# FIFA updates its men's world ranking monthly (typically the third Thursday).
-# Run weekly so we pick up changes within ~7 days of publication.
+# Matches happen daily during the tournament window; FIFA refreshes the ranking
+# after each FIFA-window match. Run daily so the site always has fresh points.
 # Manual trigger also available via the Actions tab.
 on:
   schedule:
-    - cron: '17 6 * * 1'   # Every Monday 06:17 UTC
+    - cron: '17 6 * * *'   # Every day 06:17 UTC
   workflow_dispatch:
 
 # Allow the workflow to push back to the repo.
