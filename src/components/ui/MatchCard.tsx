@@ -71,26 +71,21 @@ export function MatchCard({ variant, match, onClick }: Props) {
             <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold">
               {match.stage}
             </span>
-            {statusToPill(match, result)}
+            {statusToPill(match)}
           </div>
           <div className="flex items-center justify-between gap-3 mb-3">
             <TeamSide team={match.home} />
-            <span className={isFinished ? 'font-mono text-text text-lg' : 'font-mono text-text-dim text-sm'}>
-              {isFinished ? `${homeScore ?? 0} - ${awayScore ?? 0}` : 'vs'}
-            </span>
+            <span className="font-mono text-text-dim text-sm">vs</span>
             <TeamSide team={match.away} align="right" />
           </div>
           <div className="flex items-center justify-between text-xs text-text-dim">
             <span>{match.stadium.name}</span>
-            {!isFinished && match.status === 'scheduled' && (
+            {match.status === 'scheduled' && (
               <Countdown
                 to={match.kickoff}
                 format="HH:MM:SS"
                 className="font-mono text-gold"
               />
-            )}
-            {result?.status === 'PEN' && (
-              <span className="font-mono">({result.homePenScore}-{result.awayPenScore}) pens</span>
             )}
           </div>
         </Card>
