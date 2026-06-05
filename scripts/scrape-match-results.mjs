@@ -84,14 +84,61 @@ function parseScorer(text, homeTeam, awayTeam) {
 }
 
 async function scrapeDateResults(page, date) {
-  const url = `https://www.bbc.com/sport/football/world-cup/scores-fixtures/${date}`;
-  console.log(`[${date}] fetching ${url}`);
+  // BBC Sport changed their World Cup archive structure
+  // Try both current and archived URLs
+  const urls = [
+    `https://www.bbc.com/sport/football/world-cup/scores-fixtures/${date}`,
+    `https://www.bbc.com/sport/football/scores-fixtures/${date}`,
+  ];
   
-  try {
-    await page.goto(url, { waitUntil: 'networkidle2', timeout: 30000 });
+  for (const url of urls) {
+    console.log(`[${date}] trying ${url}`);
     
-    // Wait for match cards to load
-    await page.waitForSelector('.sp-c-fixture', { timeout: 10000 });
+    try {
+      await page.goto(url, { waitUntil: 'networkidle2', timeout: 30000 });
+    
+    // DEBUG: Check what's actually on the page
+    const pageContent = await page.evaluate(() => {
+      const body = document.body.innerHTML;
+      const fixtures = document.querySelectorAll('[class*="fixture"]');
+      const scores = document.querySelectorAll('[class*="score"]');
+      return {
+        hasBody: !!body,
+        bodyLength: body.length,
+        fixturesFound: fixtures.length,
+        scoresFound: scores.length,
+        fixtureClasses: Array.from(fixtures).slice(0, 3).map(f => f.className),
+      };
+    });
+    
+    console.log(`[${date}] DEBUG:`, JSON.stringify(pageContent, null, 2));
+    
+    // Wait for match cards to load - try multiple selectors
+    let selector = null;
+    const selectors = [
+      '.sp-c-fixture',
+      '[class*="fixture"]',
+      '.qa-match-block',
+      '[data-testid*="fixture"]',
+    ];
+    
+    for (const sel of selectors) {
+      try {
+        await page.waitForSelector(sel, { timeout: 5000 });
+        selector = sel;
+        console.log(`[${date}] found matches using selector: ${sel}`);
+        break;
+      } catch (e) {
+        // Try next selector
+      }
+    }
+    
+    if (!selector) {
+      console.log(`[${date}] no match cards found, trying next URL...`);
+      continue; // Try next URL
+    }
+    
+    // Found matches, parse them
     
     const matches = await page.evaluate((matchDate) => {
       const results = [];
@@ -164,10 +211,16 @@ async function scrapeDateResults(page, date) {
     
     console.log(`[${date}] found ${matches.length} finished matches`);
     return matches;
-  } catch (err) {
-    console.warn(`[${date}] failed to scrape:`, err.message);
-    return [];
+    
+    } catch (err) {
+      console.warn(`[${date}] error with this URL:`, err.message);
+      // Continue to next URL
+    }
   }
+  
+  // No URLs worked
+  console.warn(`[${date}] failed to scrape from all URLs`);
+  return [];
 }
 
 async function scrape() {
