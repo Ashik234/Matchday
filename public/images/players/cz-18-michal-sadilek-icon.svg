@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Michal Sadílek #18</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#D7141A"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <g transform="translate(220 340)">
+      <circle r="80" fill="#11457E" opacity="0.85"/>
+      <circle r="40" fill="#fff"/>
+      <circle r="18" fill="#000"/>
+    </g>
+    <g transform="translate(380 340)">
+      <circle r="80" fill="#11457E" opacity="0.85"/>
+      <circle r="40" fill="#fff"/>
+      <circle r="18" fill="#000"/>
+    </g>
+</svg>

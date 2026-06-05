@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Ali Nemati #19</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#239F40"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <g transform="translate(300 340)">
+      <ellipse rx="160" ry="40" fill="#DA0000" opacity="0.85"/>
+      <rect x="-160" y="0" width="320" height="120" fill="#DA0000" opacity="0.6"/>
+      <ellipse cy="120" rx="160" ry="40" fill="#DA0000" opacity="0.75"/>
+      <line x1="-100" y1="0" x2="-100" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="-50" y1="0" x2="-50" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="0" y1="0" x2="0" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="50" y1="0" x2="50" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/><line x1="100" y1="0" x2="100" y2="120" stroke="#fff" stroke-width="3" opacity="0.45"/>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Giovani Lo Celso #11</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#74ACDF"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M300 580 Q220 480 240 360 Q190 320 240 240 Q260 200 300 180 Q340 200 360 240 Q410 320 360 360 Q380 480 300 580 Z"
+          fill="#74ACDF" stroke="#fff" stroke-width="5" opacity="0.88"/>
+    <path d="M300 480 Q260 420 280 360 Q300 320 300 280 Q300 320 320 360 Q340 420 300 480 Z"
+          fill="#fff" opacity="0.45"/>
+</svg>

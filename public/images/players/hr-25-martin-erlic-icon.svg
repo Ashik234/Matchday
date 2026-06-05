@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Martin Erlić #25</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M300 180 Q330 220 330 280 L330 420 L360 460 L240 460 L270 420 L270 280 Q270 220 300 180 Z"
+          fill="#0F1F4F" opacity="0.92" stroke="#fff" stroke-width="4"/>
+    <circle cx="300" cy="300" r="18" fill="#fff"/>
+    <path d="M270 460 Q260 510 240 540 M330 460 Q340 510 360 540 M300 460 L300 560"
+          stroke="#0F1F4F" stroke-width="8" fill="none" opacity="0.7"/>
+</svg>

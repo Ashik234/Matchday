@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Noah Sadiki #14</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#007FFF"/>
+      <stop offset="100%" stop-color="#F7D618"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <g>
+      <circle cx="220" cy="220" r="6" fill="#CE1126"/><circle cx="320" cy="260" r="6" fill="#CE1126"/><circle cx="420" cy="220" r="6" fill="#CE1126"/><circle cx="380" cy="360" r="6" fill="#CE1126"/><circle cx="260" cy="380" r="6" fill="#CE1126"/><circle cx="180" cy="460" r="6" fill="#CE1126"/><circle cx="340" cy="460" r="6" fill="#CE1126"/><circle cx="440" cy="420" r="6" fill="#CE1126"/><circle cx="300" cy="520" r="6" fill="#CE1126"/><circle cx="240" cy="300" r="6" fill="#CE1126"/>
+      <polyline points="220,220 320,260 420,220 380,360 260,380 180,460 340,460 440,420 300,520 240,300" fill="none" stroke="#CE1126" stroke-width="2" opacity="0.55"/>
+    </g>
+</svg>

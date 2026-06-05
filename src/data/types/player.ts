@@ -1,3 +1,5 @@
+import type { PlayerImage } from './playerImage';
+
 export type Position = 'GK' | 'DF' | 'MF' | 'FW';
 
 export type Player = {
@@ -10,4 +12,5 @@ export type Player = {
   age?: number;
   caps?: number;
   goals?: number;
+  image?: PlayerImage;
 };

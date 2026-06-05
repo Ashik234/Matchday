@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Chemsdine Talbi #7</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C1272D"/>
+      <stop offset="100%" stop-color="#006233"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M150 240 Q300 200 450 240 Q420 380 450 460 Q300 420 150 460 Q180 380 150 240 Z"
+          fill="#C1272D" opacity="0.88" stroke="#fff" stroke-width="4"/>
+</svg>

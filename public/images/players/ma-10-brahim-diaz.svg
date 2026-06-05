@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
+  <title id="t">Brahim Díaz #10</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C1272D"/>
+      <stop offset="100%" stop-color="#006233"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  
+    <polyline points="300,200 219.09830056250524,232 204.89434837048464,264 269.09830056250524,296 358.7785252292473,328 400,360 358.77852522924735,392 269.0983005625053,424 204.89434837048464,456 219.09830056250524,488 299.99999999999994,520" fill="none" stroke="#006233" stroke-width="10" opacity="0.92"/>
+    <polyline points="300,200 380.90169943749476,232 395.10565162951536,264 330.90169943749476,296 241.2214747707527,328 200,360 241.22147477075265,392 330.9016994374947,424 395.10565162951536,456 380.90169943749476,488 300.00000000000006,520" fill="none" stroke="#006233" stroke-width="10" opacity="0.65"/>
+  <rect width="600" height="800" fill="url(#vignette)"/>
+  <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
+        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">BD</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
+        font-size="56" fill="#006233" font-weight="700">#10</text>
+  <text x="60" y="760" font-family="Anton, Impact, sans-serif"
+        font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">BRAHIM DÍAZ</text>
+</svg>

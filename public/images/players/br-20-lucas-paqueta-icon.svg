@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Lucas Paquetá #20</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FEDF00"/>
+      <stop offset="100%" stop-color="#009C3B"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M300 180 L300 540" stroke="#002776" stroke-width="6" opacity="0.9"/>
+    <g><ellipse cx="250" cy="200" rx="40" ry="18" fill="#002776" opacity="0.85" transform="rotate(-30 250 200)"/><ellipse cx="350" cy="260" rx="40" ry="18" fill="#002776" opacity="0.85" transform="rotate(30 350 260)"/><ellipse cx="250" cy="320" rx="40" ry="18" fill="#002776" opacity="0.85" transform="rotate(-30 250 320)"/><ellipse cx="350" cy="380" rx="40" ry="18" fill="#002776" opacity="0.85" transform="rotate(30 350 380)"/><ellipse cx="250" cy="440" rx="40" ry="18" fill="#002776" opacity="0.85" transform="rotate(-30 250 440)"/><ellipse cx="350" cy="500" rx="40" ry="18" fill="#002776" opacity="0.85" transform="rotate(30 350 500)"/></g>
+</svg>

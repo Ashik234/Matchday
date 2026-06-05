@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Mateo Kovačić #8</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M180 320 Q120 280 100 220 Q160 240 220 300" fill="none" stroke="#0F1F4F" stroke-width="16" opacity="0.9" stroke-linecap="round"/>
+    <path d="M420 320 Q480 280 500 220 Q440 240 380 300" fill="none" stroke="#0F1F4F" stroke-width="16" opacity="0.9" stroke-linecap="round"/>
+    <ellipse cx="300" cy="340" rx="100" ry="80" fill="#0F1F4F" opacity="0.92"/>
+    <circle cx="265" cy="330" r="8" fill="#fff"/>
+    <circle cx="335" cy="330" r="8" fill="#fff"/>
+</svg>

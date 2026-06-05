@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Axel Tuanzebe #4</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#007FFF"/>
+      <stop offset="100%" stop-color="#F7D618"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M310 130 L210 380 L290 380 L240 580 L390 290 L310 290 L360 130 Z"
+          fill="#CE1126" stroke="#fff" stroke-width="6" opacity="0.92"/>
+</svg>

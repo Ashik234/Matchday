@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Erling Haaland #9</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EF2B2D"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <g stroke="#EF2B2D" stroke-width="10" fill="none" opacity="0.9">
+      <line x1="240" y1="200" x2="240" y2="480"/>
+      <line x1="360" y1="200" x2="360" y2="480"/>
+      <line x1="240" y1="280" x2="360" y2="200"/>
+      <line x1="240" y1="400" x2="360" y2="320"/>
+    </g>
+</svg>

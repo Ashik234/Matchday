@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Tomás Araújo #4</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#006600"/>
+      <stop offset="100%" stop-color="#FF0000"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <path d="M120 340 A180 180 0 0 1 480 340" fill="none" stroke="#FFD700" stroke-width="22" opacity="0.9"/>
+    <circle cx="300" cy="340" r="60" fill="#FFD700" opacity="0.85"/>
+</svg>

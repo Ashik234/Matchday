@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Julian Ryerson #26</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EF2B2D"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <g transform="translate(300 340)">
+      <ellipse cx="0" cy="-100" rx="50" ry="120" fill="#002868" opacity="0.78"/>
+      <ellipse cx="-90" cy="20" rx="120" ry="50" fill="#002868" opacity="0.78"/>
+      <ellipse cx="90" cy="20" rx="120" ry="50" fill="#002868" opacity="0.78"/>
+      <ellipse cx="-50" cy="100" rx="60" ry="80" fill="#002868" opacity="0.82" transform="rotate(-30)"/>
+      <ellipse cx="50" cy="100" rx="60" ry="80" fill="#002868" opacity="0.82" transform="rotate(30)"/>
+      <circle r="22" fill="#fff" opacity="0.95"/>
+    </g>
+</svg>

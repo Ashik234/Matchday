@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
+  <title id="t">Moteb Al-Harbi #24</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#006C35"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <g><line x1="300" y1="340" x2="500" y2="340" stroke="#FFFFFF" stroke-width="3" opacity="0.7"/><line x1="300" y1="340" x2="473.20508075688775" y2="440" stroke="#FFFFFF" stroke-width="3" opacity="0.7"/><line x1="300" y1="340" x2="400" y2="513.2050807568877" stroke="#FFFFFF" stroke-width="3" opacity="0.7"/><line x1="300" y1="340" x2="300" y2="540" stroke="#FFFFFF" stroke-width="3" opacity="0.7"/><line x1="300" y1="340" x2="200.00000000000006" y2="513.2050807568878" stroke="#FFFFFF" stroke-width="3" opacity="0.7"/><line x1="300" y1="340" x2="126.79491924311225" y2="440" stroke="#FFFFFF" stroke-width="3" opacity="0.7"/><line x1="300" y1="340" x2="100" y2="340" stroke="#FFFFFF" stroke-width="3" opacity="0.7"/><line x1="300" y1="340" x2="126.79491924311228" y2="239.99999999999997" stroke="#FFFFFF" stroke-width="3" opacity="0.7"/><line x1="300" y1="340" x2="199.99999999999991" y2="166.7949192431123" stroke="#FFFFFF" stroke-width="3" opacity="0.7"/><line x1="300" y1="340" x2="299.99999999999994" y2="140" stroke="#FFFFFF" stroke-width="3" opacity="0.7"/><line x1="300" y1="340" x2="400" y2="166.79491924311228" stroke="#FFFFFF" stroke-width="3" opacity="0.7"/><line x1="300" y1="340" x2="473.2050807568877" y2="239.99999999999991" stroke="#FFFFFF" stroke-width="3" opacity="0.7"/><circle cx="300" cy="340" r="60" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/><circle cx="300" cy="340" r="120" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/><circle cx="300" cy="340" r="180" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/></g>
+  <rect width="600" height="800" fill="url(#vignette)"/>
+  <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
+        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">MA</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
+        font-size="56" fill="#FFFFFF" font-weight="700">#24</text>
+  <text x="60" y="760" font-family="Anton, Impact, sans-serif"
+        font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">MOTEB AL-HARBI</text>
+</svg>

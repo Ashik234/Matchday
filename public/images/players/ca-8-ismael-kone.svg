@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
+  <title id="t">Ismaël Koné #8</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF0000"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  
+    <g transform="translate(300 340)">
+      <ellipse cx="0" cy="-100" rx="50" ry="120" fill="#FFFFFF" opacity="0.78"/>
+      <ellipse cx="-90" cy="20" rx="120" ry="50" fill="#FFFFFF" opacity="0.78"/>
+      <ellipse cx="90" cy="20" rx="120" ry="50" fill="#FFFFFF" opacity="0.78"/>
+      <ellipse cx="-50" cy="100" rx="60" ry="80" fill="#FFFFFF" opacity="0.82" transform="rotate(-30)"/>
+      <ellipse cx="50" cy="100" rx="60" ry="80" fill="#FFFFFF" opacity="0.82" transform="rotate(30)"/>
+      <circle r="22" fill="#fff" opacity="0.95"/>
+    </g>
+  <rect width="600" height="800" fill="url(#vignette)"/>
+  <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
+        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">IK</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
+        font-size="56" fill="#FFFFFF" font-weight="700">#8</text>
+  <text x="60" y="760" font-family="Anton, Impact, sans-serif"
+        font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">ISMAËL KONÉ</text>
+</svg>

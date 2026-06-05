@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 440 440" role="img" aria-labelledby="ti">
+  <title id="ti">Antonio Sanabria #9</title>
+  <defs>
+    <linearGradient id="ibg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D52B1E"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+  </defs>
+  <rect x="80" y="140" width="440" height="440" fill="url(#ibg)"/>
+  
+    <g transform="translate(300 340)">
+      <path d="M0 -160 L20 0 L0 160 L-20 0 Z" fill="#0038A8" opacity="0.92"/>
+      <path d="M-160 0 L0 -20 L160 0 L0 20 Z" fill="#0038A8" opacity="0.6"/>
+      <circle r="14" fill="#fff"/>
+    </g>
+</svg>

@@ -1,4 +1,5 @@
 import type { Player } from '@/data/types';
+import { PlayerPortrait } from '@/components/ui/PlayerPortrait';
 
 const POS_COLOR = {
   GK: 'bg-cyan-500/20 text-cyan-200 border-cyan-400/40',
@@ -7,23 +8,28 @@ const POS_COLOR = {
   FW: 'bg-orange-500/20 text-orange-200 border-orange-400/40',
 } as const;
 
-export function PlayerCard({ player }: { player: Player }) {
+export function PlayerCard({ player, countryCode }: { player: Player; countryCode?: string }) {
   const posClass = POS_COLOR[player.position];
   return (
     <article className="group relative rounded-2xl p-4 bg-bg-elev1/40 border border-white/8 backdrop-blur-md transition-transform duration-fast hover:scale-[1.02] hover:shadow-card">
-      <div className="flex items-start justify-between gap-2">
-        <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-bold border ${posClass}`}>
-          {player.position}
-        </span>
-        <span className="font-display text-2xl text-gold leading-none">#{player.jersey}</span>
+      <div className="flex items-start gap-3">
+        <PlayerPortrait player={player} countryCode={countryCode} size="sm" />
+        <div className="flex-1 min-w-0">
+          <div className="flex items-start justify-between gap-2">
+            <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-bold border ${posClass}`}>
+              {player.position}
+            </span>
+            <span className="font-display text-2xl text-gold leading-none">#{player.jersey}</span>
+          </div>
+          <h3 className="mt-2 text-sm font-semibold text-text truncate" title={player.name}>
+            {player.name}
+          </h3>
+          <p className="text-[11px] text-text-dim truncate" title={player.club}>
+            {player.club || 'Club unknown'}
+          </p>
+        </div>
       </div>
-      <h3 className="mt-3 text-sm font-semibold text-text truncate" title={player.name}>
-        {player.name}
-      </h3>
-      <p className="text-[11px] text-text-dim truncate" title={player.club}>
-        {player.club || 'Club unknown'}
-      </p>
-      <dl className="mt-2 grid grid-cols-2 gap-2 text-[11px]">
+      <dl className="mt-3 grid grid-cols-2 gap-2 text-[11px]">
         <div>
           <dt className="text-text-dim">Age</dt>
           <dd className="text-text">{player.age ?? '—'}</dd>
