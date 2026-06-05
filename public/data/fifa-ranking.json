@@ -1,21 +1,21 @@
 {
-  "scrapedAt": "2026-06-04T07:02:24.379Z",
+  "scrapedAt": "2026-06-05T07:14:21.962Z",
   "source": "https://inside.fifa.com/fifa-world-ranking/men",
   "ranking": [
     {
       "rank": 1,
-      "name": "France",
-      "points": 1877.32
+      "name": "Argentina",
+      "points": 1874.81
     },
     {
       "rank": 2,
       "name": "Spain",
-      "points": 1876.4
+      "points": 1873.01
     },
     {
       "rank": 3,
-      "name": "Argentina",
-      "points": 1874.81
+      "name": "France",
+      "points": 1869.43
     },
     {
       "rank": 4,
@@ -64,13 +64,13 @@
     },
     {
       "rank": 14,
-      "name": "Senegal",
-      "points": 1686.41
+      "name": "Mexico",
+      "points": 1687.48
     },
     {
       "rank": 15,
-      "name": "Mexico",
-      "points": 1684.13
+      "name": "Senegal",
+      "points": 1686.41
     },
     {
       "rank": 16,
@@ -93,9 +93,9 @@
       "points": 1650.75
     },
     {
-      "rank": 21,
+      "rank": 20,
       "name": "Iran",
-      "points": 1616.04
+      "points": 1619.58
     },
     {
       "rank": 22,
@@ -144,28 +144,28 @@
     },
     {
       "rank": 33,
+      "name": "Ivory Coast",
+      "points": 1540.87
+    },
+    {
+      "rank": 34,
       "name": "Panama",
       "points": 1540.6
     },
     {
-      "rank": 34,
-      "name": "Ivory Coast",
-      "points": 1532.98
-    },
-    {
       "rank": 38,
       "name": "Sweden",
-      "points": 1510.11
+      "points": 1509.79
+    },
+    {
+      "rank": 39,
+      "name": "Czech Republic",
+      "points": 1505.74
     },
     {
       "rank": 40,
       "name": "Paraguay",
       "points": 1503.5
-    },
-    {
-      "rank": 41,
-      "name": "Czech Republic",
-      "points": 1503.04
     },
     {
       "rank": 43,
@@ -193,9 +193,9 @@
       "points": 1452.37
     },
     {
-      "rank": 57,
+      "rank": 56,
       "name": "Iraq",
-      "points": 1447.77
+      "points": 1451.15
     },
     {
       "rank": 60,
@@ -228,7 +228,7 @@
       "points": 1346.88
     },
     {
-      "rank": 82,
+      "rank": 81,
       "name": "Haiti",
       "points": 1296.61
     },
