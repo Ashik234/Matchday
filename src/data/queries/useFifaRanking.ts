@@ -21,15 +21,20 @@ export function useFifaRanking() {
   return useQuery<FifaRankingPayload, Error>({
     queryKey: ['fifa-ranking'],
     queryFn: async ({ signal }) => {
-      const cached = getCached<FifaRankingPayload>(CACHE_KEY);
-      if (cached) return cached.value;
-      const res = await fetch(FIFA_URL, { signal });
+      // Always hit the network so daily refreshes land. The localStorage cache
+      // is only used to short-circuit JSON parsing when the upstream
+      // scrapedAt is unchanged — never to skip the fetch entirely.
+      const res = await fetch(FIFA_URL, { signal, cache: 'no-store' });
       if (!res.ok) throw new Error(`fifa-ranking ${res.status}`);
-      const data = (await res.json()) as FifaRankingPayload;
-      setCached(CACHE_KEY, data, TTL_MS);
-      return data;
+      const fresh = (await res.json()) as FifaRankingPayload;
+      const cached = getCached<FifaRankingPayload>(CACHE_KEY);
+      if (cached && cached.value.scrapedAt === fresh.scrapedAt) {
+        return cached.value;
+      }
+      setCached(CACHE_KEY, fresh, TTL_MS);
+      return fresh;
     },
-    staleTime: 24 * 60 * 60 * 1000, // 24h
+    staleTime: 60 * 60 * 1000, // 1h — short window before refetch
   });
 }
 
