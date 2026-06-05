@@ -129,6 +129,8 @@ export default function MatchPage() {
                 awayName={match.away.name}
                 squadHome={squadHome}
                 squadAway={squadAway}
+                homeCountryCode={match.home.countryCode}
+                awayCountryCode={match.away.countryCode}
               />
             )}
             {tab === 'history' && <PreviousMeetingsTab h2h={h2h} />}

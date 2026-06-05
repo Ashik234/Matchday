@@ -1,26 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" role="img" aria-labelledby="t">
   <title id="t">Tete Yengi #26</title>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#012169"/>
       <stop offset="100%" stop-color="#FFFFFF"/>
     </linearGradient>
-    <radialGradient id="vignette" cx="0.5" cy="0.4" r="0.7">
-      <stop offset="0%" stop-color="transparent"/>
-      <stop offset="100%" stop-color="rgba(0,0,0,0.45)"/>
-    </radialGradient>
   </defs>
-  <rect width="600" height="800" fill="url(#bg)"/>
-  
-    <path d="M200 460 L380 460 L430 380 L400 360 L380 380 L300 380 L260 320 L200 360 Z"
-          fill="#E4002B" opacity="0.92" stroke="#fff" stroke-width="4"/>
-    <path d="M180 360 Q140 340 100 360 M180 380 Q140 360 100 380 M180 400 Q140 380 100 400"
-          stroke="#E4002B" stroke-width="6" fill="none" opacity="0.85"/>
-  <rect width="600" height="800" fill="url(#vignette)"/>
-  <text x="300" y="700" text-anchor="middle" font-family="Anton, Impact, sans-serif"
-        font-size="180" fill="#fff" opacity="0.96" letter-spacing="4">TY</text>
-  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace"
-        font-size="56" fill="#E4002B" font-weight="700">#26</text>
-  <text x="60" y="760" font-family="Anton, Impact, sans-serif"
-        font-size="22" fill="#fff" opacity="0.55" letter-spacing="3">TETE YENGI</text>
+  <rect width="600" height="800" fill="url(#g)"/>
+  <text x="300" y="420" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="280" fill="#fff" opacity="0.92">TY</text>
+  <text x="540" y="80" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="56" fill="#FFD700" font-weight="700">#26</text>
 </svg>

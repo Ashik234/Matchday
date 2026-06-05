@@ -1,12 +1,19 @@
 import type { Player } from '@/data/types';
+import { PlayerPortrait } from '@/components/ui/PlayerPortrait';
 
 const POS_ORDER = ['GK', 'DF', 'MF', 'FW'] as const;
 
-export function SquadColumn({ name, squad }: { name: string; squad: Player[] }) {
+export function SquadColumn({
+  name,
+  squad,
+  countryCode,
+}: {
+  name: string;
+  squad: Player[];
+  countryCode?: string;
+}) {
   if (!squad.length) {
-    return (
-      <div className="text-text-dim text-sm">No squad data for {name}.</div>
-    );
+    return <div className="text-text-dim text-sm">No squad data for {name}.</div>;
   }
   const withAge = squad.filter((p) => p.age !== undefined);
   const avgAge = withAge.length
@@ -33,6 +40,7 @@ export function SquadColumn({ name, squad }: { name: string; squad: Player[] }) 
             <ul className="space-y-1">
               {rows.map((p) => (
                 <li key={p.id} className="flex items-center gap-2 text-xs">
+                  <PlayerPortrait player={p} countryCode={countryCode} size="xs" shape="circle" />
                   <span className="font-mono text-gold w-6 text-right">#{p.jersey}</span>
                   <span className="text-text truncate flex-1">{p.name}</span>
                   <span className="text-text-dim truncate">{p.club}</span>
