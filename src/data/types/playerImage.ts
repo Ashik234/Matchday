@@ -12,7 +12,7 @@ export type PlayerImage = {
   width: number;
   height: number;
   source: PlayerImageSource;
-  /** SHA1 of the original Commons file (32 hex chars). Lets the scraper detect upstream changes. */
+  /** SHA1 of the original Commons file (40 hex chars). Lets the scraper detect upstream changes. */
   hash: string;
   /** ISO timestamp when this entry was generated. */
   generatedAt: string;
