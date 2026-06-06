@@ -4,7 +4,6 @@ const LINKS = [
   { label: 'Home', to: '/' },
   { label: 'Matches', to: '/#today-matches' },
   { label: 'Teams', to: '/#featured-teams' },
-  { label: 'Stadiums', to: '/#stadiums' },
   { label: 'Bracket', to: '/#road-to-final' },
 ];
 

@@ -16,7 +16,7 @@ export function Section({ id, stage, eyebrow, title, className, children }: Prop
     <section
       id={id}
       data-ball-stage={stage}
-      className={cn('relative max-w-container mx-auto px-4 md:px-8 py-16 md:py-24', className)}
+      className={cn('relative max-w-container mx-auto px-4 md:px-8 py-16 md:py-24 scroll-mt-[88px] lg:scroll-mt-[140px]', className)}
     >
       <motion.div
         initial={{ opacity: 0, y: 24 }}
