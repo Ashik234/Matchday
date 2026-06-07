@@ -1,11 +1,11 @@
 {
-  "scrapedAt": "2026-06-06T08:46:54.389Z",
+  "scrapedAt": "2026-06-07T09:35:53.611Z",
   "source": "https://inside.fifa.com/fifa-world-ranking/men",
   "ranking": [
     {
       "rank": 1,
       "name": "Argentina",
-      "points": 1874.81
+      "points": 1876.12
     },
     {
       "rank": 2,
@@ -20,17 +20,17 @@
     {
       "rank": 4,
       "name": "England",
-      "points": 1825.97
+      "points": 1827.05
     },
     {
       "rank": 5,
       "name": "Portugal",
-      "points": 1763.83
+      "points": 1766.18
     },
     {
       "rank": 6,
       "name": "Brazil",
-      "points": 1762.66
+      "points": 1765.86
     },
     {
       "rank": 7,
@@ -45,12 +45,12 @@
     {
       "rank": 9,
       "name": "Belgium",
-      "points": 1739.55
+      "points": 1742.24
     },
     {
       "rank": 10,
       "name": "Germany",
-      "points": 1731.3
+      "points": 1735.77
     },
     {
       "rank": 11,
@@ -74,13 +74,13 @@
     },
     {
       "rank": 16,
-      "name": "USA",
-      "points": 1675.7
+      "name": "Uruguay",
+      "points": 1673.07
     },
     {
       "rank": 17,
-      "name": "Uruguay",
-      "points": 1673.07
+      "name": "USA",
+      "points": 1671.23
     },
     {
       "rank": 18,
@@ -90,7 +90,7 @@
     {
       "rank": 19,
       "name": "Switzerland",
-      "points": 1650.75
+      "points": 1650.06
     },
     {
       "rank": 20,
@@ -100,7 +100,7 @@
     {
       "rank": 22,
       "name": "Turkey",
-      "points": 1601.99
+      "points": 1605.73
     },
     {
       "rank": 23,
@@ -120,7 +120,7 @@
     {
       "rank": 27,
       "name": "Australia",
-      "points": 1578.66
+      "points": 1579.34
     },
     {
       "rank": 28,
@@ -130,7 +130,7 @@
     {
       "rank": 29,
       "name": "Egypt",
-      "points": 1565.56
+      "points": 1562.37
     },
     {
       "rank": 30,
@@ -150,7 +150,7 @@
     {
       "rank": 34,
       "name": "Panama",
-      "points": 1540.6
+      "points": 1539.16
     },
     {
       "rank": 38,
@@ -168,9 +168,9 @@
       "points": 1505.35
     },
     {
-      "rank": 43,
+      "rank": 42,
       "name": "Scotland",
-      "points": 1499.92
+      "points": 1503.34
     },
     {
       "rank": 45,
@@ -180,7 +180,7 @@
     {
       "rank": 46,
       "name": "Tunisia",
-      "points": 1479.1
+      "points": 1476.41
     },
     {
       "rank": 50,
@@ -188,14 +188,14 @@
       "points": 1461.21
     },
     {
-      "rank": 55,
-      "name": "Qatar",
-      "points": 1452.37
-    },
-    {
       "rank": 56,
       "name": "Iraq",
       "points": 1451.15
+    },
+    {
+      "rank": 57,
+      "name": "Qatar",
+      "points": 1450.31
     },
     {
       "rank": 60,
@@ -215,12 +215,12 @@
     {
       "rank": 64,
       "name": "Bosnia & Herzegovina",
-      "points": 1385.77
+      "points": 1387.22
     },
     {
-      "rank": 68,
+      "rank": 67,
       "name": "Cape Verde",
-      "points": 1369.29
+      "points": 1371.11
     },
     {
       "rank": 73,
@@ -229,18 +229,18 @@
     },
     {
       "rank": 82,
+      "name": "Curaçao",
+      "points": 1294.77
+    },
+    {
+      "rank": 83,
       "name": "Haiti",
       "points": 1293.1
     },
     {
-      "rank": 83,
-      "name": "Curaçao",
-      "points": 1293.08
-    },
-    {
       "rank": 85,
       "name": "New Zealand",
-      "points": 1276.66
+      "points": 1275.58
     }
   ]
 }
