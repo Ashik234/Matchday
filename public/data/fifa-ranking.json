@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-06-07T09:35:53.611Z",
+  "scrapedAt": "2026-06-08T11:20:58.578Z",
   "source": "https://inside.fifa.com/fifa-world-ranking/men",
   "ranking": [
     {
@@ -35,7 +35,7 @@
     {
       "rank": 7,
       "name": "Morocco",
-      "points": 1756.94
+      "points": 1755.1
     },
     {
       "rank": 8,
@@ -55,12 +55,12 @@
     {
       "rank": 11,
       "name": "Croatia",
-      "points": 1712.24
+      "points": 1714.87
     },
     {
       "rank": 13,
       "name": "Colombia",
-      "points": 1695.99
+      "points": 1698.35
     },
     {
       "rank": 14,
@@ -104,13 +104,13 @@
     },
     {
       "rank": 23,
-      "name": "Austria",
-      "points": 1597.4
+      "name": "Ecuador",
+      "points": 1598.52
     },
     {
       "rank": 24,
-      "name": "Ecuador",
-      "points": 1596.48
+      "name": "Austria",
+      "points": 1597.4
     },
     {
       "rank": 25,
@@ -140,7 +140,7 @@
     {
       "rank": 31,
       "name": "Norway",
-      "points": 1555.6
+      "points": 1557.44
     },
     {
       "rank": 33,
@@ -210,7 +210,7 @@
     {
       "rank": 63,
       "name": "Jordan",
-      "points": 1390.1
+      "points": 1387.74
     },
     {
       "rank": 64,
