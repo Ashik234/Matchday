@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-06-08T11:20:58.578Z",
+  "scrapedAt": "2026-06-09T10:02:45.118Z",
   "source": "https://inside.fifa.com/fifa-world-ranking/men",
   "ranking": [
     {
@@ -10,12 +10,12 @@
     {
       "rank": 2,
       "name": "Spain",
-      "points": 1873.01
+      "points": 1874.71
     },
     {
       "rank": 3,
       "name": "France",
-      "points": 1869.43
+      "points": 1870.7
     },
     {
       "rank": 4,
@@ -40,7 +40,7 @@
     {
       "rank": 8,
       "name": "Netherlands",
-      "points": 1751.1
+      "points": 1753.57
     },
     {
       "rank": 9,
@@ -185,7 +185,7 @@
     {
       "rank": 50,
       "name": "Uzbekistan",
-      "points": 1461.21
+      "points": 1458.73
     },
     {
       "rank": 56,
