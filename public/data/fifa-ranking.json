@@ -1,11 +1,11 @@
 {
-  "scrapedAt": "2026-06-09T10:02:45.118Z",
+  "scrapedAt": "2026-06-10T10:32:31.191Z",
   "source": "https://inside.fifa.com/fifa-world-ranking/men",
   "ranking": [
     {
       "rank": 1,
       "name": "Argentina",
-      "points": 1876.12
+      "points": 1877.27
     },
     {
       "rank": 2,
@@ -70,7 +70,7 @@
     {
       "rank": 15,
       "name": "Senegal",
-      "points": 1686.41
+      "points": 1684.07
     },
     {
       "rank": 16,
@@ -158,12 +158,12 @@
       "points": 1509.79
     },
     {
-      "rank": 39,
+      "rank": 40,
       "name": "Czech Republic",
       "points": 1505.74
     },
     {
-      "rank": 40,
+      "rank": 41,
       "name": "Paraguay",
       "points": 1505.35
     },
@@ -174,13 +174,13 @@
     },
     {
       "rank": 45,
-      "name": "DR Congo",
-      "points": 1479.68
+      "name": "Tunisia",
+      "points": 1476.41
     },
     {
       "rank": 46,
-      "name": "Tunisia",
-      "points": 1476.41
+      "name": "DR Congo",
+      "points": 1474.43
     },
     {
       "rank": 50,
@@ -189,13 +189,13 @@
     },
     {
       "rank": 56,
-      "name": "Iraq",
-      "points": 1451.15
+      "name": "Qatar",
+      "points": 1450.31
     },
     {
       "rank": 57,
-      "name": "Qatar",
-      "points": 1450.31
+      "name": "Iraq",
+      "points": 1446.28
     },
     {
       "rank": 60,
@@ -205,7 +205,7 @@
     {
       "rank": 61,
       "name": "Saudi Arabia",
-      "points": 1421.54
+      "points": 1423.88
     },
     {
       "rank": 63,
