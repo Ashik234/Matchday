@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-06-11T10:58:34.053Z",
+  "scrapedAt": "2026-06-12T10:40:11.530Z",
   "source": "https://inside.fifa.com/fifa-world-ranking/men",
   "ranking": [
     {
@@ -59,13 +59,13 @@
     },
     {
       "rank": 13,
-      "name": "Colombia",
-      "points": 1698.35
+      "name": "Mexico",
+      "points": 1700.98
     },
     {
       "rank": 14,
-      "name": "Mexico",
-      "points": 1687.48
+      "name": "Colombia",
+      "points": 1698.35
     },
     {
       "rank": 15,
@@ -99,23 +99,23 @@
     },
     {
       "rank": 22,
+      "name": "South Korea",
+      "points": 1612.55
+    },
+    {
+      "rank": 23,
       "name": "Turkey",
       "points": 1605.73
     },
     {
-      "rank": 23,
+      "rank": 24,
       "name": "Ecuador",
       "points": 1598.52
     },
     {
-      "rank": 24,
+      "rank": 25,
       "name": "Austria",
       "points": 1597.4
-    },
-    {
-      "rank": 25,
-      "name": "South Korea",
-      "points": 1591.63
     },
     {
       "rank": 27,
@@ -159,18 +159,18 @@
     },
     {
       "rank": 40,
-      "name": "Czech Republic",
-      "points": 1505.74
-    },
-    {
-      "rank": 41,
       "name": "Paraguay",
       "points": 1505.35
     },
     {
-      "rank": 42,
+      "rank": 41,
       "name": "Scotland",
       "points": 1503.34
+    },
+    {
+      "rank": 43,
+      "name": "Czech Republic",
+      "points": 1484.82
     },
     {
       "rank": 45,
@@ -199,13 +199,13 @@
     },
     {
       "rank": 60,
-      "name": "South Africa",
-      "points": 1428.38
+      "name": "Saudi Arabia",
+      "points": 1423.88
     },
     {
       "rank": 61,
-      "name": "Saudi Arabia",
-      "points": 1423.88
+      "name": "South Africa",
+      "points": 1414.88
     },
     {
       "rank": 63,
