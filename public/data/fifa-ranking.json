@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-06-12T10:40:11.530Z",
+  "scrapedAt": "2026-06-13T09:34:06.930Z",
   "source": "https://inside.fifa.com/fifa-world-ranking/men",
   "ranking": [
     {
@@ -69,18 +69,18 @@
     },
     {
       "rank": 15,
+      "name": "USA",
+      "points": 1688.53
+    },
+    {
+      "rank": 16,
       "name": "Senegal",
       "points": 1684.07
     },
     {
-      "rank": 16,
+      "rank": 17,
       "name": "Uruguay",
       "points": 1673.07
-    },
-    {
-      "rank": 17,
-      "name": "USA",
-      "points": 1671.23
     },
     {
       "rank": 18,
@@ -134,13 +134,13 @@
     },
     {
       "rank": 30,
-      "name": "Canada",
-      "points": 1559.48
+      "name": "Norway",
+      "points": 1557.44
     },
     {
       "rank": 31,
-      "name": "Norway",
-      "points": 1557.44
+      "name": "Canada",
+      "points": 1551.5
     },
     {
       "rank": 33,
@@ -159,13 +159,13 @@
     },
     {
       "rank": 40,
-      "name": "Paraguay",
-      "points": 1505.35
-    },
-    {
-      "rank": 41,
       "name": "Scotland",
       "points": 1503.34
+    },
+    {
+      "rank": 42,
+      "name": "Paraguay",
+      "points": 1488.05
     },
     {
       "rank": 43,
@@ -209,13 +209,13 @@
     },
     {
       "rank": 63,
-      "name": "Jordan",
-      "points": 1387.74
+      "name": "Bosnia & Herzegovina",
+      "points": 1395.19
     },
     {
       "rank": 64,
-      "name": "Bosnia & Herzegovina",
-      "points": 1387.22
+      "name": "Jordan",
+      "points": 1387.74
     },
     {
       "rank": 67,
