@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-06-13T09:34:06.930Z",
+  "scrapedAt": "2026-06-14T09:56:02.427Z",
   "source": "https://inside.fifa.com/fifa-world-ranking/men",
   "ranking": [
     {
@@ -30,12 +30,12 @@
     {
       "rank": 6,
       "name": "Brazil",
-      "points": 1765.86
+      "points": 1765.34
     },
     {
       "rank": 7,
       "name": "Morocco",
-      "points": 1755.1
+      "points": 1755.62
     },
     {
       "rank": 8,
@@ -90,7 +90,7 @@
     {
       "rank": 19,
       "name": "Switzerland",
-      "points": 1650.06
+      "points": 1640.92
     },
     {
       "rank": 20,
@@ -104,8 +104,8 @@
     },
     {
       "rank": 23,
-      "name": "Turkey",
-      "points": 1605.73
+      "name": "Australia",
+      "points": 1605.61
     },
     {
       "rank": 24,
@@ -119,8 +119,8 @@
     },
     {
       "rank": 27,
-      "name": "Australia",
-      "points": 1579.34
+      "name": "Turkey",
+      "points": 1579.47
     },
     {
       "rank": 28,
@@ -153,14 +153,14 @@
       "points": 1539.16
     },
     {
-      "rank": 38,
-      "name": "Sweden",
-      "points": 1509.79
+      "rank": 37,
+      "name": "Scotland",
+      "points": 1518.77
     },
     {
-      "rank": 40,
-      "name": "Scotland",
-      "points": 1503.34
+      "rank": 39,
+      "name": "Sweden",
+      "points": 1509.79
     },
     {
       "rank": 42,
@@ -184,13 +184,13 @@
     },
     {
       "rank": 50,
-      "name": "Uzbekistan",
-      "points": 1458.73
+      "name": "Qatar",
+      "points": 1459.45
     },
     {
-      "rank": 56,
-      "name": "Qatar",
-      "points": 1450.31
+      "rank": 51,
+      "name": "Uzbekistan",
+      "points": 1458.73
     },
     {
       "rank": 57,
@@ -233,9 +233,9 @@
       "points": 1294.77
     },
     {
-      "rank": 83,
+      "rank": 84,
       "name": "Haiti",
-      "points": 1293.1
+      "points": 1277.67
     },
     {
       "rank": 85,
