@@ -1,5 +1,5 @@
 {
-  "scrapedAt": "2026-06-15T12:42:20.886Z",
+  "scrapedAt": "2026-06-16T11:34:05.417Z",
   "source": "https://inside.fifa.com/fifa-world-ranking/men",
   "ranking": [
     {
@@ -9,13 +9,13 @@
     },
     {
       "rank": 2,
-      "name": "Spain",
-      "points": 1874.71
+      "name": "France",
+      "points": 1870.7
     },
     {
       "rank": 3,
-      "name": "France",
-      "points": 1870.7
+      "name": "Spain",
+      "points": 1856.03
     },
     {
       "rank": 4,
@@ -50,7 +50,7 @@
     {
       "rank": 10,
       "name": "Belgium",
-      "points": 1742.24
+      "points": 1733.93
     },
     {
       "rank": 11,
@@ -79,13 +79,13 @@
     },
     {
       "rank": 17,
-      "name": "Uruguay",
-      "points": 1673.07
+      "name": "Japan",
+      "points": 1665.94
     },
     {
       "rank": 18,
-      "name": "Japan",
-      "points": 1665.94
+      "name": "Uruguay",
+      "points": 1661.95
     },
     {
       "rank": 19,
@@ -93,19 +93,19 @@
       "points": 1640.92
     },
     {
-      "rank": 20,
-      "name": "Iran",
-      "points": 1619.58
-    },
-    {
-      "rank": 22,
+      "rank": 21,
       "name": "South Korea",
       "points": 1612.55
     },
     {
-      "rank": 23,
+      "rank": 22,
       "name": "Australia",
       "points": 1605.61
+    },
+    {
+      "rank": 23,
+      "name": "Iran",
+      "points": 1605.12
     },
     {
       "rank": 24,
@@ -129,13 +129,13 @@
     },
     {
       "rank": 29,
-      "name": "Ivory Coast",
-      "points": 1568.62
+      "name": "Egypt",
+      "points": 1570.67
     },
     {
       "rank": 30,
-      "name": "Egypt",
-      "points": 1562.37
+      "name": "Ivory Coast",
+      "points": 1568.62
     },
     {
       "rank": 31,
@@ -200,7 +200,7 @@
     {
       "rank": 60,
       "name": "Saudi Arabia",
-      "points": 1423.88
+      "points": 1435
     },
     {
       "rank": 61,
@@ -214,13 +214,13 @@
     },
     {
       "rank": 64,
-      "name": "Jordan",
-      "points": 1387.74
+      "name": "Cape Verde",
+      "points": 1389.79
     },
     {
-      "rank": 67,
-      "name": "Cape Verde",
-      "points": 1371.11
+      "rank": 65,
+      "name": "Jordan",
+      "points": 1387.74
     },
     {
       "rank": 73,
@@ -229,18 +229,18 @@
     },
     {
       "rank": 82,
+      "name": "New Zealand",
+      "points": 1290.04
+    },
+    {
+      "rank": 83,
       "name": "Curaçao",
       "points": 1287
     },
     {
-      "rank": 84,
+      "rank": 85,
       "name": "Haiti",
       "points": 1277.67
-    },
-    {
-      "rank": 85,
-      "name": "New Zealand",
-      "points": 1275.58
     }
   ]
 }
