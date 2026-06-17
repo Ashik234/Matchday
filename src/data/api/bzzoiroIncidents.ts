@@ -28,10 +28,10 @@ function mapOne(raw: unknown, homeTeamId?: number): Incident | null {
   if (typeof raw !== 'object' || raw === null) return null;
   const r = raw as Record<string, unknown>;
 
-  const minute = num(r.minute ?? r.time ?? r.elapsed);
+  const minute = num(r.minute) ?? num(r.time) ?? num(r.elapsed);
   if (minute === undefined) return null;
 
-  const rawTeamId = num(r.team_id ?? r.team ?? r.participant_id);
+  const rawTeamId = num(r.team_id) ?? num(r.team) ?? num(r.participant_id);
   const teamSide: 'home' | 'away' =
     homeTeamId !== undefined && rawTeamId !== undefined && rawTeamId !== homeTeamId
       ? 'away'
@@ -44,19 +44,19 @@ function mapOne(raw: unknown, homeTeamId?: number): Incident | null {
   const id =
     str(r.id) ??
     str(r.incident_id) ??
-    `${minute}|${mapType(r.type ?? r.incident_type)}|${str(r.player ?? r.player_name) ?? ''}|${teamSide}`;
+    `${minute}|${mapType(r.type ?? r.incident_type ?? r.code)}|${str(r.player) ?? str(r.player_name) ?? ''}|${teamSide}`;
 
   return {
     id,
     minute,
-    addedTime: num(r.added_time ?? r.injury_time ?? r.extra),
+    addedTime: num(r.added_time) ?? num(r.injury_time) ?? num(r.extra),
     type: mapType(r.type ?? r.incident_type ?? r.code),
     teamSide,
-    player: str(r.player ?? r.player_name ?? r.name) ?? '',
+    player: str(r.player) ?? str(r.player_name) ?? str(r.name) ?? '',
     detail:
       str(r.detail) ??
-      str(r.assist ?? r.assist_name) ??
-      str(r.player_out ?? r.sub_out) ??
+      (str(r.assist) ?? str(r.assist_name)) ??
+      (str(r.player_out) ?? str(r.sub_out)) ??
       str(r.reason),
   };
 }
