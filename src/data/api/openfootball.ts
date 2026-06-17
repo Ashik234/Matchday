@@ -308,4 +308,9 @@ export const openfootball = {
       capacity: s.capacity,
     }));
   },
+
+  squad: async (): Promise<import('@/data/types').Player[]> => {
+    // openfootball has no per-team squad data; squads require the bzzoiro key.
+    return [];
+  },
 };
