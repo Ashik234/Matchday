@@ -2,6 +2,7 @@ import { bzzoiroRequest } from './client';
 import { openfootball } from './openfootball';
 import { resolveTeamId } from './teamIdMap';
 import { mapSquadRow, mapEvent } from './bzzoiroMap';
+import { mapIncidents } from './bzzoiroIncidents';
 import type {
   Paginated,
   SquadRowV2,
@@ -9,6 +10,8 @@ import type {
   EventStatsV2,
   MomentumPoint,
   PolymarketResponse,
+  IncidentsResponseV2,
+  Incident,
 } from './bzzoiroTypes';
 import type { Match, Player } from '@/data/types';
 
@@ -28,6 +31,19 @@ async function momentum(eventId: number, signal: AbortSignal): Promise<MomentumP
     { ttlMs: EVENTS_TTL, staleOk: true },
   );
   return res.momentum ?? [];
+}
+
+async function incidents(
+  eventId: number,
+  homeTeamId: number | undefined,
+  signal: AbortSignal,
+): Promise<Incident[]> {
+  const res = await bzzoiroRequest<IncidentsResponseV2>(
+    `/api/v2/events/${eventId}/incidents/`,
+    signal,
+    { ttlMs: EVENTS_TTL, staleOk: true },
+  );
+  return mapIncidents(res, homeTeamId);
 }
 
 async function polymarket(eventId: number, signal: AbortSignal): Promise<Market1x2 | null> {
@@ -69,6 +85,7 @@ export const bzzoiro = {
   squad,
   liveMatches,
   momentum,
+  incidents,
   polymarket,
   allMatches: openfootball.allMatches,
   todayMatches: openfootball.todayMatches,
