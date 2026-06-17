@@ -41,7 +41,9 @@ export function Providers({ children }: { children: ReactNode }) {
         persistOptions={{
           persister,
           maxAge: 24 * 60 * 60 * 1000, // 24h
-          buster: 'v2',
+          // Bump when cached query shapes/data change. v3: bzzoiro data source +
+          // regenerated SVG player-image manifest (old cache held dead .webp urls).
+          buster: 'v3',
         }}
       >
         <ErrorBoundary>{children}</ErrorBoundary>
