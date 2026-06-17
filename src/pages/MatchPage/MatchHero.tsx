@@ -2,6 +2,7 @@ import { Flag } from '@/components/ui/Flag';
 import { Countdown } from '@/components/ui/Countdown';
 import { Pill } from '@/components/ui/Pill';
 import { useMatchResult } from '@/data/queries/useMatchResults';
+import { useLiveEvent } from '@/data/queries/useLiveEvent';
 import { toMatchSlug } from '@/utils/matchSlug';
 import type { Match } from '@/data/types';
 
@@ -15,8 +16,13 @@ export function MatchHero({
   awayRank?: number;
 }) {
   const result = useMatchResult(toMatchSlug(match));
-  const homeScore = result?.homeScore ?? match.home.score;
-  const awayScore = result?.awayScore ?? match.away.score;
+  const eventId = Number(match.id);
+  const live = useLiveEvent(
+    Number.isFinite(eventId) ? eventId : undefined,
+    match.status === 'live',
+  );
+  const homeScore = live.home_score ?? result?.homeScore ?? match.home.score;
+  const awayScore = live.away_score ?? result?.awayScore ?? match.away.score;
   const isFinished = match.status === 'finished' || Boolean(result);
   const kickoff = new Date(match.kickoff);
   const dateStr = kickoff.toLocaleDateString(undefined, {
@@ -60,7 +66,9 @@ export function MatchHero({
             <div className="text-xs text-text-dim">{dateStr}</div>
             <div className="text-[11px] text-text-dim">{match.stadium.name}</div>
             {!isFinished && match.status === 'scheduled' && <Countdown to={match.kickoff} />}
-            {match.status === 'live' && !result && <Pill variant="live">LIVE · {match.minute}'</Pill>}
+            {match.status === 'live' && !result && (
+              <Pill variant="live">LIVE · {live.minute ?? match.minute}'</Pill>
+            )}
             {isFinished && <Pill variant="final">{result?.status ?? 'FT'}</Pill>}
           </div>
 
