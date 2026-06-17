@@ -8,6 +8,7 @@ import { MatchHero } from './MatchHero';
 import { MatchTabs, MATCH_TABS, type MatchTabKey } from './MatchTabs';
 import { MatchOverviewTab } from './tabs/MatchOverviewTab';
 import { MomentumTab } from './tabs/MomentumTab';
+import { MarketsTab } from './tabs/MarketsTab';
 import { HeadToHeadTab } from './tabs/HeadToHeadTab';
 import { RecentFormTab } from './tabs/RecentFormTab';
 import { SquadCompareTab } from './tabs/SquadCompareTab';
@@ -107,6 +108,7 @@ export default function MatchPage() {
               />
             )}
             {tab === 'momentum' && <MomentumTab match={match} />}
+            {tab === 'markets' && <MarketsTab match={match} />}
             {tab === 'h2h' && (
               <HeadToHeadTab
                 homeName={match.home.name}
