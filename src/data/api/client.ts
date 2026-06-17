@@ -1,6 +1,6 @@
 import { getCached, setCached, getStale } from '@/data/cache/storageCache';
 
-export type ApiSource = 'openfootball';
+export type ApiSource = 'openfootball' | 'bzzoiro';
 
 export class ApiError extends Error {
   source: ApiSource;
@@ -71,4 +71,22 @@ export async function requestCached<T>(
   const value = await request<T>(source, url, init);
   setCached(cacheKey, value, opts.ttlMs);
   return value;
+}
+
+const BZZOIRO_BASE = import.meta.env.VITE_BZZOIRO_API_URL ?? 'https://sports.bzzoiro.com';
+const BZZOIRO_KEY = import.meta.env.VITE_BZZOIRO_KEY;
+
+export function bzzoiroRequest<T>(
+  path: string,
+  signal: AbortSignal,
+  opts: RequestCachedOptions = { ttlMs: 60_000, staleOk: true },
+): Promise<T> {
+  const url = `${BZZOIRO_BASE}${path}`;
+  const headers: Record<string, string> = {};
+  if (BZZOIRO_KEY) headers.Authorization = `Token ${BZZOIRO_KEY}`;
+  return requestCached<T>('bzzoiro', url, { signal, headers }, opts);
+}
+
+export function hasBzzoiroKey(): boolean {
+  return Boolean(BZZOIRO_KEY);
 }
