@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { useEnriched } from './useEnriched';
-import { openfootball } from '@/data/api/openfootball';
+import { activeSource } from '@/data/api/dataSource';
 import { fixtures } from '@/data/fixtures';
 import { useFifaRanking, buildRankIndex } from './useFifaRanking';
 import type { Team } from '@/data/types';
@@ -8,7 +8,7 @@ import type { Team } from '@/data/types';
 export function useTeams() {
   const enriched = useEnriched({
     queryKey: ['teams'],
-    queryFn: ({ signal }) => openfootball.teams(undefined, signal!),
+    queryFn: ({ signal }) => activeSource.teams(undefined, signal!),
     fixture: fixtures.teams,
     staleTime: 6 * 60 * 60 * 1000,
   });
