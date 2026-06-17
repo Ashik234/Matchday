@@ -42,19 +42,19 @@ export function pickOnThisDayMoment(
 
   if (todayMatches.length > 0) {
     const idx = dayOfYear(new Date()) % todayMatches.length;
-    return { moment: todayMatches[idx], todayMatches, isFallback: false };
+    return { moment: todayMatches[idx]!, todayMatches, isFallback: false };
   }
 
   // Fallback: pick from top-importance moments, stable per day
   const legendaries = moments.slice().sort((a, b) => b.importance - a.importance);
   const idx = dayOfYear(new Date()) % legendaries.length;
-  return { moment: legendaries[idx], todayMatches: [], isFallback: true };
+  return { moment: legendaries[idx]!, todayMatches: [], isFallback: true };
 }
 
 /** Format "06-22" → "June 22" */
 export function formatMMDD(mmdd: string): string {
   const [mm, dd] = mmdd.split('-').map(Number);
-  return new Date(2000, mm - 1, dd).toLocaleDateString('en-US', {
+  return new Date(2000, mm! - 1, dd).toLocaleDateString('en-US', {
     month: 'long',
     day: 'numeric',
   });

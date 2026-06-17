@@ -6,9 +6,11 @@ export type Scorer = {
   penalty?: boolean;
 };
 
+export type ResultStatus = 'FT' | 'AET' | 'PEN';
+
 export type MatchResult = {
   matchId: string;
-  status: 'FT' | 'AET' | 'PEN';
+  status: ResultStatus;
   homeScore: number;
   awayScore: number;
   homePenScore?: number;

@@ -27,10 +27,6 @@ export function OnThisDayCard({ moment, isFallback, otherCount, todayMMDD }: Pro
   const gradient = CATEGORY_GRADIENT[moment.category] ?? CATEGORY_GRADIENT.match;
   const icon = CATEGORY_ICON[moment.category] ?? '🏆';
 
-  const displayDate = isFallback
-    ? `${moment.year}`
-    : `${formatMMDD(todayMMDD)}, ${moment.year}`;
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 32 }}
