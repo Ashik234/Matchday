@@ -44,6 +44,13 @@ Requirements: Node 18+, pnpm 8+
    ```bash
    cp .env.example .env.local
    ```
+   For live data and real World Cup squads, set a [bzzoiro Sports API](https://sports.bzzoiro.com/register/) token (free registration):
+   ```bash
+   VITE_BZZOIRO_API_URL=https://sports.bzzoiro.com
+   VITE_BZZOIRO_WS_URL=wss://sports.bzzoiro.com
+   VITE_BZZOIRO_KEY=your_token_here
+   ```
+   When a key is present, bzzoiro is the primary data source (real squads + live WebSocket match updates) and OpenFootball is the fallback. Without a key the app runs on OpenFootball alone.
 3. Start the app
    ```bash
    pnpm dev
@@ -63,6 +70,7 @@ Requirements: Node 18+, pnpm 8+
 
 ## 🌐 Data sources
 
+- bzzoiro Sports API (primary, when keyed) for real World Cup 2026 squads and live match updates over WebSocket (`/ws/live/`), with REST polling fallback
 - OpenFootball World Cup data for fixtures, teams, groups, standings, and tournament structure
 - Local fixture fallback data for resilience and offline-safe UI behavior
 - Curated historical moment data for the “On This Day” section
