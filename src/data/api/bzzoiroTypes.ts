@@ -78,3 +78,34 @@ export type EventV2 = {
   live_websocket: boolean;
   websocket_plus: boolean;
 };
+
+// Match incidents from GET /api/v2/events/{id}/incidents/. The per-incident
+// shape is undocumented, so the raw array is `unknown[]` and coerced in
+// bzzoiroIncidents.ts.
+export type IncidentsResponseV2 = {
+  event_id?: number;
+  incidents?: unknown[];
+};
+
+export type IncidentType =
+  | 'goal'
+  | 'own-goal'
+  | 'penalty'
+  | 'penalty-miss'
+  | 'yellow'
+  | 'red'
+  | 'sub'
+  | 'var'
+  | 'unknown';
+
+// Normalised incident the UI renders. `teamSide` is resolved from the raw
+// team id against the event's home team; defaults to 'home' when unknown.
+export type Incident = {
+  id: string;
+  minute: number;
+  addedTime?: number;
+  type: IncidentType;
+  teamSide: 'home' | 'away';
+  player: string;
+  detail?: string;
+};
