@@ -3,6 +3,7 @@ import { cn } from '@/utils/cn';
 
 export type MatchTabKey =
   | 'overview'
+  | 'momentum'
   | 'h2h'
   | 'form'
   | 'squad'
@@ -10,6 +11,7 @@ export type MatchTabKey =
 
 export const MATCH_TABS: { key: MatchTabKey; label: string }[] = [
   { key: 'overview', label: 'Overview' },
+  { key: 'momentum', label: 'Momentum' },
   { key: 'h2h', label: 'Head-to-Head' },
   { key: 'form', label: 'Recent Form' },
   { key: 'squad', label: 'Squad' },

@@ -7,6 +7,7 @@ import { useTeams } from '@/data/queries';
 import { MatchHero } from './MatchHero';
 import { MatchTabs, MATCH_TABS, type MatchTabKey } from './MatchTabs';
 import { MatchOverviewTab } from './tabs/MatchOverviewTab';
+import { MomentumTab } from './tabs/MomentumTab';
 import { HeadToHeadTab } from './tabs/HeadToHeadTab';
 import { RecentFormTab } from './tabs/RecentFormTab';
 import { SquadCompareTab } from './tabs/SquadCompareTab';
@@ -105,6 +106,7 @@ export default function MatchPage() {
                 awayFinished={awayFinished}
               />
             )}
+            {tab === 'momentum' && <MomentumTab match={match} />}
             {tab === 'h2h' && (
               <HeadToHeadTab
                 homeName={match.home.name}
