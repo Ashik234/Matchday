@@ -7,6 +7,15 @@ export type Paginated<T> = {
   results: T[];
 };
 
+// Minute-by-minute pressure index from GET /api/v2/events/{id}/stats/.
+// v positive = home dominance, negative = away.
+export type MomentumPoint = { m: number; v: number };
+
+export type EventStatsV2 = {
+  event_id: number;
+  momentum: MomentumPoint[] | null;
+};
+
 export type SquadRowV2 = {
   id: number;
   team_id: number;

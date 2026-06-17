@@ -2,10 +2,19 @@ import { bzzoiroRequest } from './client';
 import { openfootball } from './openfootball';
 import { resolveTeamId } from './teamIdMap';
 import { mapSquadRow, mapEvent } from './bzzoiroMap';
-import type { Paginated, SquadRowV2, EventV2 } from './bzzoiroTypes';
+import type { Paginated, SquadRowV2, EventV2, EventStatsV2, MomentumPoint } from './bzzoiroTypes';
 import type { Match, Player } from '@/data/types';
 
 const EVENTS_TTL = 30_000;
+
+async function momentum(eventId: number, signal: AbortSignal): Promise<MomentumPoint[]> {
+  const res = await bzzoiroRequest<EventStatsV2>(
+    `/api/v2/events/${eventId}/stats/`,
+    signal,
+    { ttlMs: EVENTS_TTL, staleOk: true },
+  );
+  return res.momentum ?? [];
+}
 
 async function squad(teamCode: string, signal: AbortSignal): Promise<Player[]> {
   const teamId = await resolveTeamId(teamCode, signal);
@@ -34,6 +43,7 @@ async function liveMatches(_: void, signal: AbortSignal): Promise<Match[]> {
 export const bzzoiro = {
   squad,
   liveMatches,
+  momentum,
   allMatches: openfootball.allMatches,
   todayMatches: openfootball.todayMatches,
   upcomingMatches: openfootball.upcomingMatches,
