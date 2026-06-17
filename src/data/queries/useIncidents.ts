@@ -43,6 +43,7 @@ export function useIncidents(
 
   useEffect(() => {
     if (!enabled || !isLive || !wsTracked) return;
+    lastSeen.current = {};
     const apply = (f: LiveFrame) => {
       const prev = lastSeen.current;
       const changed =
