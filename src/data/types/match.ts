@@ -17,4 +17,7 @@ export type Match = {
   stadium: { name: string; city: string };
   home: MatchTeam;
   away: MatchTeam;
+  // True when this event pushes live updates over the bzzoiro WebSocket
+  // (/ws/live/). Undefined for sources without live tracking (e.g. openfootball).
+  liveWsTracked?: boolean;
 };

@@ -17,9 +17,12 @@ export function MatchHero({
 }) {
   const result = useMatchResult(toMatchSlug(match));
   const eventId = Number(match.id);
+  const isLive = match.status === 'live';
+  // Engage live updates only for live matches with a numeric (bzzoiro) id.
+  // WebSocket when the event is WS-tracked; otherwise useLiveEvent polls REST.
   const live = useLiveEvent(
-    Number.isFinite(eventId) ? eventId : undefined,
-    match.status === 'live',
+    isLive && Number.isFinite(eventId) ? eventId : undefined,
+    match.liveWsTracked ?? false,
   );
   const homeScore = live.home_score ?? result?.homeScore ?? match.home.score;
   const awayScore = live.away_score ?? result?.awayScore ?? match.away.score;

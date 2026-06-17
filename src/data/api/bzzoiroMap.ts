@@ -49,5 +49,6 @@ export function mapEvent(e: EventV2): Match {
       countryCode: nameToIso(e.away_team),
       score: e.away_score ?? undefined,
     },
+    liveWsTracked: e.live_websocket,
   };
 }

@@ -13,11 +13,21 @@ type Listener = (frame: LiveFrame) => void;
 const WS_BASE = import.meta.env.VITE_BZZOIRO_WS_URL ?? 'wss://sports.bzzoiro.com';
 const KEY = import.meta.env.VITE_BZZOIRO_KEY;
 
+// WS push-frame shape is undocumented; coerce defensively so a string/null
+// score never leaks a wrong-typed value into the UI.
+function num(v: unknown): number | undefined {
+  return typeof v === 'number' && Number.isFinite(v) ? v : undefined;
+}
+function str(v: unknown): string | undefined {
+  return typeof v === 'string' ? v : undefined;
+}
+
 class LiveSocket {
   private ws: WebSocket | null = null;
   private listeners = new Map<number, Set<Listener>>();
   private backoff = 1000;
   private connecting = false;
+  private reconnectTimer: ReturnType<typeof setTimeout> | null = null;
 
   private url(): string {
     return KEY ? `${WS_BASE}/ws/live/?token=${KEY}` : `${WS_BASE}/ws/live/`;
@@ -39,7 +49,11 @@ class LiveSocket {
       this.connecting = false;
       this.ws = null;
       if (this.listeners.size > 0) {
-        setTimeout(() => this.connect(), this.backoff);
+        this.reconnectTimer = setTimeout(() => {
+          this.reconnectTimer = null;
+          // Listeners may have all unsubscribed during the backoff window.
+          if (this.listeners.size > 0) this.connect();
+        }, this.backoff);
         this.backoff = Math.min(this.backoff * 2, 30_000);
       }
     };
@@ -63,11 +77,11 @@ class LiveSocket {
     if (!eventId) return;
     const frame: LiveFrame = {
       eventId,
-      home_score: msg.home_score as number | undefined,
-      away_score: msg.away_score as number | undefined,
-      minute: (msg.minute ?? msg.current_minute) as number | undefined,
-      period: msg.period as string | undefined,
-      momentum: msg.momentum as number | undefined,
+      home_score: num(msg.home_score),
+      away_score: num(msg.away_score),
+      minute: num(msg.minute ?? msg.current_minute),
+      period: str(msg.period),
+      momentum: num(msg.momentum),
       raw: msg,
     };
     this.listeners.get(eventId)?.forEach((cb) => cb(frame));
@@ -88,6 +102,10 @@ class LiveSocket {
       s?.delete(cb);
       if (s && s.size === 0) this.listeners.delete(eventId);
       if (this.listeners.size === 0) {
+        if (this.reconnectTimer) {
+          clearTimeout(this.reconnectTimer);
+          this.reconnectTimer = null;
+        }
         this.ws?.close();
         this.ws = null;
       }
