@@ -16,6 +16,21 @@ export type EventStatsV2 = {
   momentum: MomentumPoint[] | null;
 };
 
+// Polymarket prediction-market prices. Values are implied probabilities (0–1);
+// decimal odds = 1 / price. `detail` is present when no market is available.
+export type PolymarketMarket1x2 = {
+  home: number | null;
+  draw: number | null;
+  away: number | null;
+};
+export type PolymarketResponse = {
+  event_id?: number;
+  polymarket_event_id?: string;
+  markets?: { '1x2'?: PolymarketMarket1x2 };
+  updated_at?: string;
+  detail?: string;
+};
+
 export type SquadRowV2 = {
   id: number;
   team_id: number;

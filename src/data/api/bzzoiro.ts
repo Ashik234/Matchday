@@ -2,10 +2,24 @@ import { bzzoiroRequest } from './client';
 import { openfootball } from './openfootball';
 import { resolveTeamId } from './teamIdMap';
 import { mapSquadRow, mapEvent } from './bzzoiroMap';
-import type { Paginated, SquadRowV2, EventV2, EventStatsV2, MomentumPoint } from './bzzoiroTypes';
+import type {
+  Paginated,
+  SquadRowV2,
+  EventV2,
+  EventStatsV2,
+  MomentumPoint,
+  PolymarketResponse,
+} from './bzzoiroTypes';
 import type { Match, Player } from '@/data/types';
 
 const EVENTS_TTL = 30_000;
+
+export type Market1x2 = {
+  home: number | null;
+  draw: number | null;
+  away: number | null;
+  updatedAt?: string;
+};
 
 async function momentum(eventId: number, signal: AbortSignal): Promise<MomentumPoint[]> {
   const res = await bzzoiroRequest<EventStatsV2>(
@@ -14,6 +28,17 @@ async function momentum(eventId: number, signal: AbortSignal): Promise<MomentumP
     { ttlMs: EVENTS_TTL, staleOk: true },
   );
   return res.momentum ?? [];
+}
+
+async function polymarket(eventId: number, signal: AbortSignal): Promise<Market1x2 | null> {
+  const res = await bzzoiroRequest<PolymarketResponse>(
+    `/api/v2/events/${eventId}/polymarket/`,
+    signal,
+    { ttlMs: 60_000, staleOk: true },
+  );
+  const m = res.markets?.['1x2'];
+  if (!m) return null;
+  return { home: m.home, draw: m.draw, away: m.away, updatedAt: res.updated_at };
 }
 
 async function squad(teamCode: string, signal: AbortSignal): Promise<Player[]> {
@@ -44,6 +69,7 @@ export const bzzoiro = {
   squad,
   liveMatches,
   momentum,
+  polymarket,
   allMatches: openfootball.allMatches,
   todayMatches: openfootball.todayMatches,
   upcomingMatches: openfootball.upcomingMatches,
